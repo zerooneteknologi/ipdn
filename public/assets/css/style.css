@@ -52,7 +52,7 @@ h6 {
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
-  background: linear-gradient(45deg, #1dd3e0, #5c49cc);
+  background: linear-gradient(45deg, #c11f2a, #063877);
   color: #fff;
   border-radius: 4px 4px 0 0;
   right: 15px;
@@ -70,7 +70,7 @@ h6 {
 }
 
 .back-to-top:focus {
-  background: linear-gradient(45deg, #1dd3e0, #5c49cc);
+  background: linear-gradient(45deg, #c11f2a, #063877);
   color: #fff;
   outline: none;
 }
@@ -92,7 +92,7 @@ h6 {
   height: 90px;
   transition: all 0.5s;
   z-index: 997;
-  background: linear-gradient(45deg, #1dd3e0, #5c49cc);
+  background: linear-gradient(45deg, #c11f2a, #063877);
 }
 
 #header.header-transparent {
@@ -100,7 +100,7 @@ h6 {
 }
 
 #header.header-scrolled {
-  background: linear-gradient(45deg, #1dd3e0, #5c49cc);
+  background: linear-gradient(45deg, #c11f2a, #063877);
   height: 70px;
   transition: all 0.5s;
 }
@@ -301,7 +301,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(26, 26, 26, 0.9);
+  background: rgba(6, 56, 119, 0.8);
   transition: 0.3s;
   z-index: 999;
 }
@@ -395,8 +395,8 @@ h6 {
   height: 100vh;
   background: linear-gradient(
       45deg,
-      rgba(109, 207, 231, 0.747),
-      rgba(179, 153, 240, 0.945)
+      rgba(193, 31, 42, 0.8),
+      rgba(6, 56, 119, 0.8)
     ),
     url('../img/hero-bg.jpg') center top no-repeat;
   background-size: cover;
@@ -474,7 +474,7 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  color: #1dc8cd;
+  color: #063877;
   background: #fff;
 }
 
@@ -1045,7 +1045,7 @@ section {
 }
 
 #pricing .featured .get-started-btn {
-  background: linear-gradient(45deg, #1dd3e0, #5c49cc);
+  background: linear-gradient(45deg, #c11f2a, #063877);
 }
 
 /* Frequently Asked Questions Section
@@ -1333,7 +1333,7 @@ section {
 }
 
 #contact .php-email-form button[type='submit'] {
-  background: linear-gradient(45deg, #1dd3e0, #5c49cc);
+  background: linear-gradient(45deg, #c11f2a, #063877);
   border: 0;
   border-radius: 20px;
   padding: 8px 30px;
