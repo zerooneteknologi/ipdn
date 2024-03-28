@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6 text-lg-start text-center">
                 <div class="copyright">
-                    &copy; Copyright <strong>Avilon</strong>. All Rights Reserved
+                    &copy; Copyright <strong>Zero One Teknologi</strong>. All Rights Reserved
                 </div>
                 <div class="credits">
                     <!--
@@ -34,6 +34,8 @@
 <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="/assets/vendor/php-email-form/validate.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 <!-- Template Main JS File -->
 <script src="/assets/js/main.js"></script>

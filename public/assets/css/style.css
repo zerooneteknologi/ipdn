@@ -539,26 +539,26 @@ section {
 /* Sections Header
 --------------------------------*/
 .section-header .section-title {
-  font-size: 32px;
+  font-size: 60px;
   color: #111;
-  text-align: center;
-  font-weight: 400;
+  float: left;
+  /* text-align: center; */
+  /* font-weight: 400; */
 }
 
-.section-header .section-description {
-  text-align: center;
-  padding-bottom: 40px;
-  color: #777;
-  font-style: italic;
+.section-header a {
+  font-size: 25px;
+  color: #c11f2a;
+  float: right;
+  font-weight: 400;
+}
+.section-header a:hover {
+  color: #063877;
 }
 
 .section-header .section-divider {
+  clear: both;
   display: block;
-  width: 60px;
-  height: 3px;
-  background: #1dc8cd;
-  background: linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
-  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -637,7 +637,6 @@ section {
 }
 
 #about .about-img {
-  height: 510px;
   overflow: hidden;
 }
 
@@ -679,19 +678,7 @@ section {
   margin-bottom: 0;
 }
 
-#about .content i {
-  font-size: 20px;
-  padding-right: 4px;
-  color: #1dc8cd;
-}
-
-#about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-#about .content ul li {
-  padding-bottom: 10px;
+#about a {
 }
 
 /* Product Featuress Section
@@ -700,22 +687,6 @@ section {
   background: #fff;
   padding: 60px 0 0 0;
   overflow: hidden;
-}
-
-#features .features-img {
-  text-align: center;
-  padding-top: 20px;
-}
-
-@media (min-width: 769px) {
-  #features .features-img {
-    padding-top: 120px;
-    margin-top: -200px;
-  }
-}
-
-#features .features-img img {
-  max-width: 100%;
 }
 
 #features .box {
@@ -745,20 +716,6 @@ section {
   font-weight: 300;
   margin-bottom: 15px;
   font-size: 22px;
-}
-
-#features .title a {
-  color: #111;
-}
-
-#features .description {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 10px;
-}
-
-#features .section-description {
-  padding-bottom: 10px;
 }
 
 /* Product Advanced Featuress Section
@@ -1381,4 +1338,12 @@ section {
 
 #footer .footer-links a:hover {
   color: #1dc8cd;
+}
+
+.bg-repeat-0 {
+  background-repeat: no-repeat !important;
+}
+
+.bg-size-cover {
+  background-size: cover !important;
 }
