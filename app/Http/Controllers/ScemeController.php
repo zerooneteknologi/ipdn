@@ -95,7 +95,7 @@ class ScemeController extends Controller
         if ($request->file('sceme_file')) {
             if ($sceme->sceme_file) {
                 if (Storage::exists($sceme->sceme_file)) {
-                    Storage::delete();
+                    Storage::delete($sceme->sceme_file);
                     $data['sceme_file'] = $request
                         ->file('sceme_file')
                         ->store('file/sceme');
@@ -110,10 +110,10 @@ class ScemeController extends Controller
         if ($request->file('sceme_image')) {
             if ($sceme->sceme_image) {
                 if (Storage::exists($sceme->sceme_image)) {
-                    Storage::delete();
+                    Storage::delete($sceme->sceme_image);
                     $data['sceme_image'] = $request
                         ->file('sceme_image')
-                        ->store('file/sceme');
+                        ->store('img/sceme');
                 }
             } else {
                 $data['sceme_image'] = $request
@@ -134,6 +134,16 @@ class ScemeController extends Controller
      */
     public function destroy(Sceme $sceme)
     {
+        if ($sceme->sceme_file) {
+            if (Storage::exists($sceme->sceme_file)) {
+                Storage::delete($sceme->sceme_file);
+            }
+        }
+        if ($sceme->sceme_image) {
+            if (Storage::exists($sceme->sceme_image)) {
+                Storage::delete($sceme->sceme_image);
+            }
+        }
         $sceme->delete();
         return redirect()
             ->route('sceme.index')
