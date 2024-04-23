@@ -7,7 +7,7 @@
 
         <div class="hero-text" data-aos="zoom-out">
             <h2>Selamat Datang di LSP</h2>
-            <p>We are team of talented designers making websites with Bootstrap</p>
+            <h3 class="text-white">Institut Pemerintahan Dalam Negeri</h3>
             <a href="#about" class="btn btn-get-started scrollto">Get Started</a>
         </div>
 

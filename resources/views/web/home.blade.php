@@ -36,7 +36,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Featuress Section ======= -->
-    <section class=" pb-md-2 pb-lg-5 section-bg" data-aos="fade-up">
+    <section id="schema" class=" pb-md-2 pb-lg-5 section-bg" data-aos="fade-up">
         <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
         <div class="container pb-4 pt-5">
             <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">
@@ -205,6 +205,77 @@
     </section>
     <!-- End Featuress Section -->
 
+    <!-- ======= Team Section ======= -->
+    <section id="asesor" class="section-bg pb-5">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h3 class="section-title">Our Team</h3>
+                <span class="section-divider"></span>
+                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                    accusantium doloremque</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/assets/img/team/team-1.jpg" alt=""></div>
+                        <h4>Walter White</h4>
+                        <span>Chief Executive Officer</span>
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/assets/img/team/team-2.jpg" alt=""></div>
+                        <h4>Sarah Jhinson</h4>
+                        <span>Product Manager</span>
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/assets/img/team/team-3.jpg" alt=""></div>
+                        <h4>William Anderson</h4>
+                        <span>CTO</span>
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/assets/img/team/team-4.jpg" alt=""></div>
+                        <h4>Amanda Jepson</h4>
+                        <span>Accountant</span>
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Team Section -->
+
     <!-- ======= Advanced Featuress Section ======= -->
     {{-- <section id="advanced-features">
 
@@ -297,7 +368,7 @@
     <!-- End Call To Action Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing">
+    <section id="pengumuman">
         <div class="container" data-aos="fade-up">
 
             <div class="section-header">
@@ -343,7 +414,7 @@
     <!-- End Pricing Section -->
 
     <!-- Post Section -->
-    <section class="section-bg" data-aos="fade-up">
+    <section id="berita" class="section-bg" data-aos="fade-up">
         <div class="container mb-5 pt-5 pb-lg-5">
             <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Berita Terbaru</h2>
 
@@ -674,77 +745,6 @@
     </div>
 </section> --}}
     <!-- End Frequently Asked Questions Section -->
-
-    <!-- ======= Team Section ======= -->
-    {{-- <section id="team" class="section-bg">
-    <div class="container" data-aos="fade-up">
-        <div class="section-header">
-            <h3 class="section-title">Our Team</h3>
-            <span class="section-divider"></span>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="member">
-                    <div class="pic"><img src="/assets/img/team/team-1.jpg" alt=""></div>
-                    <h4>Walter White</h4>
-                    <span>Chief Executive Officer</span>
-                    <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="member">
-                    <div class="pic"><img src="/assets/img/team/team-2.jpg" alt=""></div>
-                    <h4>Sarah Jhinson</h4>
-                    <span>Product Manager</span>
-                    <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="member">
-                    <div class="pic"><img src="/assets/img/team/team-3.jpg" alt=""></div>
-                    <h4>William Anderson</h4>
-                    <span>CTO</span>
-                    <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="member">
-                    <div class="pic"><img src="/assets/img/team/team-4.jpg" alt=""></div>
-                    <h4>Amanda Jepson</h4>
-                    <span>Accountant</span>
-                    <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section> --}}
-    <!-- End Team Section -->
 
     <!-- ======= Gallery Section ======= -->
     {{-- <section id="gallery">
