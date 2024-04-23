@@ -25,7 +25,7 @@
                 <li><a class="nav-link scrollto" href="#pricing">Asesor Kompetensi</a></li>
                 <li><a class="nav-link scrollto" href="#team">Pengumuman</a></li>
                 <li><a class="nav-link scrollto" href="#gallery">Kegiatan</a></li>
-                <li><a class="nav-link scrollto" href="#contact">Pendaftaran</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('registration') }}">Pendaftaran</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

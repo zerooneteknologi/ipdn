@@ -418,7 +418,7 @@ h6 {
 #hero .hero-text {
   position: absolute;
   left: 0;
-  top: 60px;
+  top: 200px;
   right: 0;
   height: calc(50% - 60px);
   display: flex;

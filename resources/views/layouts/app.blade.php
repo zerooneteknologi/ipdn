@@ -2,10 +2,6 @@
 
 <body>
 
-    <!-- ======= Header ======= -->
-    @include('layouts.header')
-    <!-- End Header -->
-
     <!-- ======= Hero Section ======= -->
     <section id="hero">
 
