@@ -24,20 +24,36 @@
                     </a>
                 </li>
             </ul>
-        </li><!-- End Components Nav -->
+        </li><!-- End Sceme Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-person"></i><span>Assesor Sertifikasi</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{ route('assesor.index') }}">
+                        <i class="bi bi-circle"></i><span>Daftar Assesor</span>
+                    </a>
+                    <a href="{{ route('assesor.create') }}">
+                        <i class="bi bi-circle"></i><span>Tambah Assesor</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Assesor Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-journal-text"></i><span>Pengaturan</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
-            <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="{{ route('setting.index') }}">
                         <i class="bi bi-circle"></i><span>Data</span>
                     </a>
                 </li>
             </ul>
-        </li><!-- End Forms Nav -->
+        </li><!-- End Setting Nav -->
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
