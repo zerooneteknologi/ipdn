@@ -13,11 +13,14 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::resource('/sceme', ScemeController::class);
-Route::resource('/setting', SettingController::class);
-Route::resource('/assesor', AssesorController::class);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/registration', [LspController::class, 'registration'])->name(
-    'registration'
-);
+Route::middleware('auth')->group(function () {
+    Route::resource('/sceme', ScemeController::class);
+    Route::resource('/setting', SettingController::class);
+    Route::resource('/assesor', AssesorController::class);
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+});
+
+Route::controller(LspController::class)->group(function () {
+    Route::get('/registration', 'registration')->name('registration');
+});

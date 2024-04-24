@@ -56,6 +56,7 @@ class ScemeController extends Controller
                 ->file('sceme_image')
                 ->store('img/sceme');
         }
+
         $data['sceme_slug'] = Str::slug(
             $request->sceme_name . round(microtime(true))
         );
@@ -63,7 +64,10 @@ class ScemeController extends Controller
 
         return redirect()
             ->route('sceme.index')
-            ->with('success', 'Berhasil Menambahkan skema baru!');
+            ->with(
+                'success',
+                "Berhasil Menambahkan skema baru \"$request->sceme_name\"!"
+            );
     }
 
     /**
@@ -122,11 +126,18 @@ class ScemeController extends Controller
             }
         }
 
+        $data['sceme_slug'] = Str::slug(
+            $request->sceme_name . round(microtime(true))
+        );
+
         $sceme->update($data);
 
         return redirect()
             ->route('sceme.index')
-            ->with('success', 'Berhasil mengubah Skema Serifikasi!');
+            ->with(
+                'success',
+                "Berhasil mengubah Skema Serifikasi \"$sceme->sceme_name\"!"
+            );
     }
 
     /**
@@ -147,6 +158,9 @@ class ScemeController extends Controller
         $sceme->delete();
         return redirect()
             ->route('sceme.index')
-            ->with('success', 'Berhasil Menghapus Skema Serifikasi!');
+            ->with(
+                'success',
+                "Berhasil Menghapus Skema Serifikasi \"$sceme->sceme_name\"! "
+            );
     }
 }

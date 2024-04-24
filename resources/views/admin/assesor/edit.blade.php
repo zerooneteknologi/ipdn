@@ -8,7 +8,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('home')}}">Home</a></li>
             <li class="breadcrumb-item"><a href="{{ route('assesor.index')}}">Assesor Kompetensi</a></li>
-            <li class="breadcrumb-item active">Tambah</li>
+            <li class="breadcrumb-item active">Edit</li>
         </ol>
     </nav>
 </div><!-- End Page Title -->
@@ -16,38 +16,44 @@
 <section class="section">
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Tambah Assesor Kompetensi</h5>
+            <h5 class="card-title">Edit Assesor Kompetensi</h5>
 
             <!-- General Form Elements -->
-            <form method="POST" action="{{ route('assesor.store') }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('assesor.update', $assesor->id) }}" enctype="multipart/form-data">
                 @csrf
+                @method('put')
                 <div class="row">
                     <div class="col-sm-6 mb-3">
                         <label for="assesor_name" class=" col-form-label">Nama Assesor</label>
-                        <input name="assesor_name" id="assesor_name" type="text" class="form-control" required>
+                        <input value="{{ $assesor->assesor_name }}" name="assesor_name" id="assesor_name" type="text"
+                            class="form-control" required>
 
                         <label for="assesor_code" class="col-form-label">Kode Assesor</label>
-                        <input id="assesor_code" name="assesor_code" type="text" class="form-control" required>
+                        <input value="{{$assesor->assesor_code}}" id="assesor_code" name="assesor_code" type="text"
+                            class="form-control" required>
 
                         <label for="assesor_specialize" class="col-form-label">Keahlian Assesor</label>
-                        <input id="assesor_specialize" name="assesor_specialize" type="text" class="form-control"
-                            required>
+                        <input value="{{ $assesor->assesor_specialize}}" id="assesor_specialize"
+                            name="assesor_specialize" type="text" class="form-control" required>
 
                     </div>
                     <div class="col-sm-6">
                         <label for="assesor_address" class="col-form-label">Alamat Assesor</label>
-                        <input id="assesor_address" name="assesor_address" type="text" class="form-control" required>
+                        <input value="{{ $assesor->assesor_address }}" id="assesor_address" name="assesor_address"
+                            type="text" class="form-control" required>
 
                         <label for="assesor_image" class="col-sm-4 col-form-label">Tambah Gambar</label>
                         <input name="assesor_image" class="form-control" type="file" id="assesor_image"
                             onchange="validateImage()" accept="image/*">
-                        <img id="img-preview" class="img-fluid col-sm-4 mt-3" src="">
+                        <img id="img-preview" class="img-fluid col-sm-4 mt-3"
+                            src="{{ asset('storage/' .$assesor->assesor_image)}}">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="assesor_detail" class="col-form-label">Detail Assesor</label>
                     <div class="col-sm-12">
-                        <input id="assesor_detail" type="hidden" name="assesor_detail" required>
+                        <input value="{{ $assesor->assesor_detail }}" id="assesor_detail" type="hidden"
+                            name="assesor_detail" required>
                         <trix-editor input="assesor_detail"></trix-editor>
                     </div>
                 </div>

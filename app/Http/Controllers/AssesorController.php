@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Assesor;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+
+use function PHPUnit\Framework\returnValueMap;
 
 class AssesorController extends Controller
 {
@@ -46,30 +50,19 @@ class AssesorController extends Controller
      */
     public function store(Request $request)
     {
-        Assesor::create([
-            'assesor_name' => $request->assesor_name,
-            'assesor_slug' =>
-                Str::slug($request->assesor_name, '-') . round(microtime(true)),
-            'assesor_code' => $request->assesor_code,
-            'assesor_specialize' => $request->assesor_specialize,
-            'assesor_address' => $request->assesor_address,
-            'assesor_detail' => $request->assesor_detail,
-            'assesor_image' => $request
+        $validateData = $this->validateData($request);
+        $validateData['assesor_slug'] = Str::slug(
+            $request->assesor_name . round(microtime(true)),
+            '-'
+        );
+
+        if ($request->file('assesor_image')) {
+            $validateData['assesor_image'] = $request
                 ->file('assesor_image')
-                ->store('img/assesor'),
-        ]);
+                ->store('img/assesor');
+        }
 
-        // $data = $this->validateData($request);
-
-        // if ($request->file('assesor_image')) {
-        //     $data = $request->file('assesor_image')->store('img/assesor');
-        // }
-
-        // $data['assesor_slug'] = Str::slug(
-        //     $request->assesor_name . round(microtime(true))
-        // );
-
-        // Assesor::create($data);
+        Assesor::create($validateData);
 
         return redirect()
             ->route('assesor.index')
@@ -84,7 +77,9 @@ class AssesorController extends Controller
      */
     public function show(Assesor $assesor)
     {
-        //
+        return view('admin.assesor.show', [
+            'assesor' => $assesor,
+        ]);
     }
 
     /**
@@ -92,7 +87,9 @@ class AssesorController extends Controller
      */
     public function edit(Assesor $assesor)
     {
-        //
+        return view('admin.assesor.edit', [
+            'assesor' => $assesor,
+        ]);
     }
 
     /**
@@ -100,7 +97,32 @@ class AssesorController extends Controller
      */
     public function update(Request $request, Assesor $assesor)
     {
-        //
+        $validateData = $this->validateData($request);
+
+        if ($request->file('assesor_image')) {
+            if ($assesor->assesor_image) {
+                if (Storage::exists($assesor->assesor_image)) {
+                    Storage::delete($assesor->assesor_image);
+                    $validateData['assesor_image'] = $request
+                        ->file('assesor_image')
+                        ->store('img/assesor');
+                }
+            }
+        }
+
+        $validateData['assesor_slug'] = Str::slug(
+            $request->assesor_name . round(microtime(true)),
+            '-'
+        );
+
+        $assesor->update($validateData);
+
+        return redirect()
+            ->route('assesor.index')
+            ->with(
+                'success',
+                "Berhasil Menambahkan assesor \"$request->assesor_name\"!"
+            );
     }
 
     /**
@@ -108,6 +130,19 @@ class AssesorController extends Controller
      */
     public function destroy(Assesor $assesor)
     {
-        //
+        if ($assesor->assesor_image) {
+            if (Storage::exists($assesor->assesor_image)) {
+                Storage::delete($assesor->assesor_image);
+            }
+        }
+
+        $assesor->delete();
+
+        return redirect()
+            ->route('assesor.index')
+            ->with(
+                'success',
+                "Berhasil Menghapus assesor \"$assesor->assesor_name\"!"
+            );
     }
 }

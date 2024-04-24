@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="/admin/assets/img/favicon.png" rel="icon">
-    <link href="/admin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="/assets/img/logo/Logo_LSP.jpg" rel="icon">
+    <link href="/assets/img/logo/Logo_LSP.jpg" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -41,7 +41,7 @@
 
                             <div class="d-flex justify-content-center py-4">
                                 <a href="index.html" class="logo d-flex align-items-center w-auto">
-                                    <img src="/admin/assets/img/logo.png" alt="">
+                                    <img src="/assets/img/logo/Logo_LSP.jpg" alt="LSP IPDN">
                                     <span class="d-none d-lg-block">LSP IPDN</span>
                                 </a>
                             </div><!-- End Logo -->
