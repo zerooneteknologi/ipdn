@@ -16,10 +16,9 @@
                 <li><a class="nav-link scrollto active" href="/">Beranda</a></li>
                 <li class="dropdown"><a href="#about"><span>Profil LSP</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Profil LSP</a></li>
-                        <li><a href="#">Visi Misi</a></li>
-                        <li><a href="#">Struktur Organisasi</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
+                        <li><a href="#about">Profil LSP</a></li>
+                        <li><a href="#about">Visi Misi</a></li>
+                        <li><a href="#about">Struktur Organisasi</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="#schema">Skema Sertifikasi</a></li>

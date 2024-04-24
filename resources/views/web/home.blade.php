@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
 <!-- ======= About Section ======= -->
 <section id="about">
-    <div class="container" data-aos="fade-up">
+    <div class="container pt-5" data-aos="fade-up">
 
         <div class="row">
             <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
@@ -263,618 +262,675 @@
             </div>
         </div>
 
-    </div>
+        <<<<<<< HEAD </div>
 </section>
 <!-- End Team Section -->
-
-<!-- ======= Advanced Featuress Section ======= -->
-{{-- <section id="advanced-features">
-
-    <div class="features-row section-bg" data-aos="fade-up">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <img class="advanced-feature-img-right wow fadeInRight" src="/assets/img/advanced-feature-1.jpg"
-                        alt="">
-                    <div>
-                        <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                        <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                            qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="features-row" data-aos="fade-up">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <img class="advanced-feature-img-left" src="/assets/img/advanced-feature-2.jpg" alt="">
-                    <div>
-                        <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                        <i class="bi bi-calendar4-week"></i>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        <i class="bi bi-bar-chart"></i>
-                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                        <i class="bi bi-brightness-high"></i>
-                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="features-row section-bg" data-aos="fade-up">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <img class="advanced-feature-img-right wow fadeInRight" src="/assets/img/advanced-feature-3.jpg"
-                        alt="">
-                    <div>
-                        <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                        <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                        <i class="bi bi-binoculars"></i>
-                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                            qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-<!-- End Advanced Featuress Section -->
-
-<!-- ======= Call To Action Section ======= -->
-{{-- <section id="call-to-action">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9 text-center text-lg-start">
-                <h3 class="cta-title">Call To Action</h3>
-                <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="col-lg-3 cta-btn-container text-center">
-                <a class="cta-btn align-middle" href="#">Call To Action</a>
-            </div>
-        </div>
-
-    </div>
-</section> --}}
-<!-- End Call To Action Section -->
-
-<!-- ======= Pricing Section ======= -->
-<section id="pengumuman">
+=======
+<!-- ======= Team Section ======= -->
+<section id="asesor" class="section-bg pb-5">
     <div class="container" data-aos="fade-up">
-
         <div class="section-header">
-            <h3 class="section-title">Pengumuman</h3>
+            <h3 class="section-title">Asesor</h3>
             <span class="section-divider"></span>
+            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque</p>
         </div>
-
         <div class="row">
-
-            <div class="col-lg-4 col-md-6">
-                <div class="box">
-                    <h3>Free</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius quae laborum ratione
-                        molestias, consequuntur corporis minima, laudantium delectus vel sint reiciendis error
-                        voluptatem alias aliquid est, nostrum voluptas? Illo.</p>
-                    <a href="#" class="get-started-btn">Get Started</a>
+            <div class="col-lg-3 col-md-6">
+                <div class="member">
+                    <div class="pic"><img src="/assets/img/team/team-1.jpg" alt=""></div>
+                    <h4>Walter White</h4>
+                    <span>Chief Executive Officer</span>
+                    <div class="social">
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
+            >>>>>>> 02d28dd (view modif)
 
-            <div class="col-lg-4 col-md-6">
-                <div class="box featured">
-                    <h3>Business</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, non! Obcaecati, atque sit
-                        cum aut reiciendis tenetur nulla. Modi architecto autem possimus dolore, quos quia in molestiae
-                        veritatis esse earum!</p>
-                    <a href="#" class="get-started-btn">Get Started</a>
+            <!-- ======= Advanced Featuress Section ======= -->
+            {{-- <section id="advanced-features">
+
+                <div class="features-row section-bg" data-aos="fade-up">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="advanced-feature-img-right wow fadeInRight"
+                                    src="/assets/img/advanced-feature-1.jpg" alt="">
+                                <div>
+                                    <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
+                                    <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                        deserunt
+                                        mollit anim id est laborum.</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa
+                                        qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="box">
-                    <h3>Developer</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nihil ducimus aperiam optio
-                        eligendi nam? Corrupti officiis quas, voluptatem accusamus impedit magni itaque fugiat quisquam
-                        illo, sapiente ut cum labore!</p>
-                    <a href="#" class="get-started-btn">Get Started</a>
+                <div class="features-row" data-aos="fade-up">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="advanced-feature-img-left" src="/assets/img/advanced-feature-2.jpg" alt="">
+                                <div>
+                                    <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
+                                    <i class="bi bi-calendar4-week"></i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                    <i class="bi bi-bar-chart"></i>
+                                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                                    <i class="bi bi-brightness-high"></i>
+                                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-        </div>
-    </div>
-</section>
-<!-- End Pricing Section -->
+                <div class="features-row section-bg" data-aos="fade-up">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="advanced-feature-img-right wow fadeInRight"
+                                    src="/assets/img/advanced-feature-3.jpg" alt="">
+                                <div>
+                                    <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
+                                    <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                        deserunt
+                                        mollit anim id est laborum.</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                    <i class="bi bi-binoculars"></i>
+                                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa
+                                        qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> --}}
+            <!-- End Advanced Featuress Section -->
 
-<!-- Post Section -->
-<section id="berita" class="section-bg" data-aos="fade-up">
-    <div class="container mb-5 pt-5 pb-lg-5">
-        <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Berita Terbaru</h2>
+            <!-- ======= Call To Action Section ======= -->
+            {{-- <section id="call-to-action">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9 text-center text-lg-start">
+                            <h3 class="cta-title">Call To Action</h3>
+                            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="col-lg-3 cta-btn-container text-center">
+                            <a class="cta-btn align-middle" href="#">Call To Action</a>
+                        </div>
+                    </div>
 
-        <!-- Blog articles -->
-        <div class="pb-3">
-            <!-- Blog item -->
-            <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
-                <div class="row g-0">
-                    <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="
+                </div>
+            </section> --}}
+            <!-- End Call To Action Section -->
+
+            <!-- ======= Pricing Section ======= -->
+            <section id="pengumuman">
+                <div class="container" data-aos="fade-up">
+
+                    <div class="section-header">
+                        <h3 class="section-title">Pengumuman</h3>
+                        <span class="section-divider"></span>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="box">
+                                <h3>Free</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius quae laborum
+                                    ratione
+                                    molestias, consequuntur corporis minima, laudantium delectus vel sint reiciendis
+                                    error
+                                    voluptatem alias aliquid est, nostrum voluptas? Illo.</p>
+                                <a href="#" class="get-started-btn">Get Started</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="box featured">
+                                <h3>Business</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, non! Obcaecati,
+                                    atque sit
+                                    cum aut reiciendis tenetur nulla. Modi architecto autem possimus dolore, quos quia
+                                    in molestiae
+                                    veritatis esse earum!</p>
+                                <a href="#" class="get-started-btn">Get Started</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="box">
+                                <h3>Developer</h3>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nihil ducimus
+                                    aperiam optio
+                                    eligendi nam? Corrupti officiis quas, voluptatem accusamus impedit magni itaque
+                                    fugiat quisquam
+                                    illo, sapiente ut cum labore!</p>
+                                <a href="#" class="get-started-btn">Get Started</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- End Pricing Section -->
+
+            <!-- Post Section -->
+            <section id="berita" class="section-bg" data-aos="fade-up">
+                <div class="container mb-5 pt-5 pb-lg-5">
+                    <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Berita Terbaru</h2>
+
+                    <!-- Blog articles -->
+                    <div class="pb-3">
+                        <!-- Blog item -->
+                        <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="
                 background-image: url(/assets/img/gallery/gallery-1.jpg);
                 min-height: 15rem;">
-                        <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
-                            aria-label="Read more"></a>
-                        <a href="#"
-                            class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                            data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
-                            aria-label="Read later">
-                            <i class="bx bx-bookmark"></i>
-                        </a>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
-                                    Startups
-                                </a>
-                                <span class="fs-sm text-muted border-start ps-3 ms-3">
-                                    Sep 3, 2023
-                                </span>
+                                    <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
+                                        aria-label="Read more"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
+                                        aria-label="Read later">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
+                                                Startups
+                                            </a>
+                                            <span class="fs-sm text-muted border-start ps-3 ms-3">
+                                                Sep 3, 2023
+                                            </span>
+                                        </div>
+                                        <h3 class="h4">
+                                            <a href="blog-single.html">
+                                                5 Bad Landing Page Examples &amp; How We Would Fix Them
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            Tellus sagittis dolor pellentesque vel porttitor magna
+                                            aliquet arcu. Interdum risus mauris pulvinar et vel. Morbi
+                                            tellus, scelerisque vel metus. Scelerisque arcu egestas ac
+                                            commodo, ac nibh. Pretium ac elit sed nulla nec.
+                                        </p>
+                                        <hr class="my-4" />
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="h4">
-                                <a href="blog-single.html">
-                                    5 Bad Landing Page Examples &amp; How We Would Fix Them
-                                </a>
-                            </h3>
-                            <p>
-                                Tellus sagittis dolor pellentesque vel porttitor magna
-                                aliquet arcu. Interdum risus mauris pulvinar et vel. Morbi
-                                tellus, scelerisque vel metus. Scelerisque arcu egestas ac
-                                commodo, ac nibh. Pretium ac elit sed nulla nec.
-                            </p>
-                            <hr class="my-4" />
-                        </div>
-                    </div>
-                </div>
-            </article>
+                        </article>
 
-            <!-- Article -->
-            <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
-                <div class="row g-0">
-                    <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="
+                        <!-- Article -->
+                        <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="
                 background-image: url(/assets/img/gallery/gallery-2.jpg);
                 min-height: 15rem;">
-                        <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
-                            aria-label="Read more"></a>
-                        <a href="#"
-                            class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                            data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
-                            aria-label="Read later">
-                            <i class="bx bx-bookmark"></i>
-                        </a>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
-                                    Startups
-                                </a>
-                                <span class="fs-sm text-muted border-start ps-3 ms-3">
-                                    Sep 10, 2023
-                                </span>
+                                    <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
+                                        aria-label="Read more"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
+                                        aria-label="Read later">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
+                                                Startups
+                                            </a>
+                                            <span class="fs-sm text-muted border-start ps-3 ms-3">
+                                                Sep 10, 2023
+                                            </span>
+                                        </div>
+                                        <h3 class="h4">
+                                            <a href="blog-single.html">
+                                                How Agile is Your Forecasting Process?
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            Nulla fringilla arcu justo augue fringilla in nunc volutpat
+                                            sit. Dui diam, faucibus vitae ultricies vitae mollis nunc
+                                            elementum. Et, habitasse porta neque tempor tellus ut.
+                                            Sagittis odio porttitor erat viverra erat neque.
+                                        </p>
+                                        <hr class="my-4" />
+
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="h4">
-                                <a href="blog-single.html">
-                                    How Agile is Your Forecasting Process?
-                                </a>
-                            </h3>
-                            <p>
-                                Nulla fringilla arcu justo augue fringilla in nunc volutpat
-                                sit. Dui diam, faucibus vitae ultricies vitae mollis nunc
-                                elementum. Et, habitasse porta neque tempor tellus ut.
-                                Sagittis odio porttitor erat viverra erat neque.
-                            </p>
-                            <hr class="my-4" />
+                        </article>
 
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Article -->
-            <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
-                <div class="row g-0">
-                    <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="
+                        <!-- Article -->
+                        <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="
                 background-image: url(/assets/img/gallery/gallery-3.jpg);
                 min-height: 15rem;">
-                        <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
-                            aria-label="Read more"></a>
-                        <a href="#"
-                            class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                            data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
-                            aria-label="Read later">
-                            <i class="bx bx-bookmark"></i>
-                        </a>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
-                                    Digital
-                                </a>
-                                <span class="fs-sm text-muted border-start ps-3 ms-3">
-                                    Oct 9, 2023
-                                </span>
+                                    <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
+                                        aria-label="Read more"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
+                                        aria-label="Read later">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
+                                                Digital
+                                            </a>
+                                            <span class="fs-sm text-muted border-start ps-3 ms-3">
+                                                Oct 9, 2023
+                                            </span>
+                                        </div>
+                                        <h3 class="h4">
+                                            <a href="blog-single.html">
+                                                Inclusive Marketing: Why and How Does it Work?
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            Nunc aliquet scelerisque pellentesque imperdiet tortor elit,
+                                            dictum. Tristique odio at dignissim viverra aliquet eleifend
+                                            erat. Tellus, at arcu, egestas praesent. Varius aliquet
+                                            pharetra adipiscing tincidunt orci nec neque.
+                                        </p>
+                                        <hr class="my-4" />
+
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="h4">
-                                <a href="blog-single.html">
-                                    Inclusive Marketing: Why and How Does it Work?
-                                </a>
-                            </h3>
-                            <p>
-                                Nunc aliquet scelerisque pellentesque imperdiet tortor elit,
-                                dictum. Tristique odio at dignissim viverra aliquet eleifend
-                                erat. Tellus, at arcu, egestas praesent. Varius aliquet
-                                pharetra adipiscing tincidunt orci nec neque.
-                            </p>
-                            <hr class="my-4" />
+                        </article>
 
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Article -->
-            <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
-                <div class="row g-0">
-                    <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="
+                        <!-- Article -->
+                        <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="
                 background-image: url(/assets/img/gallery/gallery-4.jpg);
                 min-height: 15rem;">
-                        <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
-                            aria-label="Read more"></a>
-                        <a href="#"
-                            class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                            data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
-                            aria-label="Read later">
-                            <i class="bx bx-bookmark"></i>
-                        </a>
+                                    <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
+                                        aria-label="Read more"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
+                                        aria-label="Read later">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
+                                                Strategy
+                                            </a>
+                                            <span class="fs-sm text-muted border-start ps-3 ms-3">
+                                                Sep 3, 2023
+                                            </span>
+                                        </div>
+                                        <h3 class="h4">
+                                            <a href="blog-single.html">
+                                                This Long-Awaited Technology May Finally Change the World
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            Sapien, nulla placerat in at. Vitae tincidunt quam ornare
+                                            massa porttitor. Neque a vitae feugiat in sit habitant
+                                            integer. Cursus et at pulvinar sed neque vitae. Aliquam
+                                            vitae hac phasellus purus lectus facilisi. Vitae vel ac
+                                            quam.
+                                        </p>
+                                        <hr class="my-4" />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                    <div class="col-sm-8">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
-                                    Strategy
+
+                    <!-- Load more btn -->
+                    <a href="#" class="btn btn-lg btn-outline-primary w-100">
+                        <i class="bi bi-arrow-down"></i>
+                        Show more
+                    </a>
+                </div>
+            </section>
+            <!-- End Post Section -->
+
+            <!-- ======= Clients Section ======= -->
+            <section id="clients">
+                <div class="container" data-aos="fade-up">
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <img src="/assets/img/clients/client-1.png" alt="">
+                        </div>
+
+                        <div class="col-md-2">
+                            <img src="/assets/img/clients/client-2.png" alt="">
+                        </div>
+
+                        <div class="col-md-2">
+                            <img src="/assets/img/clients/client-3.png" alt="">
+                        </div>
+
+                        <div class="col-md-2">
+                            <img src="/assets/img/clients/client-4.png" alt="">
+                        </div>
+
+                        <div class="col-md-2">
+                            <img src="/assets/img/clients/client-5.png" alt="">
+                        </div>
+
+                        <div class="col-md-2">
+                            <img src="/assets/img/clients/client-6.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- End Clients Section -->
+
+            <!-- ======= Frequently Asked Questions Section ======= -->
+            {{-- <section id="faq">
+                <div class="container">
+
+                    <div class="section-header">
+                        <h3 class="section-title">Frequently Asked Questions</h3>
+                        <span class="section-divider"></span>
+                        <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque</p>
+                    </div>
+
+                    <ul class="faq-list">
+
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a
+                                erat
+                                nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i
+                                    class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
+                                    non
+                                    curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
+                                    purus
+                                    non.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque
+                                varius morbi enim nunc faucibus a pellentesque? <i
+                                    class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
+                                    velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
+                                    donec
+                                    pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus
+                                    turpis massa tincidunt dui.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet
+                                consectetur adipiscing elit pellentesque habitant morbi? <i
+                                    class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
+                                    pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit.
+                                    Rutrum
+                                    tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna
+                                    molestie at elementum eu facilisis sed odio morbi quis
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci
+                                dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i
+                                    class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
+                                    velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
+                                    donec
+                                    pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus
+                                    turpis massa tincidunt dui.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam
+                                pellentesque
+                                nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i
+                                    class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
+                                    est
+                                    ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit
+                                    adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus
+                                faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i
+                                    class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
+                                    integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc
+                                    eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                                    Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.
+                                    Nibh tellus molestie nunc non blandit massa enim nec.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </section> --}}
+            <!-- End Frequently Asked Questions Section -->
+
+            <!-- ======= Gallery Section ======= -->
+            {{-- <section id="gallery">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="section-header">
+                        <h3 class="section-title">Gallery</h3>
+                        <span class="section-divider"></span>
+                        <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque</p>
+                    </div>
+
+                    <div class="row g-0">
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="/assets/img/gallery/gallery-1.jpg" data-gall="portfolioGallery"
+                                    class="gallery-lightbox">
+                                    <img src="/assets/img/gallery/gallery-1.jpg" alt="">
                                 </a>
-                                <span class="fs-sm text-muted border-start ps-3 ms-3">
-                                    Sep 3, 2023
-                                </span>
                             </div>
-                            <h3 class="h4">
-                                <a href="blog-single.html">
-                                    This Long-Awaited Technology May Finally Change the World
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="/assets/img/gallery/gallery-2.jpg" data-gall="portfolioGallery"
+                                    class="gallery-lightbox">
+                                    <img src="/assets/img/gallery/gallery-2.jpg" alt="">
                                 </a>
-                            </h3>
-                            <p>
-                                Sapien, nulla placerat in at. Vitae tincidunt quam ornare
-                                massa porttitor. Neque a vitae feugiat in sit habitant
-                                integer. Cursus et at pulvinar sed neque vitae. Aliquam
-                                vitae hac phasellus purus lectus facilisi. Vitae vel ac
-                                quam.
-                            </p>
-                            <hr class="my-4" />
-
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
-
-        <!-- Load more btn -->
-        <a href="#" class="btn btn-lg btn-outline-primary w-100">
-            <i class="bi bi-arrow-down"></i>
-            Show more
-        </a>
-    </div>
-</section>
-<!-- End Post Section -->
-
-<!-- ======= Clients Section ======= -->
-<section id="clients">
-    <div class="container" data-aos="fade-up">
-
-        <div class="row">
-
-            <div class="col-md-2">
-                <img src="/assets/img/clients/client-1.png" alt="">
-            </div>
-
-            <div class="col-md-2">
-                <img src="/assets/img/clients/client-2.png" alt="">
-            </div>
-
-            <div class="col-md-2">
-                <img src="/assets/img/clients/client-3.png" alt="">
-            </div>
-
-            <div class="col-md-2">
-                <img src="/assets/img/clients/client-4.png" alt="">
-            </div>
-
-            <div class="col-md-2">
-                <img src="/assets/img/clients/client-5.png" alt="">
-            </div>
-
-            <div class="col-md-2">
-                <img src="/assets/img/clients/client-6.png" alt="">
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- End Clients Section -->
-
-<!-- ======= Frequently Asked Questions Section ======= -->
-{{-- <section id="faq">
-    <div class="container">
-
-        <div class="section-header">
-            <h3 class="section-title">Frequently Asked Questions</h3>
-            <span class="section-divider"></span>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque</p>
-        </div>
-
-        <ul class="faq-list">
-
-            <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat
-                    nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i
-                        class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
-                        curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
-                        non.
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque
-                    varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i
-                        class="bi bi-chevron-up icon-close"></i>
-                </div>
-                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
-                        pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus
-                        turpis massa tincidunt dui.
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet
-                    consectetur adipiscing elit pellentesque habitant morbi? <i
-                        class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
-                </div>
-                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                        pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
-                        tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna
-                        molestie at elementum eu facilisis sed odio morbi quis
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci
-                    dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i
-                        class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
-                        pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus
-                        turpis massa tincidunt dui.
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque
-                    nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i
-                        class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                        Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
-                        ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit
-                        adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus
-                    faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i
-                        class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
-                </div>
-                <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                        Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
-                        integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                        eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                        Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.
-                        Nibh tellus molestie nunc non blandit massa enim nec.
-                    </p>
-                </div>
-            </li>
-
-        </ul>
-
-    </div>
-</section> --}}
-<!-- End Frequently Asked Questions Section -->
-
-<!-- ======= Gallery Section ======= -->
-{{-- <section id="gallery">
-    <div class="container-fluid" data-aos="fade-up">
-        <div class="section-header">
-            <h3 class="section-title">Gallery</h3>
-            <span class="section-divider"></span>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque</p>
-        </div>
-
-        <div class="row g-0">
-
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-item">
-                    <a href="/assets/img/gallery/gallery-1.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                        <img src="/assets/img/gallery/gallery-1.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-item">
-                    <a href="/assets/img/gallery/gallery-2.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                        <img src="/assets/img/gallery/gallery-2.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-item">
-                    <a href="/assets/img/gallery/gallery-3.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                        <img src="/assets/img/gallery/gallery-3.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-item">
-                    <a href="/assets/img/gallery/gallery-4.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                        <img src="/assets/img/gallery/gallery-4.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-item">
-                    <a href="/assets/img/gallery/gallery-5.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                        <img src="/assets/img/gallery/gallery-5.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-item">
-                    <a href="/assets/img/gallery/gallery-6.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                        <img src="/assets/img/gallery/gallery-6.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section> --}}
-<!-- End Gallery Section -->
-
-<!-- ======= Contact Section ======= -->
-{{-- <section id="contact">
-    <div class="container" data-aos="fade-up">
-        <div class="row">
-
-            <div class="col-lg-4 col-md-4">
-                <div class="contact-about">
-                    <h3>Avilon</h3>
-                    <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus.
-                        Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc
-                        congue.</p>
-                    <div class="social-links">
-                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-                <div class="info">
-                    <div>
-                        <i class="bi bi-geo-alt"></i>
-                        <p>A108 Adam Street<br>New York, NY 535022</p>
-                    </div>
-
-                    <div>
-                        <i class="bi bi-envelope"></i>
-                        <p>info@example.com</p>
-                    </div>
-
-                    <div>
-                        <i class="bi bi-phone"></i>
-                        <p>+1 5589 55488 55s</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-md-8">
-                <div class="form">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                            <div class="form-group col-lg-6">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                            </div>
-                            <div class="form-group col-lg-6 mt-3 mt-lg-0">
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
                             </div>
                         </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="/assets/img/gallery/gallery-3.jpg" data-gall="portfolioGallery"
+                                    class="gallery-lightbox">
+                                    <img src="/assets/img/gallery/gallery-3.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message"
-                                required></textarea>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="/assets/img/gallery/gallery-4.jpg" data-gall="portfolioGallery"
+                                    class="gallery-lightbox">
+                                    <img src="/assets/img/gallery/gallery-4.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="/assets/img/gallery/gallery-5.jpg" data-gall="portfolioGallery"
+                                    class="gallery-lightbox">
+                                    <img src="/assets/img/gallery/gallery-5.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div class="text-center"><button type="submit" title="Send Message">Send
-                                Message</button></div>
-                    </form>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="/assets/img/gallery/gallery-6.jpg" data-gall="portfolioGallery"
+                                    class="gallery-lightbox">
+                                    <img src="/assets/img/gallery/gallery-6.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-            </div>
+            </section> --}}
+            <!-- End Gallery Section -->
 
-        </div>
+            <!-- ======= Contact Section ======= -->
+            {{-- <section id="contact">
+                <div class="container" data-aos="fade-up">
+                    <div class="row">
 
-    </div>
-</section> --}}
-<!-- End Contact Section -->
-@endsection
+                        <div class="col-lg-4 col-md-4">
+                            <div class="contact-about">
+                                <h3>Avilon</h3>
+                                <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam
+                                    phasellus.
+                                    Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc
+                                    congue.</p>
+                                <div class="social-links">
+                                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4">
+                            <div class="info">
+                                <div>
+                                    <i class="bi bi-geo-alt"></i>
+                                    <p>A108 Adam Street<br>New York, NY 535022</p>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-envelope"></i>
+                                    <p>info@example.com</p>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-phone"></i>
+                                    <p>+1 5589 55488 55s</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-8">
+                            <div class="form">
+                                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                                    <div class="row">
+                                        <div class="form-group col-lg-6">
+                                            <input type="text" name="name" class="form-control" id="name"
+                                                placeholder="Your Name" data-rule="minlen:4"
+                                                data-msg="Please enter at least 4 chars">
+                                        </div>
+                                        <div class="form-group col-lg-6 mt-3 mt-lg-0">
+                                            <input type="email" class="form-control" name="email" id="email"
+                                                placeholder="Your Email" data-rule="email"
+                                                data-msg="Please enter a valid email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <input type="text" class="form-control" name="subject" id="subject"
+                                            placeholder="Subject" data-rule="minlen:4"
+                                            data-msg="Please enter at least 8 chars of subject">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                            required></textarea>
+                                    </div>
+                                    <div class="my-3">
+                                        <div class="loading">Loading</div>
+                                        <div class="error-message"></div>
+                                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                                    </div>
+                                    <div class="text-center"><button type="submit" title="Send Message">Send
+                                            Message</button></div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section> --}}
+            <!-- End Contact Section -->
+            @endsection
