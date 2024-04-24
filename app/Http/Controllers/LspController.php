@@ -63,7 +63,16 @@ class LspController extends Controller
         //
     }
 
-    public function registration() {
+    public function registration()
+    {
         return view('web.registration.registration');
+    }
+
+    /*
+     * scemes public
+     */
+    public function scemes()
+    {
+        return view('web.sceme.scemes');
     }
 }

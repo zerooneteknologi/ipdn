@@ -23,4 +23,5 @@ Route::middleware('auth')->group(function () {
 
 Route::controller(LspController::class)->group(function () {
     Route::get('/registration', 'registration')->name('registration');
+    Route::get('/scemes', 'scemes')->name('scemes');
 });
