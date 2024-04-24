@@ -26,4 +26,18 @@
         </div>
     </section>
     <!-- End registration Section -->
+    <script>
+        // Tentukan elemen tujuan
+        var targetElement = document.getElementById("registration");
+
+        // Dapatkan posisi relatif elemen terhadap dokumen
+        var rect = targetElement.getBoundingClientRect();
+
+        // Gulir halaman ke posisi elemen tersebut
+        window.scrollTo({
+            // top: rect.top + window.scrollY,
+            top: rect.top + (window.scrollY - 80),
+            behavior: 'smooth' // untuk animasi scroll
+        });
+    </script>
 @endsection

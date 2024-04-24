@@ -7,7 +7,7 @@
 
     <!-- ======= About Section ======= -->
     <section id="about">
-        <div class="container" data-aos="fade-up">
+        <div class="container pt-5" data-aos="fade-up">
 
             <div class="row">
                 <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
@@ -209,7 +209,7 @@
     <section id="asesor" class="section-bg pb-5">
         <div class="container" data-aos="fade-up">
             <div class="section-header">
-                <h3 class="section-title">Our Team</h3>
+                <h3 class="section-title">Asesor</h3>
                 <span class="section-divider"></span>
                 <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                     accusantium doloremque</p>

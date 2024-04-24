@@ -29,6 +29,7 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
+                            <th scope="col">Jenis Pengaturan</th>
                             <th scope="col">Detail</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -40,6 +41,7 @@
                                     @csrf
                                     @method('put')
                                     <td>{{ $loop->iteration }}</td>
+                                    <td>Embed Google Form</td>
                                     <td><input type="text" class="form-control" name="setting_embed"
                                             value="{{ $setting->setting_embed }}"></td>
                                     <th><button type="submit" class="btn btn-warning">Update</button></th>
