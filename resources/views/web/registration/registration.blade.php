@@ -23,7 +23,6 @@
     </div>
 </section>
 <!-- End registration Section -->
-@endsection
 <script>
     // Tentukan elemen tujuan
         var targetElement = document.getElementById("registration");
