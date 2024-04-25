@@ -72,7 +72,7 @@
                         </td>
                         <td>
                             @if ($sceme->sceme_file)
-                            <p><i class="bi bi-filetype-pdf"></i></p>
+                            <a href="{{ asset('storage/' . $sceme->sceme_file)}}"><i class="bi bi-filetype-pdf"></i></a>
                             @endif
                         </td>
                         <td>

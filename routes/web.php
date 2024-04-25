@@ -8,9 +8,9 @@ use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('web.home');
-});
+// Route::get('/', function () {
+//     return view('web.home');
+// });
 
 Auth::routes();
 
@@ -22,6 +22,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::controller(LspController::class)->group(function () {
+    Route::get('/', 'index')->name('web');
     Route::get('/registration', 'registration')->name('registration');
     Route::get('/scemes', 'scemes')->name('scemes');
+    Route::get('/scemes/{sceme:sceme_slug}', 'scemesingle')->name(
+        'scemesingle'
+    );
 });

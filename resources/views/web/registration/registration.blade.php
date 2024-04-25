@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@section('title', 'Pendaftaran')
 
 <!-- ======= registration Section ======= -->
 <section id="registration">
@@ -23,6 +24,8 @@
     </div>
 </section>
 <!-- End registration Section -->
+@endsection
+@push('script')
 <script>
     // Tentukan elemen tujuan
         var targetElement = document.getElementById("registration");
@@ -36,5 +39,5 @@
             top: rect.top + (window.scrollY - 80),
             behavior: 'smooth' // untuk animasi scroll
         });
+@endpush
 </script>
-@endsection

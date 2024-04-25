@@ -3,16 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lsp;
+use App\Models\Sceme;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class LspController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * main view home
      */
     public function index()
     {
-        //
+        return view('web.home', [
+            'scemes' => Sceme::latest()
+                ->limit(6)
+                ->get(),
+        ]);
     }
 
     /**
@@ -73,6 +81,23 @@ class LspController extends Controller
      */
     public function scemes()
     {
-        return view('web.sceme.scemes');
+        return view('web.sceme.scemes', [
+            'scemes' => Sceme::latest()->paginate(6),
+        ]);
+    }
+
+    /*
+     * single sceme view
+     */
+    public function scemesingle(Sceme $sceme)
+    {
+        return response()
+            ->view('web.sceme.single', [
+                'sceme' => $sceme,
+            ])
+            ->header('Content-Type', 'aplication/pdf');
+        // return view('web.sceme.single', [
+        //     'sceme' => $sceme,
+        // ]);
     }
 }

@@ -3,8 +3,8 @@
 
         <div id="logo">
             <a href="/" class="navbar-brand pe-3">
-                <img src="assets/img/logo/Logo_IPDN.png" width="47" alt="Silicon" />
-                <img src="assets/img/logo/Logo_LSP.jpg" class="rounded-circle" width="45" alt="Silicon" />
+                <img src="/assets/img/logo/Logo_IPDN.png" width="47" alt="Silicon" />
+                <img src="/assets/img/logo/Logo_LSP.jpg" class="rounded-circle" width="45" alt="Silicon" />
             </a>
             <h1 class="align-middle"><a href="/">LSP</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
