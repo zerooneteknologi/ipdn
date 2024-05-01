@@ -1353,3 +1353,107 @@ section {
 .bg-size-cover {
   background-size: cover !important;
 }
+.container .navbar,
+button,
+input {
+  font: 1em Hind, sans-serif;
+  line-height: 1.5em;
+}
+.container .navbar,
+input {
+  color: #171717;
+}
+
+.container .navbar,
+.search-bar {
+  display: flex;
+}
+
+.container .navbar .search-bar input,
+.search-btn,
+.search-btn:before,
+.search-btn:after {
+  transition: all 0.25s ease-out;
+}
+
+.container .navbar .search-bar input,
+.search-btn {
+  width: 3em;
+  height: 3em;
+}
+
+.container .navbar .search-bar input:invalid:not(:focus),
+.search-btn {
+  cursor: pointer;
+}
+
+.container .navbar .search-bar,
+.search-bar input:focus,
+.search-bar input:valid {
+  width: 100%;
+}
+
+.container .navbar .search-bar input:focus,
+.search-bar input:not(:focus) + .search-btn:focus {
+  outline: transparent;
+}
+
+.container .navbar .search-bar {
+  margin: auto;
+  padding: 1.5em;
+  justify-content: center;
+  max-width: 30em;
+}
+
+.container .navbar .search-bar input {
+  background: transparent;
+  border-radius: 1.5em;
+  box-shadow: 0 0 0 0.4em #d2d5d8 inset;
+  padding: 0.75em;
+  transform: translate(0.5em, 0.5em) scale(0.5);
+  transform-origin: 100% 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.container .navbar .search-bar input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/* mm */
+/* .container .navbar .search-bar input:focus,
+.search-bar input:valid {
+  background: #fff;
+  border-radius: 0.375em 0 0 0.375em;
+  box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+  transform: scale(1);
+} */
+
+.container .navbar .search-btn {
+  background: #d2d5d8;
+  border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+  padding: 0.75em;
+  position: relative;
+  transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
+  transform-origin: 0 50%;
+}
+
+/* media */
+@media screen and (prefers-color-scheme: dark) {
+  .container .navbar,
+  input {
+    color: #f1f1f1;
+  }
+
+  .container .navbar .search-bar input {
+    box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+  }
+  .container .navbar .search-bar input:focus,
+  .search-bar input:valid {
+    background: #3d3d3d;
+    box-shadow: 0 0 0 0.1em #3d3d3d inset;
+  }
+  .container .navbar .search-btn {
+    background: #f1f1f1;
+  }
+}

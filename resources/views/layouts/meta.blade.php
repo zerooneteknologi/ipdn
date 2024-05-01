@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/logo/Logo_LSP.jpg" rel="icon">
-  <link href="/assets/img/logo/Logo_LSP.jpg" rel="apple-touch-icon">
+  <link href="/assets/img/logo/Logo_IPDN.png" rel="icon">
+  <link href="/assets/img/logo/Logo_IPDN.png" rel="apple-touch-icon">
 
   <!-- Theme switcher (color modes) -->
   <script src="/assets/js/theme-switcher.js"></script>

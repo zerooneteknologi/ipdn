@@ -6,7 +6,7 @@
                 <img src="/assets/img/logo/Logo_IPDN.png" width="47" alt="Silicon" />
                 <img src="/assets/img/logo/Logo_LSP.jpg" class="rounded-circle" width="45" alt="Silicon" />
             </a>
-            <h1 class="align-middle"><a href="/">LSP</a></h1>
+            {{-- <h1 class="align-middle"><a href="/">LSP</a></h1> --}}
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html"><img src="/assets/img/logo.png" alt=""></a> -->
         </div>
@@ -26,6 +26,14 @@
                 <li><a class="nav-link scrollto" href="#pengumuman">Pengumuman</a></li>
                 <li><a class="nav-link scrollto" href="#berita">Kegiatan</a></li>
                 <li><a class="nav-link scrollto" href="{{ route('registration') }}">Pendaftaran</a></li>
+                <li>
+                    <form action="" class="search-bar">
+                        <input type="search" name="search" pattern=".*\S.*" required>
+                        <button class="search-btn" type="submit">
+                            <span>Search</span>
+                        </button>
+                    </form>
+                </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

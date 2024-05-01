@@ -11,7 +11,7 @@
         <div class="hero-text" data-aos="zoom-out">
             <h2>Selamat Datang di LSP</h2>
             <h3 class="text-white">Institut Pemerintahan Dalam Negeri</h3>
-            <a href="#about" class="btn btn-get-started scrollto">Get Started</a>
+            <a href="{{ route('registration') }}" class="btn btn-get-started scrollto">Daftar</a>
         </div>
 
     </section><!-- End Hero Section -->
