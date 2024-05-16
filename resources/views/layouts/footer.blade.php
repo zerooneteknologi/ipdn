@@ -36,6 +36,7 @@
 <script src="/assets/vendor/php-email-form/validate.js"></script>
 <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <!-- Template Main JS File -->
 <script src="/assets/js/main.js"></script>

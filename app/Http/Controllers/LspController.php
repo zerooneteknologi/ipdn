@@ -82,7 +82,20 @@ class LspController extends Controller
     public function scemes()
     {
         return view('web.sceme.scemes', [
-            'scemes' => Sceme::latest()->paginate(6),
+            'scemes' => Sceme::latest()->paginate(8),
+        ]);
+    }
+    /*
+     * scemes search
+     */
+    public function search()
+    {
+        return view('web.sceme.search', [
+            'scemes' => Sceme::active()
+                ->search(request('search'))
+                ->latest()
+                ->paginate(8)
+                ->withQueryString(),
         ]);
     }
 
@@ -91,13 +104,8 @@ class LspController extends Controller
      */
     public function scemesingle(Sceme $sceme)
     {
-        return response()
-            ->view('web.sceme.single', [
-                'sceme' => $sceme,
-            ])
-            ->header('Content-Type', 'aplication/pdf');
-        // return view('web.sceme.single', [
-        //     'sceme' => $sceme,
-        // ]);
+        return view('web.sceme.single', [
+            'sceme' => $sceme,
+        ]);
     }
 }

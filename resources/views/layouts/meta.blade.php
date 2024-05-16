@@ -31,7 +31,6 @@
 
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
 
   @stack('css')
 

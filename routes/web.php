@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
 //     return view('web.home');
-// });
+// }); d2d5d8
 
 Auth::routes();
 
@@ -24,6 +24,7 @@ Route::middleware('auth')->group(function () {
 Route::controller(LspController::class)->group(function () {
     Route::get('/', 'index')->name('web');
     Route::get('/registration', 'registration')->name('registration');
+    Route::get('/search', 'search')->name('search');
     Route::get('/scemes', 'scemes')->name('scemes');
     Route::get('/scemes/{sceme:sceme_slug}', 'scemesingle')->name(
         'scemesingle'

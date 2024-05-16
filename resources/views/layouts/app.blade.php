@@ -5,17 +5,6 @@
     @include('layouts.header')
     <!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero">
-
-        <div class="hero-text" data-aos="zoom-out">
-            <h2>Selamat Datang di LSP</h2>
-            <h3 class="text-white">Institut Pemerintahan Dalam Negeri</h3>
-            <a href="{{ route('registration') }}" class="btn btn-get-started scrollto">Daftar</a>
-        </div>
-
-    </section><!-- End Hero Section -->
-
     <main id="main">
 
         @yield('content')

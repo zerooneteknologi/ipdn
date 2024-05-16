@@ -1,6 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+
+    <div class="hero-text" data-aos="zoom-out">
+        <h2>Selamat Datang di LSP</h2>
+        <h3 class="text-white">Institut Pemerintahan Dalam Negeri</h3>
+        <a href="{{ route('registration') }}" class="btn btn-get-started scrollto">Daftar</a>
+    </div>
+
+</section><!-- End Hero Section -->
+
 <!-- ======= About Section ======= -->
 <section id="about">
     <div class="container pt-5" data-aos="fade-up">
@@ -60,9 +72,15 @@
                     class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
                     <div class="card-body pt-3">
                         <div class="d-inline-block bg-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                            @if ($sceme->sceme_image)
                             <img src="{{ asset('storage/'. $sceme->sceme_image) }}" class="d-block m-1 img-fluid"
                                 width="100" alt="{{ $sceme->sceme_name}}"
                                 style="max-height: 100px; min-height: 100px" />
+                            @else
+                            <img src="/assets/img/logo/noimage.png" class="d-block m-1 img-fluid" width="100"
+                                alt="no image" style="max-height: 100px; min-height: 100px" />
+                            @endif
+
                         </div>
                         <h2 class="h4 mt-3 align-items-center">
                             {{ $sceme->sceme_name}}
