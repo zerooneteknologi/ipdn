@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Assesor;
 use App\Models\Lsp;
 use App\Models\Sceme;
 use GuzzleHttp\Psr7\Response;
@@ -19,6 +20,9 @@ class LspController extends Controller
         return view('web.home', [
             'scemes' => Sceme::latest()
                 ->limit(6)
+                ->get(),
+            'assesors' => Assesor::latest()
+                ->limit(4)
                 ->get(),
         ]);
     }
@@ -106,6 +110,24 @@ class LspController extends Controller
     {
         return view('web.sceme.single', [
             'sceme' => $sceme,
+        ]);
+    }
+
+    /**
+     * view public assecors
+     */
+    public function assesors()
+    {
+        return view('web.assesor.assesors', [
+            'assesors' => Assesor::latest()->paginate(9),
+        ]);
+    }
+
+    public function assesorsingle(Assesor $assesor)
+    {
+        // return $assesor;
+        return view('web.assesor.single', [
+            'assesor' => $assesor,
         ]);
     }
 }

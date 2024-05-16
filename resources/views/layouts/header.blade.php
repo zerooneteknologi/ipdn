@@ -25,7 +25,8 @@
                 </li>
                 <li><a class="nav-link scrollto {{Request::is('scemes') ? 'active' :''}}"
                         href="{{ route('scemes')}}">Skema Sertifikasi</a></li>
-                <li><a class="nav-link scrollto" href="#asesor">Asesor Kompetensi</a></li>
+                <li><a class="nav-link scrollto {{Request::is('assesors') ? 'active' :''}}"
+                        href="{{ route('assesors')}}">Asesor Kompetensi</a></li>
                 <li><a class="nav-link scrollto" href="#pengumuman">Pengumuman</a></li>
                 <li><a class="nav-link scrollto" href="#berita">Kegiatan</a></li>
                 <li><a class="nav-link scrollto {{Request::is('registration') ? 'active' :''}}"
@@ -51,7 +52,7 @@
     function fokusout(x) {
             $('ul').removeClass("d-none")
         }
-    $('input').change(function() {
+    $('input').keyup(function() {
         const val = $('input').val()
         $.get('/scemes', { search : `${val}`}, function(data) {
             $('#main').html(data)

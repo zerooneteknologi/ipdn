@@ -97,6 +97,43 @@
 </section>
 <!-- End Featuress Section -->
 
+<!-- ======= Team Section ======= -->
+<section id="team">
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="d-xl-block d-flex align-items-center justify-content-between mb-xl-0 mb-4 pb-xl-0 pb-3">
+                    <h3 class="h1 mb-xl-4 mb-0 pb-xl-3">Tim Aseesor</h3>
+                    <a href="{{ route('assesors')}}" class="btn btn-primary ms-xl-0 ms-4">Lihat semua</a>
+                </div>
+            </div>
+            <div class="col-xl-9">
+                <div class="row">
+                    @foreach ($assesors as $assesor)
+                    <div class="col-lg-3 col-md-6">
+                        <a href="{{ route('assesorsingle', $assesor->assesor_slug)}}">
+                            <div class="member">
+                                <div class="pic bg-black">
+                                    @if ($assesor->assesor_image)
+                                    <img src="{{ asset('storage/'. $assesor->assesor_image)}}"
+                                        alt="{{ $assesor->assesor_name }}">
+                                    @else
+                                    <img src="/assets/img/logo/noimage.png" alt="no image">
+                                    @endif
+                                </div>
+                                <h4>{{ $assesor->assesor_name }}</h4>
+                                <span>{{ $assesor->assesor_specialize }}</span>
+                            </div>
+                        </a>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Team Section -->
+
 <!-- ======= Pricing Section ======= -->
 <section id="pricing" class="section-bg">
     <div class="container" data-aos="fade-up">
@@ -158,76 +195,6 @@
         </div>
     </div>
 </section><!-- End Pricing Section -->
-
-<!-- ======= Team Section ======= -->
-<section id="team" class="section-bg">
-    <div class="container" data-aos="fade-up">
-        <div class="section-header">
-            <h3 class="section-title">Our Team</h3>
-            <span class="section-divider"></span>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                doloremque</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="member">
-                    <div class="pic"><img src="assets/img/team/team-1.jpg" alt=""></div>
-                    <h4>Walter White</h4>
-                    <span>Chief Executive Officer</span>
-                    <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="member">
-                    <div class="pic"><img src="assets/img/team/team-2.jpg" alt=""></div>
-                    <h4>Sarah Jhinson</h4>
-                    <span>Product Manager</span>
-                    <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="member">
-                    <div class="pic"><img src="assets/img/team/team-3.jpg" alt=""></div>
-                    <h4>William Anderson</h4>
-                    <span>CTO</span>
-                    <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="member">
-                    <div class="pic"><img src="assets/img/team/team-4.jpg" alt=""></div>
-                    <h4>Amanda Jepson</h4>
-                    <span>Accountant</span>
-                    <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section><!-- End Team Section -->
 
 <!-- Post Section -->
 <section id="berita" class="section-bg" data-aos="fade-up">

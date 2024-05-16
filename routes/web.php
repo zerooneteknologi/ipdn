@@ -24,6 +24,10 @@ Route::middleware('auth')->group(function () {
 Route::controller(LspController::class)->group(function () {
     Route::get('/', 'index')->name('web');
     Route::get('/registration', 'registration')->name('registration');
+    Route::get('/assesors', 'assesors')->name('assesors');
+    Route::get('/assesors/{assesor:assesor_slug}', 'assesorsingle')->name(
+        'assesorsingle'
+    );
     Route::get('/search', 'search')->name('search');
     Route::get('/scemes', 'scemes')->name('scemes');
     Route::get('/scemes/{sceme:sceme_slug}', 'scemesingle')->name(
