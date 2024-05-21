@@ -12,7 +12,7 @@
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                         @if ($assesor->assesor_image)
                         <img src="{{ asset('storage/'. $assesor->assesor_image )}}" alt="Profile" class="rounded-circle"
-                            width="50px">
+                            width="250px">
                         @else
                         <img src="/assets/img/logo/noimage.png" alt="Profile" class="rounded-circle" width="200px">
                         @endif

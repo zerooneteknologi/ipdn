@@ -30,6 +30,7 @@ Route::controller(LspController::class)->group(function () {
     );
     Route::get('/search', 'search')->name('search');
     Route::get('/scemes', 'scemes')->name('scemes');
+    Route::get('/viepdf/{sceme:sceme_slug}', 'viepdf')->name('viepdf');
     Route::get('/scemes/{sceme:sceme_slug}', 'scemesingle')->name(
         'scemesingle'
     );

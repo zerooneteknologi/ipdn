@@ -54,9 +54,15 @@
         }
     $('input').keyup(function() {
         const val = $('input').val()
-        $.get('/scemes', { search : `${val}`}, function(data) {
-            $('#main').html(data)
+        $.get('/scemes', {}, function (data) {
+            document.open();
+            document.write(data);
+            document.close();
+        // console.log(data);
+        $.get('/search', { search : `${val}`}, function(data) {
+            $('.filter').html(data)
         })
+        });
     })
 </script>
 @endpush

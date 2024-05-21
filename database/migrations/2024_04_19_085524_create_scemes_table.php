@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('sceme_slug');
             $table->string('sceme_code');
             $table->enum('sceme_status', [1, 2]); // 1. active 2. disactive
+            $table->enum('sceme_bnsp', [1, 2]); // 1. active 2. disactive
             $table->text('sceme_detail')->nullable();
             $table->string('sceme_image')->nullable();
             $table->string('sceme_file')->nullable();

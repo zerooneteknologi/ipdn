@@ -33,4 +33,40 @@ class Sceme extends Model
                 ->orWhere('sceme_detail', 'LIKE', "%$search%")
         );
     }
+
+    public function scopeFilter(Builder $query, array $filter): void
+    {
+        // $query->when($filter['sceme_sortir'] ?? false, function (
+        //     $query,
+        //     $filter
+        // ) {
+        //     if ($filter == 1) {
+        //         return $query->latst()->get();
+        //     }
+        //     if ($filter == 2) {
+        //         return $query->oldest()->get();
+        //     }
+        //     if ($filter == 3) {
+        //         return $query->orderBy('sceme_name')->get();
+        //     }
+        // });
+
+        $query->when(
+            $filter['sceme_bnsp'] ?? false,
+            fn($query, $filter) => $query->where('sceme_bnsp', $filter)
+        );
+
+        // $query->when($filter['sceme_bnsp'] ?? false, function (
+        //     $query,
+        //     $filter
+        // ) {
+        //     if ($filter == 1) {
+        //         return $query->where('sceme_bnsp', $filter);
+        //     }
+
+        //     if ($filter == 2) {
+        //         return $query->where('sceme_bnsp', $filter);
+        //     }
+        // });
+    }
 }

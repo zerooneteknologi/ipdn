@@ -35,9 +35,17 @@
                         <label for="sceme_status" class="col-form-label">Status</label>
                         <select id="sceme_status" name="sceme_status" class="form-select"
                             aria-label="Default select example" required>
-                            <option value="">pilih Status</option>
+                            <option value="" disabled>Pilih Status</option>
                             <option value="1" {{ $sceme->sceme_status == 1 ? 'selected' : ''}}>Active</option>
                             <option value="2" {{ $sceme->sceme_status == 2 ? 'selected' : ''}} >Tidak Aktif</option>
+                        </select>
+
+                        <label for="sceme_bnsp" class="col-form-label">Status BNSP</label>
+                        <select id="sceme_bnsp" name="sceme_bnsp" class="form-select"
+                            aria-label="Default select example" required>
+                            <option value="" disabled>Pilih Status</option>
+                            <option value="1" {{ $sceme->sceme_bnsp == 1 ? 'selected' : ''}}>Active</option>
+                            <option value="2" {{ $sceme->sceme_bnsp == 2 ? 'selected' : ''}} >Tidak Aktif</option>
                         </select>
 
                     </div>
@@ -46,14 +54,14 @@
                             <label for="sceme_file" class="col-sm-4 col-form-label">Tambah File</label>
                             <div class="col-sm-8">
                                 <input name="sceme_file" class="form-control" type="file" id="sceme_file"
-                                    onchange="validatePDF()">
+                                    onchange="validatePDF()" accept=".pdf">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="sceme_image" class="col-sm-4 col-form-label">Tambah Gambar</label>
                             <div class="col-sm-8">
                                 <input name="sceme_image" class="form-control" type="file" id="sceme_image"
-                                    onchange="validateImage()">
+                                    onchange="validateImage()" accept="image/*">
                                 @if ($sceme->sceme_image)
                                 <img id="img-preview" class="img-fluid col-sm-4 mt-3"
                                     src="{{ asset('storage/' . $sceme->sceme_image)}}">

@@ -31,11 +31,12 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">No</th>
+                        <th scope="col">Foto</th>
                         <th scope="col">Nama</th>
                         <th scope="col">Kode</th>
-                        <th scope="col">foto</th>
-                        <th scope="col">file</th>
-                        <th scope="col">status</th>
+                        <th scope="col">File</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Status BNSP</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,8 +61,6 @@
                             </form>
                         </th>
                         <th scope="row">{{ $loop->iteration }}</th>
-                        <td>{{ $sceme->sceme_name}}</td>
-                        <td>{{ $sceme->sceme_code}}</td>
                         <td>@if ($sceme->sceme_image)
                             <img width="50px" class="rounded-circle" src="{{ asset('storage/'.$sceme->sceme_image) }}"
                                 alt="{{ $sceme->sceme_name}}">
@@ -70,13 +69,22 @@
                                 alt="Tidak ada gambar">
                             @endif
                         </td>
+                        <td>{{ $sceme->sceme_name}}</td>
+                        <td>{{ $sceme->sceme_code}}</td>
                         <td>
                             @if ($sceme->sceme_file)
-                            <a href="{{ asset('storage/' . $sceme->sceme_file)}}"><i class="bi bi-filetype-pdf"></i></a>
+                            <span><i class="bi bi-filetype-pdf"></i></span>
                             @endif
                         </td>
                         <td>
                             @if ($sceme->sceme_status == 1)
+                            <p class="text-bg-info">Aktif</p>
+                            @else
+                            <p class="text-bg-danger">Tidak Aktif</p>
+                            @endif
+                        </td>
+                        <td>
+                            @if ($sceme->sceme_bnsp == 1)
                             <p class="text-bg-info">Aktif</p>
                             @else
                             <p class="text-bg-danger">Tidak Aktif</p>

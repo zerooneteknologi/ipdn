@@ -95,9 +95,10 @@ class LspController extends Controller
     public function search()
     {
         return view('web.sceme.search', [
-            'scemes' => Sceme::active()
-                ->search(request('search'))
-                ->latest()
+            'scemes' => Sceme::search(request('search'))
+                ->filter(
+                    request(['sceme_sortif', 'sceme_bnsp', 'sceme_status'])
+                )
                 ->paginate(8)
                 ->withQueryString(),
         ]);
@@ -128,6 +129,14 @@ class LspController extends Controller
         // return $assesor;
         return view('web.assesor.single', [
             'assesor' => $assesor,
+        ]);
+    }
+
+    public function viepdf(Sceme $sceme)
+    {
+        // dd($sceme);
+        return response()->file(public_path('storage/' . $sceme->sceme_file), [
+            'conten-type' => 'aplocation/pdf',
         ]);
     }
 }

@@ -16,6 +16,7 @@ class ScemeController extends Controller
             'sceme_slug' => '',
             'sceme_code' => '',
             'sceme_status' => '',
+            'sceme_bnsp' => '',
             'sceme_detail' => '',
             'sceme_image' => '',
             'sceme_file' => '',
@@ -46,11 +47,18 @@ class ScemeController extends Controller
     {
         $data = $this->validateData($request);
 
+        /**
+         * upload file pdf
+         */
         if ($request->file('sceme_file')) {
             $data['sceme_file'] = $request
                 ->file('sceme_file')
                 ->store('file/sceme');
         }
+
+        /**
+         * upload image
+         */
         if ($request->file('sceme_image')) {
             $data['sceme_image'] = $request
                 ->file('sceme_image')
@@ -96,6 +104,9 @@ class ScemeController extends Controller
     {
         $data = $this->validateData($request);
 
+        /**
+         * update file
+         */
         if ($request->file('sceme_file')) {
             if ($sceme->sceme_file) {
                 if (Storage::exists($sceme->sceme_file)) {
@@ -111,6 +122,9 @@ class ScemeController extends Controller
             }
         }
 
+        /**
+         * update image
+         */
         if ($request->file('sceme_image')) {
             if ($sceme->sceme_image) {
                 if (Storage::exists($sceme->sceme_image)) {
@@ -122,7 +136,7 @@ class ScemeController extends Controller
             } else {
                 $data['sceme_image'] = $request
                     ->file('sceme_image')
-                    ->store('file/sceme');
+                    ->store('img/sceme');
             }
         }
 
