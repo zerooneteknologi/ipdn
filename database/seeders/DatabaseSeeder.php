@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             ScemeSeeder::class,
             AssesorSeeder::class,
             SettingSeeder::class,
+            PartnerSeeder::class,
         ]);
     }
 }

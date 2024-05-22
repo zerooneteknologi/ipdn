@@ -1,6 +1,7 @@
 <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-heading">Menu Utama</li>
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{ route('home') }}">
@@ -41,6 +42,13 @@
                 </li>
             </ul>
         </li><!-- End Assesor Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('partner.index') }}">
+                <i class="bi bi-person"></i>
+                <span>Partner</span>
+            </a>
+        </li><!-- End Partner Page Nav -->
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#setting" data-bs-toggle="collapse" href="#">

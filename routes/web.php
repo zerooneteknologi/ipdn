@@ -4,6 +4,7 @@ use App\Http\Controllers\AssesorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScemeController;
 use App\Http\Controllers\LspController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -15,10 +16,11 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::middleware('auth')->group(function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::resource('/sceme', ScemeController::class);
     Route::resource('/setting', SettingController::class);
     Route::resource('/assesor', AssesorController::class);
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::resource('/partner', PartnerController::class);
 });
 
 Route::controller(LspController::class)->group(function () {
