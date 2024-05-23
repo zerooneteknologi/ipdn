@@ -11,23 +11,18 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/logo/Logo_IPDN.png" rel="icon">
-  <link href="/assets/img/logo/Logo_IPDN.png" rel="apple-touch-icon">
-
-  <!-- Theme switcher (color modes) -->
-  <script src="/assets/js/theme-switcher.js"></script>
+  <link href="{{ asset('/assets/img/logo/Logo_IPDN.png')}}" rel="icon">
+  <link href="{{ asset('/assets/img/logo/Logo_IPDN.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link href="{{ asset('/assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ asset('/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ asset('/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">

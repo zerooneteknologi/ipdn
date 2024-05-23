@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Assesor;
 use App\Models\Lsp;
+use App\Models\Partner;
 use App\Models\Sceme;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
@@ -22,6 +23,9 @@ class LspController extends Controller
                 ->limit(6)
                 ->get(),
             'assesors' => Assesor::latest()
+                ->limit(4)
+                ->get(),
+            'partners' => Partner::latest()
                 ->limit(4)
                 ->get(),
         ]);
