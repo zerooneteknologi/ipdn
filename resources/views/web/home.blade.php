@@ -202,138 +202,60 @@
             <!-- Blog articles -->
             <div class="pb-3">
                 <!-- Blog item -->
+                <!-- Article -->
                 @foreach ($articles as $article)
                     <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
                         <div class="row g-0">
                             <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover">
                                 @if ($article->article_image)
-                                    <img width="50px" class="rounded-circle"
-                                        src="{{ asset('storage/' . $article->article_image) }}"
-                                        alt="{{ $article->article_title }}">
+                                    <img src="{{ asset('storage/' . $article->article_image) }}"
+                                        class="d-block m-1 img-fluid" width="100" alt="{{ $article->article_name }}"
+                                        style="max-height: 100px; min-height: 100px" />
                                 @else
-                                    <img width="50px" class="rounded-circle" src="/assets/img/logo/noimage.png"
-                                        alt="Tidak ada gambar">
+                                    <img src="/assets/img/logo/noimage.png" class="d-block mx-auto m-1 img-fluid"
+                                        width="100" alt="no image" style="width: 50%" />
                                 @endif
                                 <a href="{{ route('articlesingle', $article->article_slug) }}"
                                     class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                                <a href="{{ route('articlesingle', $article->article_slug) }}"
+                                <a href="#"
                                     class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
                                     data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
                                     aria-label="Read later">
                                     <i class="bx bx-bookmark"></i>
                                 </a>
                             </div>
-                            <h3 class="h4">
-                                <a href="blog-single.html">
-                                    How Agile is Your Forecasting Process?
-                                </a>
-                            </h3>
-                            <p>
-                                Nulla fringilla arcu justo augue fringilla in nunc volutpat
-                                sit. Dui diam, faucibus vitae ultricies vitae mollis nunc
-                                elementum. Et, habitasse porta neque tempor tellus ut.
-                                Sagittis odio porttitor erat viverra erat neque.
-                            </p>
-                            <hr class="my-4" />
+                            <div class="col-sm-8">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
+                                            {{ $article->category->category_name }}
+                                        </a>
+                                        <span class="fs-sm text-muted border-start ps-3 ms-3">
+                                            {{ date_format($article->created_at, 'd M Y') }}
+                                        </span>
+                                    </div>
+                                    <h3 class="h4">
+                                        <a href="{{ route('articlesingle', $article->article_slug) }}">
+                                            {{ $article->article_title }}
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        {{ Str::after(Str::limit($article->article_description, 300, '...'), '<div>') }}
+                                    </p>
+                                    <hr class="my-4" />
+
+                                </div>
+                            </div>
                         </div>
+                    </article>
                 @endforeach
             </div>
-        </div>
-        </article>
 
-        <!-- Article -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
-            <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover"
-                    style="
-                background-image: url(/assets/img/gallery/gallery-3.jpg);
-                min-height: 15rem;">
-                    <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
-                        aria-label="Read more"></a>
-                    <a href="#"
-                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
-                        <i class="bx bx-bookmark"></i>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
-                                Digital
-                            </a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">
-                                Oct 9, 2023
-                            </span>
-                        </div>
-                        <h3 class="h4">
-                            <a href="blog-single.html">
-                                Inclusive Marketing: Why and How Does it Work?
-                            </a>
-                        </h3>
-                        <p>
-                            Nunc aliquet scelerisque pellentesque imperdiet tortor elit,
-                            dictum. Tristique odio at dignissim viverra aliquet eleifend
-                            erat. Tellus, at arcu, egestas praesent. Varius aliquet
-                            pharetra adipiscing tincidunt orci nec neque.
-                        </p>
-                        <hr class="my-4" />
-
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <!-- Article -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
-            <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover"
-                    style="
-                background-image: url(/assets/img/gallery/gallery-4.jpg);
-                min-height: 15rem;">
-                    <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
-                        aria-label="Read more"></a>
-                    <a href="#"
-                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
-                        <i class="bx bx-bookmark"></i>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
-                                Strategy
-                            </a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">
-                                Sep 3, 2023
-                            </span>
-                        </div>
-                        <h3 class="h4">
-                            <a href="blog-single.html">
-                                This Long-Awaited Technology May Finally Change the World
-                            </a>
-                        </h3>
-                        <p>
-                            Sapien, nulla placerat in at. Vitae tincidunt quam ornare
-                            massa porttitor. Neque a vitae feugiat in sit habitant
-                            integer. Cursus et at pulvinar sed neque vitae. Aliquam
-                            vitae hac phasellus purus lectus facilisi. Vitae vel ac
-                            quam.
-                        </p>
-                        <hr class="my-4" />
-
-                    </div>
-                </div>
-            </div>
-        </article>
-        </div>
-
-        <!-- Load more btn -->
-        <a href="#" class="btn btn-lg btn-outline-primary w-100">
-            <i class="bi bi-arrow-down"></i>
-            Show more
-        </a>
+            <!-- Load more btn -->
+            <a href="{{ route('articles') }}" class="btn btn-lg btn-outline-primary w-100">
+                <i class="bi bi-arrow-down"></i>
+                Show more
+            </a>
         </div>
     </section>
     <!-- End Post Section -->
