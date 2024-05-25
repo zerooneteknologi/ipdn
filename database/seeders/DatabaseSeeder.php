@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Seeting;
+use App\Models\Article;
+use App\Models\Category;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -26,6 +28,8 @@ class DatabaseSeeder extends Seeder
             AssesorSeeder::class,
             SettingSeeder::class,
             PartnerSeeder::class,
+            ArticleSeeder::class,
+            CategorySeeder::class,
         ]);
     }
 }

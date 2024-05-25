@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AssesorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScemeController;
@@ -21,6 +23,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/setting', SettingController::class);
     Route::resource('/assesor', AssesorController::class);
     Route::resource('/partner', PartnerController::class);
+    Route::resource('/article', ArticleController::class);
+    Route::resource('/category', CategoryController::class);
 });
 
 Route::controller(LspController::class)->group(function () {
@@ -35,5 +39,9 @@ Route::controller(LspController::class)->group(function () {
     Route::get('/viepdf/{sceme:sceme_slug}', 'viepdf')->name('viepdf');
     Route::get('/scemes/{sceme:sceme_slug}', 'scemesingle')->name(
         'scemesingle'
+    );
+    Route::get('/articles', 'articles')->name('articles');
+    Route::get('/articles/{article:article_slug}', 'articlesingle')->name(
+        'articlesingle'
     );
 });
