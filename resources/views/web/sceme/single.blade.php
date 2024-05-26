@@ -66,8 +66,8 @@
                             @endif
                         </div>
                         <div class="row mb-3">
-                            <div class="col-lg-3 col-md-4 label ">Status BNPT</div>
-                            @if ($sceme->sceme_status == 1)
+                            <div class="col-lg-3 col-md-4 label ">Status BNSP</div>
+                            @if ($sceme->sceme_bnsp == 1)
                             <div class="col-lg-9 col-md-8">Ya</div>
                             @else
                             <div class="col-lg-9 col-md-8">Tidak</div>

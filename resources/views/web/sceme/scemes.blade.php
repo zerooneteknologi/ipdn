@@ -18,12 +18,6 @@
                                 <i class="bi-filter fs-2 text-black"></i>
                             </label>
                         </div>
-                        {{-- <select class="form-select sceme_sortir" name="sceme_sortir">
-                            <option>Sortir</option>
-                            <option value="1">Terbaru</option>
-                            <option value="2">Terlama</option>
-                            <option value="3">Nama Skema</option>
-                        </select> --}}
                         <select class="form-select sceme_bnsp" name="sceme_bnsp">
                             <option value="0">Status BNSP</option>
                             <option value="1">BNSP Aktif</option>
@@ -45,30 +39,3 @@
 </section>
 <!-- End Featuress Section -->
 @endsection
-@push('script')
-<script>
-    $(document).ready(function() {
-        filter()
-    })
-
-    function filter() {
-        const sortir = $('.sceme_sortir').val();
-        const sceme_bnsp = $('.sceme_bnsp').val();
-        const sceme_status = $('.sceme_status').val();
-        // console.log(sceme_sortir);
-        $.get('/search', { sceme_bnsp : `${sceme_bnsp}`,sceme_sortir : `${sortir}`, sceme_status : `${sceme_status}` }, function(data) {
-            $('.filter').html(data)
-            // console.log(data);
-        })
-    }
-    $('.sceme_sortir').change(function() {
-        filter();
-    })
-    $('.sceme_bnsp').change(function() {
-        filter();
-    })
-    $('.sceme_status').change(function() {
-        filter();
-    })
-</script>
-@endpush
