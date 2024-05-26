@@ -55,6 +55,10 @@ class Sceme extends Model
             $filter['sceme_bnsp'] ?? false,
             fn($query, $filter) => $query->where('sceme_bnsp', $filter)
         );
+        $query->when(
+            $filter['sceme_status'] ?? false,
+            fn($query, $filter) => $query->where('sceme_status', $filter)
+        );
 
         // $query->when($filter['sceme_bnsp'] ?? false, function (
         //     $query,
