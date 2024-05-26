@@ -43,7 +43,9 @@
 
 
 @push('script')
+@if (!Request::is('assesors'))
 <script src="{{ asset('assets/js/costum.js')}}"></script>
+@endif
 <script>
     $(document).ready(function() {
         const scemes = `
