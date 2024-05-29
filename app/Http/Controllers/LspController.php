@@ -7,6 +7,8 @@ use App\Models\Lsp;
 use App\Models\Partner;
 use App\Models\Sceme;
 use App\Models\Article;
+use App\Models\Mision;
+use App\Models\Vision;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -111,6 +113,14 @@ class LspController extends Controller
         // return $article;
         return view('web.article.single', [
             'article' => $article,
+        ]);
+    }
+
+    public function mision()
+    {
+        return view('web.mision.mision', [
+            'vision' => Vision::first(),
+            'misions' => Mision::all(),
         ]);
     }
 }

@@ -30,6 +30,8 @@ class DatabaseSeeder extends Seeder
             PartnerSeeder::class,
             ArticleSeeder::class,
             CategorySeeder::class,
+            VisionSeeder::class,
+            MisionSeeder::class,
         ]);
     }
 }

@@ -6,8 +6,10 @@ use App\Http\Controllers\AssesorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScemeController;
 use App\Http\Controllers\LspController;
+use App\Http\Controllers\MisionController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\VisionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +24,22 @@ Route::middleware('auth')->group(function () {
     Route::resource('/sceme', ScemeController::class);
     Route::resource('/setting', SettingController::class);
     Route::resource('/assesor', AssesorController::class);
-    Route::resource('/partner', PartnerController::class);
+    Route::resource('/partner', PartnerController::class)->except([
+        'create',
+        'show',
+        'edit',
+    ]);
     Route::resource('/article', ArticleController::class);
     Route::resource('/category', CategoryController::class);
+    Route::resource('/vision', VisionController::class)->only([
+        'index',
+        'update',
+    ]);
+    Route::resource('/mision', MisionController::class)->only([
+        'store',
+        'update',
+        'destroy',
+    ]);
 });
 
 Route::controller(LspController::class)->group(function () {
@@ -44,4 +59,5 @@ Route::controller(LspController::class)->group(function () {
     Route::get('/articles/{article:article_slug}', 'articlesingle')->name(
         'articlesingle'
     );
+    Route::get('/mision', 'mision')->name('mision');
 });

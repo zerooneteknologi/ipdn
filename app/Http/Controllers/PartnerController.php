@@ -26,14 +26,6 @@ class PartnerController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
@@ -54,22 +46,6 @@ class PartnerController extends Controller
                 'success',
                 "Berhasil Menambahkan Partner baru \"$request->partner_name\"!"
             );
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Partner $partner)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Partner $partner)
-    {
-        //
     }
 
     /**
