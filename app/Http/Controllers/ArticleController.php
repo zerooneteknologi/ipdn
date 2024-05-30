@@ -33,11 +33,22 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('admin.article.index', [
-            'articles' => Article::latest()->get(),
-            'categories' => Category::latest()->get(),
-            'profile' => Article::where('article_type', 1)->first(),
-        ]);
+        if (request('type') == 1 || request('type') == 2) {
+            return view('admin.article.about', [
+                'profile' => Article::where('article_type', 1)->first(),
+                'organizer' => Article::where('article_type', 2)->first(),
+            ]);
+        } else {
+            return view('admin.article.index', [
+                'articles' => Article::where('article_type', 3)
+                    ->latest()
+                    ->get(),
+                'categories' => Category::latest()->get(),
+                'announcements' => Article::where('article_type', 4)
+                    ->latest()
+                    ->get(),
+            ]);
+        }
     }
 
     /**
@@ -62,6 +73,10 @@ class ArticleController extends Controller
             '-'
         );
 
+        if ($request->article_type == 4) {
+            $validateData['category_id'] = 1;
+        }
+
         if ($request->file('article_image')) {
             $validateData['article_image'] = $request
                 ->file('article_image')
@@ -70,7 +85,7 @@ class ArticleController extends Controller
 
         Article::create($validateData);
 
-        return redirect('/article?type=3')->with(
+        return redirect('/article?type=' . $request->article_type)->with(
             'success',
             "Berhasil Menambahkan article \"$request->artcicle_title\"!"
         );
@@ -116,10 +131,14 @@ class ArticleController extends Controller
         if ($request->article_type == 1) {
             $validateData['article_slug'] = 'profil-lsp';
         } else {
-            $validateData['article_slug'] = Str::slug(
-                $request->article_title . round(microtime(true)),
-                '-'
-            );
+            if ($request->article_type == 1) {
+                $validateData['article_slug'] = 'struktur-organisasi';
+            } else {
+                $validateData['article_slug'] = Str::slug(
+                    $request->article_title . round(microtime(true)),
+                    '-'
+                );
+            }
         }
 
         $article->update($validateData);

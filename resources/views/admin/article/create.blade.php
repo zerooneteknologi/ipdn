@@ -2,16 +2,24 @@
 
 @if (request('type') == 3)
 @section('title', 'Berita | Tambah')
+@else
+@section('title', 'Pengumuman | Tambah')
 @endif
 
 @section('content')
 <div class="pagetitle">
-    <h1>Article</h1>
+    @if (request('type') == 3)
+    <h1>Berita</h1>
+    @else
+    <h1>Pengumuman</h1>
+    @endif
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
             @if (request('type') == 3)
             <li class="breadcrumb-item"><a href="{{ route('article.index') }}?type=3">Berita</a></li>
+            @else
+            <li class="breadcrumb-item"><a href="{{ route('article.index') }}?type=4">Pengumuman</a></li>
             @endif
             <li class="breadcrumb-item active">Tambah</li>
         </ol>
@@ -21,7 +29,11 @@
 <section class="section">
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Tambah Article</h5>
+            @if (request('type') == 4)
+            <h5 class="card-title">Tambah Berita</h5>
+            @else
+            <h5 class="card-title">Tambah Pengumuman</h5>
+            @endif
 
             <!-- General Form Elements -->
             <form method="POST" action="{{ route('article.store') }}" enctype="multipart/form-data">
@@ -40,7 +52,7 @@
                         </select>
                         @endif
 
-                        <label for="article_name" class="col-form-label mt-2">Judul article</label>
+                        <label for="article_name" class="col-form-label mt-2">Judul</label>
                         <input id="article_title" name="article_title" type="text" class="form-control" required>
                     </div>
                     <div class="col-sm-6">
@@ -51,7 +63,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="article_description" class="col-form-label">Description article</label>
+                    <label for="article_description" class="col-form-label">Description</label>
                     <div class="col-sm-12">
                         <input id="article_description" type="hidden" name="article_description" required>
                         <trix-editor input="article_description"></trix-editor>

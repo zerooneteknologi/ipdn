@@ -128,7 +128,7 @@
 <!-- End Team Section -->
 
 <!-- ======= Pricing Section ======= -->
-<section id="pricing" class="section-bg">
+<section id="pengumuman" class="section-bg">
     <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -144,7 +144,13 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-primary mb-3">
-                    <img src="/assets/img/logo/noimage.png" class="card-img-top" alt="no image">
+                    @if ($announcement->article_image)
+                    <img src="{{ asset('storage/'. $announcement->article_image)}}" class="card-img-top"
+                        alt="{{ $announcement->article_title}}" style="max-height: 400px; min-height: 300px">
+                    @else
+                    <img src="/assets/img/logo/noimage.png" class="card-img-top" alt="no image"
+                        style="max-height: 400px; min-height: 300px">
+                    @endif
                     <div class="card-body text-primary">
                         <h5 class="card-title">{{ $announcement->article_title}}</h5>
                         {{ Str::after(Str::limit($announcement->article_description, 50, '...'), '<div>') }}

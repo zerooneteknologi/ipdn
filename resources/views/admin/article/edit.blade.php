@@ -1,6 +1,8 @@
 @extends('admin.layouts.main')
 @if (request('type') == 3)
 @section('title', 'Berita | Ubah')
+@else
+@section('title', 'Pengumuman | Ubah')
 @endif
 
 @section('content')
@@ -11,6 +13,8 @@
             <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
             @if (request('type') == 3)
             <li class="breadcrumb-item"><a href="{{ route('article.index') }}?type=3">Berita</a></li>
+            @else
+            <li class="breadcrumb-item"><a href="{{ route('article.index') }}?type=3">Berita</a></li>
             @endif
             <li class="breadcrumb-item active">Edit</li>
         </ol>
@@ -20,7 +24,11 @@
 <section class="section">
     <div class="card">
         <div class="card-body">
+            @if (request('type') == 3)
             <h5 class="card-title">Edit Berita</h5>
+            @else
+            <h5 class="card-title">Edit Pengumuman</h5>
+            @endif
 
             <!-- General Form Elements -->
             <form method="POST" action="{{ route('article.update', $article->id) }}" enctype="multipart/form-data">
@@ -42,7 +50,7 @@
                         </select>
                         @endif
 
-                        <label for="article_name" class="col-form-label mt-2">Judul Berita</label>
+                        <label for="article_name" class="col-form-label mt-2">Judul</label>
                         <input value="{{ $article->article_title }}" id="article_title" name="article_title" type="text"
                             class="form-control" required>
                     </div>
@@ -55,7 +63,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="article_description" class="col-form-label">Detail Berita</label>
+                    <label for="article_description" class="col-form-label">Detail</label>
                     <div class="col-sm-12">
                         <input value="{{ $article->article_description }}" id="article_description" type="hidden"
                             name="article_description" required>
