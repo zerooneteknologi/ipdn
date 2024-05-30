@@ -18,28 +18,24 @@
 
         <div class="row">
             <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
-                <img src="/assets/img/about-img.jpg" alt="">
+                @if ($profile->article_image)
+                <img src="{{ asset('storage/' . $profile->article_image)}}" alt="{{ $profile->article_title}}">
+                @else
+                <img src="/assets/img/logo/noimage.png" alt="No Image">
+                @endif
             </div>
 
             <div class="col-lg-6 content" data-aos="fade-left" dat-aos-delay="100">
-                <h2>Profil LPM</h2>
+                <h2>{{ $profile->article_title }}</h2>
 
-                <p class="justify-content-between">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio laboriosam sed nihil harum nobis
-                    incidunt voluptatem culpa molestias minima laudantium inventore, nam molestiae explicabo placeat
-                    quos iste consequuntur dolorum sequi cum pariatur. Laboriosam, cum recusandae nesciunt ut facere ea
-                    placeat unde suscipit quibusdam illo consequuntur totam a rerum sequi veritatis nisi maiores beatae
-                    dolor! Incidunt unde, sint, velit veritatis consequatur quisquam minima minus ratione possimus
-                    quidem neque reprehenderit quos rerum saepe ipsum officiis illo provident iure harum ducimus
-                    distinctio. Fugiat quisquam cupiditate laborum est neque ex officia esse odio mollitia, saepe
-                    aliquam sed adipisci quia quam natus unde eveniet sapiente?
-                </p>
-
-                <a href="#" class="btn btn-danger justify-center">Selengkapnya</a>
+                {{ Str::after(Str::limit($profile->article_description, 600, '...'), '<div>') }}
+                    <br>
+                    <a href="{{ route('articlesingle', $profile->article_slug) }}"
+                        class="btn btn-danger justify-center mt-3">Selengkapnya</a>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 </section><!-- End About Section -->
 
 <!-- ======= Featuress Section ======= -->
@@ -144,53 +140,31 @@
 
         <div class="row">
 
-            <div class="col-lg-4 col-md-6">
-                <div class="box">
-                    <h3>Free</h3>
-                    <h4><sup>$</sup>0<span> month</span></h4>
-                    <ul>
-                        <li><i class="bi bi-check-circle"></i> Quam adipiscing vitae proin</li>
-                        <li><i class="bi bi-check-circle"></i> Nec feugiat nisl pretium</li>
-                        <li><i class="bi bi-check-circle"></i> Nulla at volutpat diam uteera</li>
-                        <li><i class="bi bi-check-circle"></i> Pharetra massa massa ultricies</li>
-                        <li><i class="bi bi-check-circle"></i> Massa ultricies mi quis hendrerit</li>
-                    </ul>
-                    <a href="#" class="get-started-btn">Get Started</a>
-                </div>
-            </div>
+            @foreach ($announcements as $announcement)
 
             <div class="col-lg-4 col-md-6">
-                <div class="box featured">
-                    <h3>Business</h3>
-                    <h4><sup>$</sup>29<span> month</span></h4>
-                    <ul>
-                        <li><i class="bi bi-check-circle"></i> Quam adipiscing vitae proin</li>
-                        <li><i class="bi bi-check-circle"></i> Nec feugiat nisl pretium</li>
-                        <li><i class="bi bi-check-circle"></i> Nulla at volutpat diam uteera</li>
-                        <li><i class="bi bi-check-circle"></i> Pharetra massa massa ultricies</li>
-                        <li><i class="bi bi-check-circle"></i> Massa ultricies mi quis hendrerit</li>
-                    </ul>
-                    <a href="#" class="get-started-btn">Get Started</a>
+                <div class="card border-primary mb-3">
+                    <img src="/assets/img/logo/noimage.png" class="card-img-top" alt="no image">
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">{{ $announcement->article_title}}</h5>
+                        {{ Str::after(Str::limit($announcement->article_description, 50, '...'), '<div>') }}
+                            <br>
+                            <a href="{{ route('articlesingle', $announcement->article_slug) }}"
+                                class="btn btn-primary mb-3 mt-3">Selengkapnya</a>
+                            <div class="card-footer">
+                                <small class="text-muted">{{ date_format($announcement->created_at, 'd M Y') }}</small>
+                            </div>
+                        </div>
+                        {{-- <div class="card border-primary">
+                            <h3>{{ $announcement->article_title}}</h3>
+                            {{ Str::after(Str::limit($announcement->article_description, 300, '...'), '
+                            <div>') }}
+                                <a href="#" class="get-started-btn">Get Started</a>
+                            </div>
+                        </div> --}}
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="box">
-                    <h3>Developer</h3>
-                    <h4><sup>$</sup>49<span> month</span></h4>
-                    <ul>
-                        <li><i class="bi bi-check-circle"></i> Quam adipiscing vitae proin</li>
-                        <li><i class="bi bi-check-circle"></i> Nec feugiat nisl pretium</li>
-                        <li><i class="bi bi-check-circle"></i> Nulla at volutpat diam uteera</li>
-                        <li><i class="bi bi-check-circle"></i> Pharetra massa massa ultricies</li>
-                        <li><i class="bi bi-check-circle"></i> Massa ultricies mi quis hendrerit</li>
-                    </ul>
-                    <a href="#" class="get-started-btn">Get Started</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
+                @endforeach
 </section><!-- End Pricing Section -->
 
 <!-- Post Section -->
@@ -207,8 +181,8 @@
                 <div class="row g-0">
                     <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover">
                         @if ($article->article_image)
-                        <img src="{{ asset('storage/' . $article->article_image) }}" class="d-block m-1 img-fluid"
-                            width="100" alt="{{ $article->article_name }}"
+                        <img src="{{ asset('storage/' . $article->article_image) }}"
+                            class="d-block mx-auto d-block m-1 img-fluid" width="100" alt="{{ $article->article_name }}"
                             style="max-height: 100px; min-height: 100px" />
                         @else
                         <img src="/assets/img/logo/noimage.png" class="d-block mx-auto m-1 img-fluid" width="100"

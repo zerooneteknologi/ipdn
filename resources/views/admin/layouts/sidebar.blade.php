@@ -70,11 +70,26 @@
         </a>
         <ul id="article" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-                <a href="{{ route('article.index') }}">
+                <a href="{{ route('article.index') }}?type=3">
                     <i class="bi bi-circle"></i><span>Daftar Berita</span>
                 </a>
-                <a href="{{ route('article.create') }}">
+                <a href="{{ route('article.create') }}?type=3">
                     <i class="bi bi-circle"></i><span>Tambah Berita</span>
+                </a>
+            </li>
+        </ul>
+        </li><!-- End Article Nav -->
+
+        <a class="nav-link collapsed" data-bs-target="#announcement" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-newspaper"></i><span>Pengumuman</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="announcement" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+                <a href="{{ route('article.index') }}?type=4">
+                    <i class="bi bi-circle"></i><span>Daftar Pengumuman</span>
+                </a>
+                <a href="{{ route('article.create') }}?type=4">
+                    <i class="bi bi-circle"></i><span>Tambah Pengumuman</span>
                 </a>
             </li>
         </ul>
@@ -83,23 +98,23 @@
         <li class="nav-heading">Tentang LSP</li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('vision.index') }}">
-                <i class="bi bi-eye"></i>
-                <span>Visi Misi</span>
-            </a>
-        </li><!-- End vision Page Nav -->
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('vision.index') }}">
+            <a class="nav-link collapsed" href="{{ route('article.index') }}?type=1">
                 <i class="bi bi-person-badge"></i>
                 <span>Profil LSP</span>
             </a>
         </li><!-- End profile Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('vision.index') }}">
+            <a class="nav-link collapsed" href="{{ route('vision.index') }}?type=1">
+                <i class="bi bi-eye"></i>
+                <span>Visi Misi</span>
+            </a>
+        </li><!-- End vision Page Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('article.index') }}?type=2">
                 <i class="bi bi-bookmark-star-fill"></i>
-                <span>Profil LSP</span>
+                <span>Struktur Organisasi</span>
             </a>
         </li><!-- End organizer Page Nav -->
 

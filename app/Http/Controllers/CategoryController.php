@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        // 
+        //
     }
 
     /**
@@ -34,7 +34,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        // 
+        //
     }
 
     /**
@@ -49,12 +49,10 @@ class CategoryController extends Controller
         );
         Category::create($validateData);
 
-        return redirect()
-            ->route('article.index')
-            ->with(
-                'success',
-                "Berhasil Menambahkan category \"$request->category_name\"!"
-            );
+        return redirect('/article?type=3')->with(
+            'success',
+            "Berhasil Menambahkan category \"$request->category_name\"!"
+        );
     }
 
     /**
@@ -86,12 +84,10 @@ class CategoryController extends Controller
 
         $category->update($validateData);
 
-        return redirect()
-            ->route('article.index')
-            ->with(
-                'success',
-                "Berhasil mengubah kategori \"$request->category_name\"!"
-            );
+        return redirect('/article?type=3')->with(
+            'success',
+            "Berhasil mengubah kategori \"$request->category_name\"!"
+        );
     }
 
     /**
@@ -101,11 +97,9 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect()
-            ->route('article.index')
-            ->with(
-                'success',
-                "Berhasil Menghapus Kategory \"$category->category_name\"!"
-            );
+        return redirect('/article?type=3')->with(
+            'success',
+            "Berhasil Menghapus Kategory \"$category->category_name\"!"
+        );
     }
 }

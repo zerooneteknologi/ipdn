@@ -36,6 +36,7 @@ class ArticleController extends Controller
         return view('admin.article.index', [
             'articles' => Article::latest()->get(),
             'categories' => Category::latest()->get(),
+            'profile' => Article::where('article_type', 1)->first(),
         ]);
     }
 
@@ -55,8 +56,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $validateData = $this->validateData($request);
-        $validateData['article_type'] = 'article';
-        $validateData['user_id']      = '1';
+        $validateData['user_id'] = '1';
         $validateData['article_slug'] = Str::slug(
             $request->article_title . round(microtime(true)),
             '-'
@@ -70,12 +70,10 @@ class ArticleController extends Controller
 
         Article::create($validateData);
 
-        return redirect()
-            ->route('article.index')
-            ->with(
-                'success',
-                "Berhasil Menambahkan article \"$request->artcicle_title\"!"
-            );
+        return redirect('/article?type=3')->with(
+            'success',
+            "Berhasil Menambahkan article \"$request->artcicle_title\"!"
+        );
     }
 
     /**
@@ -115,19 +113,21 @@ class ArticleController extends Controller
             }
         }
 
-        $validateData['article_slug'] = Str::slug(
-            $request->article_title . round(microtime(true)),
-            '-'
-        );
+        if ($request->article_type == 1) {
+            $validateData['article_slug'] = 'profil-lsp';
+        } else {
+            $validateData['article_slug'] = Str::slug(
+                $request->article_title . round(microtime(true)),
+                '-'
+            );
+        }
 
         $article->update($validateData);
 
-        return redirect()
-            ->route('article.index')
-            ->with(
-                'success',
-                "Berhasil merubah article \"$request->article_title\"!"
-            );
+        return redirect('/article?type=' . $request->article_type)->with(
+            'success',
+            "Berhasil merubah article \"$request->article_title\"!"
+        );
     }
 
     /**
@@ -143,11 +143,9 @@ class ArticleController extends Controller
 
         $article->delete();
 
-        return redirect()
-            ->route('article.index')
-            ->with(
-                'success',
-                "Berhasil Menghapus article \"$article->article_title\"!"
-            );
+        return redirect('/article?type=3')->with(
+            'success',
+            "Berhasil Menghapus article \"$article->article_title\"!"
+        );
     }
 }

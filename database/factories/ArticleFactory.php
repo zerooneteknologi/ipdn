@@ -18,12 +18,11 @@ class ArticleFactory extends Factory
     {
         return [
             'user_id' => fake()->randomDigitNotNull(),
-            'category_id' => fake()->randomDigitNotNull(),
+            'category_id' => mt_rand(1, 3),
             'article_title' => fake()->name(),
             'article_slug' => fake()->slug(),
-            'article_type' => fake()->sentence(),
-            'article_description' => fake()->text(500),
-            'article_image' => fake()->imageUrl(640, 480, 'animals', true)
+            'article_type' => mt_rand(1, 4),
+            'article_description' => fake()->paragraph(6),
         ];
     }
 }

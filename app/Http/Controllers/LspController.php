@@ -29,9 +29,15 @@ class LspController extends Controller
                 ->limit(4)
                 ->get(),
             'partners' => Partner::latest(),
-            'articles' => Article::latest()
+            'articles' => Article::where('article_type', 3)
+                ->latest()
                 ->limit(4)
                 ->get(),
+            'announcements' => Article::where('article_type', 4)
+                ->latest()
+                ->limit(3)
+                ->get(),
+            'profile' => Article::where('article_type', 1)->first(),
         ]);
     }
 
@@ -104,7 +110,9 @@ class LspController extends Controller
     public function articles()
     {
         return view('web.article.articles', [
-            'articles' => Article::latest()->paginate(9),
+            'articles' => Article::where('article_type', 3)
+                ->latest()
+                ->paginate(8),
         ]);
     }
 
