@@ -7,7 +7,7 @@
     <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
     <div class="container pb-4 pt-5">
         <h2 class="h1 text-center text-md-center mb-lg-4 pt-1 pt-md-4">
-            @if (!request('type') == 3)
+            @if (request('type') == 3)
             Daftar Berita
             @else
             Daftar Pengumuman

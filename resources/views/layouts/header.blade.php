@@ -44,7 +44,10 @@
 
 
 @push('script')
-@if (!Request::is('assesors'))
+@if (!Request::is('assesors') && !Request::is('articles'))
+<script>
+    console.log('ok');
+</script>
 <script src="{{ asset('assets/js/costum.js')}}"></script>
 @endif
 <script>
