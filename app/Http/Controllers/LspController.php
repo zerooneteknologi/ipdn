@@ -112,11 +112,11 @@ class LspController extends Controller
         if (request('type') == 3) {
             $articles = Article::where('article_type', 3)
                 ->latest()
-                ->paginate(2);
+                ->paginate(8);
         } else {
             $articles = Article::where('article_type', 4)
                 ->latest()
-                ->paginate(2);
+                ->paginate(8);
         }
 
         return view('web.article.articles', [
