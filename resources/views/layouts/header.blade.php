@@ -28,8 +28,8 @@
                         href="{{ route('scemes')}}">Skema Sertifikasi</a></li>
                 <li><a class="nav-link scrollto {{Request::is('assesors') ? 'active' :''}}"
                         href="{{ route('assesors')}}">Asesor Kompetensi</a></li>
-                <li><a class="nav-link scrollto" href="#pengumuman">Pengumuman</a></li>
-                <li><a class="nav-link scrollto" href="#berita">Kegiatan</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('articles')}}?type=4">Pengumuman</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('articles')}}?type=3">Kegiatan</a></li>
                 <li><a class="nav-link scrollto {{Request::is('registration') ? 'active' :''}}"
                         href="{{ route('registration') }}">Pendaftaran</a></li>
             </ul>

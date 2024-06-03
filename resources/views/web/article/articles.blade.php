@@ -7,36 +7,65 @@
     <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
     <div class="container pb-4 pt-5">
         <h2 class="h1 text-center text-md-center mb-lg-4 pt-1 pt-md-4">
-            LIst Articles
+            @if (!request('type') == 3)
+            Daftar Berita
+            @else
+            Daftar Pengumuman
+            @endif
         </h2>
         <div class="row align-items-center pb-5 mb-lg-2">
         </div>
-        <div class="row row-cols-1 row-cols-md-2">
-            <!-- Item -->
+
+        <!-- Blog articles -->
+        <div class="pb-3">
+            <!-- Blog item -->
+            <!-- Article -->
             @foreach ($articles as $article)
-                <div class="col py-4 my-2 my-sm-3" data-aos="fade-up">
-                    <a href="{{ route('articlesingle', $article->article_slug) }}"
-                        class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
-                        <div class="card-body pt-3">
-                            <div
-                                class="d-inline-block bg-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
-                                @if ($article->article_image)
-                                    <img src="{{ asset('storage/' . $article->article_image) }}"
-                                        class="d-block m-1 img-fluid" width="100" alt="{{ $article->article_title }}"
-                                        style="max-height: 100px; min-height: 100px" />
-                                @else
-                                    <img src="/assets/img/logo/noimage.png" class="d-block m-1 img-fluid" width="100"
-                                        alt="no image" style="max-height: 100px; min-height: 100px" />
-                                @endif
+            <article class="card border-0 shadow-sm overflow-hidden mb-4" data-aos="fade-up">
+                <div class="row g-0">
+                    <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover">
+                        @if ($article->article_image)
+                        <img src="{{ asset('storage/' . $article->article_image) }}"
+                            class="d-block mx-auto d-block m-1 img-fluid" width="100" alt="{{ $article->article_name }}"
+                            style="max-height: 100px; min-height: 100px" />
+                        @else
+                        <img src="/assets/img/logo/noimage.png" class="d-block mx-auto m-1 img-fluid" width="100"
+                            alt="no image" style="width: 50%" />
+                        @endif
+                        <a href="{{ route('articlesingle', $article->article_slug) }}"
+                            class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                        <a href="#"
+                            class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                            data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
+                            aria-label="Read later">
+                            <i class="bx bx-bookmark"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
+                                    {{ $article->category->category_name }}
+                                </a>
+                                <span class="fs-sm text-muted border-start ps-3 ms-3">
+                                    {{ date_format($article->created_at, 'd M Y') }}
+                                </span>
                             </div>
-                            <h2 class="h4 mt-3 align-items-center">
-                                {{ $article->article_name }}
-                                <i class="bi bi-arrow-right-circle text-primary fs-3 ms-2"></i>
-                            </h2>
-                            {{ Str::after(Str::limit($article->article_description, 100, '...'), '<div>') }}
+                            <h3 class="h4">
+                                <a href="{{ route('articlesingle', $article->article_slug) }}">
+                                    {{ $article->article_title }}
+                                </a>
+                            </h3>
+                            <p>
+                                {{ Str::after(Str::limit($article->article_description, 300, '...'), '
+                            <div>') }}
+                                </p>
+                                <hr class="my-4" />
+
+                            </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+            </article>
             @endforeach
         </div>
 

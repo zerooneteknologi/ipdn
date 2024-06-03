@@ -109,10 +109,18 @@ class LspController extends Controller
 
     public function articles()
     {
-        return view('web.article.articles', [
-            'articles' => Article::where('article_type', 3)
+        if (request('type') == 3) {
+            $articles = Article::where('article_type', 3)
                 ->latest()
-                ->paginate(8),
+                ->paginate(8);
+        } else {
+            $articles = Article::where('article_type', 4)
+                ->latest()
+                ->paginate(8);
+        }
+
+        return view('web.article.articles', [
+            'articles' => $articles,
         ]);
     }
 
