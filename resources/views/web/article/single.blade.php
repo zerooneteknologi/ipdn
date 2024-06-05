@@ -10,8 +10,14 @@
 
             <div class="col-12">
                 <div class="">
+                    @if ($article->article_image)
+                    <img class="rounded img-fluid mx-auto d-block" style="width: 80%;"
+                        src="{{ asset('ipdn/storage/app/public/')}}" alt="Tidak ada gambar"
+                        class="card-img-top img-fluid">
+                    @else
                     <img class="rounded img-fluid mx-auto d-block" style="width: 80%;"
                         src="/assets/img/logo/noimage.png" alt="Tidak ada gambar" class="card-img-top img-fluid">
+                    @endif
                     <hr class="hr hr-blurry" />
                     <div class="card-body">
                         <h1 class="card-title">{{ $article->article_title }}</h1>

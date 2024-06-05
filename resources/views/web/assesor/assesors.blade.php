@@ -18,7 +18,7 @@
                 <article class="card border-0 shadow-sm h-100">
                     <div class="position-relative">
                         @if ($assesor->assesor_image)
-                        <img src="{{ asset('storage/' . $assesor->assesor_image)}}" class="card-img-top"
+                        <img src="{{ asset('ipdn/storage/app/public/' . $assesor->assesor_image)}}" class="card-img-top"
                             alt="{{ $assesor->assesor_name}}">
                         @else
                         <img src="/assets/img/logo/noimage.png" class="card-img-top" alt="Image">

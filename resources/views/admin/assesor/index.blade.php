@@ -61,7 +61,8 @@
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>@if ($assesor->assesor_image)
                             <img width="50px" class="rounded-circle"
-                                src="{{ asset('storage/'.$assesor->assesor_image) }}" alt="{{ $assesor->assesor_name}}">
+                                src="{{ asset('ipdn/storage/app/public/'.$assesor->assesor_image) }}"
+                                alt="{{ $assesor->assesor_name}}">
                             @else
                             <img width="50px" class="rounded-circle" src="/assets/img/logo/noimage.png"
                                 alt="Tidak ada gambar">

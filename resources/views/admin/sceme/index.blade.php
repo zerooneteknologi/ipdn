@@ -62,7 +62,8 @@
                         </th>
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>@if ($sceme->sceme_image)
-                            <img width="50px" class="rounded-circle" src="{{ asset('storage/'.$sceme->sceme_image) }}"
+                            <img width="50px" class="rounded-circle"
+                                src="{{ asset('ipdn/storage/app/public/'.$sceme->sceme_image) }}"
                                 alt="{{ $sceme->sceme_name}}">
                             @else
                             <img width="50px" class="rounded-circle" src="/assets/img/logo/noimage.png"

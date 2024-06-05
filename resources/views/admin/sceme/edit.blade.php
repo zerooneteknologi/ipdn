@@ -64,7 +64,7 @@
                                     onchange="validateImage()" accept="image/*">
                                 @if ($sceme->sceme_image)
                                 <img id="img-preview" class="img-fluid col-sm-4 mt-3"
-                                    src="{{ asset('storage/' . $sceme->sceme_image)}}">
+                                    src="{{ asset('ipdn/storage/app/public/' . $sceme->sceme_image)}}">
                                 @endif
                                 <img id="img-preview" class="img-fluid col-sm-4 mt-3" src="">
                             </div>

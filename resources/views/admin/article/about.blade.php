@@ -30,8 +30,8 @@
                 @if (request('type') == 1)
                 <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                     @if ($profile->article_image)
-                    <img src="{{ asset('storage/'. $profile->article_image) }}" alt="{{ $profile->article_title }}"
-                        class="rounded-circle">
+                    <img src="{{ asset('ipdn/storage/app/public/'. $profile->article_image) }}"
+                        alt="{{ $profile->article_title }}" class="rounded-circle">
                     @else
                     <img src="/assets/img/logo/noimage.png" alt="no image" class="rounded-circle">
                     @endif
@@ -39,8 +39,8 @@
                 @else
                 <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                     @if ($organizer->article_image)
-                    <img src="{{ asset('storage/'. $organizer->article_image) }}" alt="{{ $organizer->article_title }}"
-                        class="rounded-circle">
+                    <img src="{{ asset('ipdn/storage/app/public/'. $organizer->article_image) }}"
+                        alt="{{ $organizer->article_title }}" class="rounded-circle">
                     @else
                     <img src="/assets/img/logo/noimage.png" alt="no image" class="rounded-circle">
                     @endif
@@ -114,8 +114,8 @@
                                         <input name="article_image" class="form-control" type="file" id="article_image"
                                             onchange="validateImage()" accept="image/*">
                                         @if ($profile->article_image)
-                                        <img src="{{ asset('storage/'. $profile->article_image) }}" alt="Profile"
-                                            class="img-fluid col-sm-4 mt-3 img-preview">
+                                        <img src="{{ asset('ipdn/storage/app/public/'. $profile->article_image) }}"
+                                            alt="Profile" class="img-fluid col-sm-4 mt-3 img-preview">
                                         @else
                                         <img class="img-fluid col-sm-4 mt-3 img-preview" src="">
                                         @endif
@@ -170,8 +170,8 @@
                                         <input name="article_image" class="form-control" type="file" id="article_image"
                                             onchange="validateImage()" accept="image/*">
                                         @if ($organizer->article_image)
-                                        <img src="{{ asset('storage/'. $organizer->article_image) }}" alt="Profile"
-                                            class="img-fluid col-sm-4 mt-3 img-preview">
+                                        <img src="{{ asset('ipdn/storage/app/public/'. $organizer->article_image) }}"
+                                            alt="Profile" class="img-fluid col-sm-4 mt-3 img-preview">
                                         @else
                                         <img class="img-fluid col-sm-4 mt-3 img-preview" src="">
                                         @endif

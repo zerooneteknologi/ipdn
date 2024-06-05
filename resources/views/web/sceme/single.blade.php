@@ -21,8 +21,8 @@
                 <div class="service-box">
                     <div class="card-body pt-4 d-flex flex-column align-items-center">
                         @if ($sceme->sceme_image)
-                        <img src="{{ asset('storage/'. $sceme->sceme_image )}}" alt="Profile" class="rounded-circle"
-                            width="300px">
+                        <img src="{{ asset('ipdn/storage/app/public/'. $sceme->sceme_image )}}" alt="Profile"
+                            class="rounded-circle" width="300px">
                         @else
                         <img src="/assets/img/logo/noimage.png" alt="Profile" class="rounded-circle" width="200px">
                         @endif

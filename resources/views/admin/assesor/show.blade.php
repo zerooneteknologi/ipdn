@@ -19,7 +19,8 @@
 
             <div class="card">
                 <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                    <img src="{{ asset('storage/'. $assesor->assesor_image )}}" alt="Profile" class="rounded-circle">
+                    <img src="{{ asset('ipdn/storage/app/public/'. $assesor->assesor_image )}}" alt="Profile"
+                        class="rounded-circle">
                 </div>
             </div>
 

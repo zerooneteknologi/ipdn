@@ -46,7 +46,7 @@
                         <input name="assesor_image" class="form-control" type="file" id="assesor_image"
                             onchange="validateImage()" accept="image/*">
                         <img id="img-preview" class="img-fluid col-sm-4 mt-3"
-                            src="{{ asset('storage/' .$assesor->assesor_image)}}">
+                            src="{{ asset('ipdn/storage/app/public/' .$assesor->assesor_image)}}">
                     </div>
                 </div>
                 <div class="row mb-3">

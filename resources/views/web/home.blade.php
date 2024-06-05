@@ -19,7 +19,8 @@
         <div class="row">
             <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
                 @if ($profile->article_image)
-                <img src="{{ asset('storage/' . $profile->article_image)}}" alt="{{ $profile->article_title}}">
+                <img src="{{ asset('ipdn/storage/app/public/' . $profile->article_image)}}"
+                    alt="{{ $profile->article_title}}">
                 @else
                 <img src="/assets/img/logo/noimage.png" alt="No Image">
                 @endif
@@ -68,8 +69,8 @@
                     <div class="card-body pt-3">
                         <div class="d-inline-block bg-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
                             @if ($sceme->sceme_image)
-                            <img src="{{ asset('storage/' . $sceme->sceme_image) }}" class="d-block m-1 img-fluid"
-                                width="100" alt="{{ $sceme->sceme_name }}"
+                            <img src="{{ asset('ipdn/storage/app/public/' . $sceme->sceme_image) }}"
+                                class="d-block m-1 img-fluid" width="100" alt="{{ $sceme->sceme_name }}"
                                 style="max-height: 100px; min-height: 100px" />
                             @else
                             <img src="/assets/img/logo/noimage.png" class="d-block m-1 img-fluid" width="100"
@@ -108,7 +109,7 @@
                             <div class="member">
                                 <div class="pic bg-black">
                                     @if ($assesor->assesor_image)
-                                    <img src="{{ asset('storage/' . $assesor->assesor_image) }}"
+                                    <img src="{{ asset('ipdn/storage/app/public/' . $assesor->assesor_image) }}"
                                         alt="{{ $assesor->assesor_name }}">
                                     @else
                                     <img src="/assets/img/logo/noimage.png" alt="no image">
@@ -145,7 +146,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card border-primary mb-3">
                     @if ($announcement->article_image)
-                    <img src="{{ asset('storage/'. $announcement->article_image)}}" class="card-img-top"
+                    <img src="{{ asset('ipdn/storage/app/public/'. $announcement->article_image)}}" class="card-img-top"
                         alt="{{ $announcement->article_title}}" style="max-height: 400px; min-height: 300px">
                     @else
                     <img src="/assets/img/logo/noimage.png" class="card-img-top" alt="no image"
@@ -187,7 +188,7 @@
                 <div class="row g-0">
                     <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover">
                         @if ($article->article_image)
-                        <img src="{{ asset('storage/' . $article->article_image) }}"
+                        <img src="{{ asset('ipdn/storage/app/public/' . $article->article_image) }}"
                             class="d-block mx-auto d-block m-1 img-fluid" width="100" alt="{{ $article->article_name }}"
                             style="max-height: 100px; min-height: 100px" />
                         @else
@@ -249,7 +250,7 @@
             @foreach ($partners as $partner)
             @if ($partner->partner_image)
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <img src="{{ asset('storage/' . $partner->partner_image) }}" alt="">
+                <img src="{{ asset('ipdn/storage/app/public/' . $partner->partner_image) }}" alt="">
             </div>
             @endif
             @endforeach

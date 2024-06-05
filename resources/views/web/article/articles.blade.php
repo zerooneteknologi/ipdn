@@ -25,7 +25,7 @@
                 <div class="row g-0">
                     <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover">
                         @if ($article->article_image)
-                        <img src="{{ asset('storage/' . $article->article_image) }}"
+                        <img src="{{ asset('ipdn/storage/app/public/' . $article->article_image) }}"
                             class="d-block mx-auto d-block m-1 img-fluid" width="100" alt="{{ $article->article_name }}"
                             style="max-height: 100px; min-height: 100px" />
                         @else

@@ -59,7 +59,7 @@
                         <input name="article_image" class="form-control" type="file" id="article_image"
                             onchange="validateImage()" accept="image/*">
                         <img id="img-preview" class="img-fluid col-sm-4 mt-3"
-                            src="{{ asset('storage/' . $article->article_image) }}">
+                            src="{{ asset('ipdn/storage/app/public/' . $article->article_image) }}">
                     </div>
                 </div>
                 <div class="row mb-3">

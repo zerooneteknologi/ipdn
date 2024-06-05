@@ -57,7 +57,8 @@
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>@if ($partner->partner_image)
                             <img width="50px" class="rounded-circle"
-                                src="{{ asset('storage/'.$partner->partner_image) }}" alt="{{ $partner->partner_name}}">
+                                src="{{ asset('ipdn/storage/app/public/'.$partner->partner_image) }}"
+                                alt="{{ $partner->partner_name}}">
                             @else
                             <img width="50px" class="rounded-circle" src="/assets/img/logo/noimage.png"
                                 alt="Tidak ada gambar">
@@ -159,7 +160,7 @@
         $('.modal-form').attr('action', "/partner/" + id);
         $('.method').val('PUT')
         $('#partner_name').val(partner_name)
-        $('.img-preview').attr('src', 'storage/' + partner_image)
+        $('.img-preview').attr('src', 'ipdn/storage/app/public/' + partner_image)
         $('#modal_partner').modal('show');
     }
 </script>

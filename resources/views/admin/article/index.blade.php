@@ -129,7 +129,7 @@
                         <td>
                             @if ($article->article_image)
                             <img width="50px" class="rounded-circle"
-                                src="{{ asset('storage/' . $article->article_image) }}"
+                                src="{{ asset('ipdn/storage/app/public/' . $article->article_image) }}"
                                 alt="{{ $article->article_name }}">
                             @else
                             <img width="50px" class="rounded-circle" src="/assets/img/logo/noimage.png"
@@ -203,7 +203,7 @@
                         <td>
                             @if ($announcement->article_image)
                             <img width="50px" class="rounded-circle"
-                                src="{{ asset('storage/' . $announcement->article_image) }}"
+                                src="{{ asset('ipdn/storage/app/public/' . $announcement->article_image) }}"
                                 alt="{{ $announcement->article_name }}">
                             @else
                             <img width="50px" class="rounded-circle" src="/assets/img/logo/noimage.png"
