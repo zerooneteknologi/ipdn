@@ -249,8 +249,9 @@
 
             @foreach ($partners as $partner)
             @if ($partner->partner_image)
-            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <img src="{{ asset('ipdn/storage/app/public/' . $partner->partner_image) }}" alt="">
+            <div class="col-md-2">
+                <img src="{{ asset('ipdn/storage/app/public/' . $partner->partner_image) }}"
+                    alt="$partner->partner_name" class="img-fluid h-50">
             </div>
             @endif
             @endforeach

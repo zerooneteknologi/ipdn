@@ -56,8 +56,14 @@ class PartnerController extends Controller
         $validateData = $this->validateData($request);
 
         if ($request->file('partner_image')) {
-            if (Storage::exists($partner->partner_image)) {
-                Storage::delete($partner->partner_image);
+            if ($partner->partner_image) {
+                if (Storage::exists($partner->partner_image)) {
+                    Storage::delete($partner->partner_image);
+                }
+                $validateData['partner_image'] = $request
+                    ->file('partner_image')
+                    ->store('img/partner');
+            } else {
                 $validateData['partner_image'] = $request
                     ->file('partner_image')
                     ->store('img/partner');
