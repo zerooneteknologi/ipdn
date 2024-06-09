@@ -63,7 +63,7 @@
         <div class="row row-cols-1 row-cols-md-2">
             <!-- Item -->
             @foreach ($scemes as $sceme)
-            <div class="col py-4 my-2 my-sm-3" data-aos="fade-up">
+            <div class="col-md-4 col py-4 my-2 my-sm-3" data-aos="fade-up">
                 <a href="{{ route('scemesingle', $sceme->sceme_slug) }}"
                     class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
                     <div class="card-body pt-3">
@@ -156,7 +156,7 @@
                         <h5 class="card-title">{{ $announcement->article_title}}</h5>
                         {{ Str::after(Str::limit($announcement->article_description, 50, '...'), '<div>') }}
                             <br>
-                            <a href="{{ route('articlesingle', $announcement->article_slug) }}"
+                            <a href="{{ route('articlesingle', $announcement->article_slug) }}?type=4"
                                 class="btn btn-primary mb-3 mt-3">Selengkapnya</a>
                             <div class="card-footer">
                                 <small class="text-muted">{{ date_format($announcement->created_at, 'd M Y') }}</small>
@@ -207,7 +207,7 @@
                     <div class="col-sm-8">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
-                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">
+                                <a href="" class="badge fs-sm text-nav bg-secondary text-decoration-none">
                                     {{ $article->category->category_name }}
                                 </a>
                                 <span class="fs-sm text-muted border-start ps-3 ms-3">
@@ -233,7 +233,7 @@
         </div>
 
         <!-- Load more btn -->
-        <a href="{{ route('articles') }}" class="btn btn-lg btn-outline-primary w-100">
+        <a href="{{ route('articles') }}?type=3" class="btn btn-lg btn-outline-primary w-100">
             <i class="bi bi-arrow-down"></i>
             Show more
         </a>
@@ -244,14 +244,14 @@
 <!-- ======= Clients Section ======= -->
 <section id="clients">
     <div class="container" data-aos="fade-up">
-
+        <h3 class="mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Partner Kerjasama Kami</h3>
         <div class="row">
 
             @foreach ($partners as $partner)
             @if ($partner->partner_image)
             <div class="col-md-2">
-                <img src="{{ asset('ipdn/storage/app/public/' . $partner->partner_image) }}"
-                    alt="$partner->partner_name" class="img-fluid h-50">
+                <img src="{{ asset('storage/' . $partner->partner_image) }}" alt="$partner->partner_name"
+                    class="img-fluid h-50">
             </div>
             @endif
             @endforeach

@@ -2,7 +2,7 @@
 
 @section('content')
 @section('title', $article->article_title)
-<section id="service-details" class="service-details">
+<section id="service-details" class="service-details pt-lg-5 mt-3">
 
     <div class="container">
 

@@ -23,12 +23,12 @@ class LspController extends Controller
     {
         return view('web.home', [
             'scemes' => Sceme::latest()
-                ->limit(6)
+                ->limit(3)
                 ->get(),
             'assesors' => Assesor::latest()
                 ->limit(4)
                 ->get(),
-            'partners' => Partner::latest(),
+            'partners' => Partner::latest()->get(),
             'articles' => Article::where('article_type', 3)
                 ->latest()
                 ->limit(4)
