@@ -18,9 +18,9 @@
                 </li>
                 <li class="dropdown"><a href="#about"><span>Profil LSP</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="{{ route('articlesingle', 'profil-lsp') }}?type=1">Profil LSP</a></li>
+                        <li><a href="{{ route('articlesingle', 'lembaga_sertifikasi_profesi') }}">Profil LSP</a></li>
                         <li><a href="{{ route('mision')}}">Visi Misi</a></li>
-                        <li><a href="{{ route('articlesingle', 'struktur-organisasi') }}?type=2">Struktur Organisasi</a>
+                        <li><a href="{{ route('articlesingle', 'struktur_organisasi') }}">Struktur Organisasi</a>
                         </li>
                     </ul>
                 </li>

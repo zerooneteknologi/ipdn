@@ -7,14 +7,18 @@
 
 @section('content')
 <div class="pagetitle">
+    @if (request('type') == 3)
     <h1>Berita</h1>
+    @else
+    <h1>Pengumuman</h1>
+    @endif
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
             @if (request('type') == 3)
             <li class="breadcrumb-item"><a href="{{ route('article.index') }}?type=3">Berita</a></li>
             @else
-            <li class="breadcrumb-item"><a href="{{ route('article.index') }}?type=3">Berita</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('article.index') }}?type=3">Pengumuman</a></li>
             @endif
             <li class="breadcrumb-item active">Edit</li>
         </ol>
@@ -31,7 +35,8 @@
             @endif
 
             <!-- General Form Elements -->
-            <form method="POST" action="{{ route('article.update', $article->id) }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('article.update', $article->id) }}?type={{ request('type')}}"
+                enctype="multipart/form-data">
                 @csrf
                 @method('put')
                 <div class="row">

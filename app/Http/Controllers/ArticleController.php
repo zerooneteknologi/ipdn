@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -25,28 +25,26 @@ class ArticleController extends Controller
             'article_description' => '',
         ]);
     }
-    /**
-     * Display a listing of the resource.
-     */
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        if (request('type') == 1 || request('type') == 2) {
-            return view('admin.article.about', [
-                'profile' => Article::where('article_type', 1)->first(),
-                'organizer' => Article::where('article_type', 2)->first(),
-            ]);
-        } else {
+        if (request('type') == 3 || request('type') == 4) {
             return view('admin.article.index', [
-                'articles' => Article::where('article_type', 3)
+                'articles' => Article::where('article_type', request('type'))
                     ->latest()
                     ->get(),
                 'categories' => Category::latest()->get(),
-                'announcements' => Article::where('article_type', 4)
-                    ->latest()
-                    ->get(),
+                'article_type' => request('type'),
+            ]);
+        } else {
+            return view('admin.article.about', [
+                'article' => Article::where(
+                    'article_type',
+                    request('type')
+                )->first(),
             ]);
         }
     }
@@ -66,24 +64,20 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $validateData = $this->validateData($request);
-        $validateData['user_id'] = '1';
-        $validateData['article_slug'] = Str::slug(
-            $request->article_title . round(microtime(true)),
-            '-'
+        $validatedData = $this->validateData($request);
+
+        $validatedData['article_slug'] = Str::slug(
+            $request->article_title . ' ' . round(microtime(true)),
+            '_'
         );
 
-        if ($request->article_type == 4) {
-            $validateData['category_id'] = 1;
-        }
-
         if ($request->file('article_image')) {
-            $validateData['article_image'] = $request
+            $validatedData['article_image'] = $request
                 ->file('article_image')
                 ->store('img/article');
         }
 
-        Article::create($validateData);
+        Article::create($validatedData);
 
         return redirect('/article?type=' . $request->article_type)->with(
             'success',
@@ -115,37 +109,40 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        $validateData = $this->validateData($request);
+        $validatedData = $this->validateData($request);
+
+        if (request('type') == 3 || request('type') == 4) {
+            $validatedData['article_slug'] = Str::slug(
+                $request->article_title . ' ' . round(microtime(true)),
+                '_'
+            );
+        } else {
+            if (request('type') == 1) {
+                $validatedData['article_slug'] = Str::slug('lembaga sertifikasi profesi', '_');
+            } else {
+                $validatedData['article_slug'] = Str::slug(
+                    'struktur organisasi',
+                    '_'
+                );
+            }
+        }
 
         if ($request->file('article_image')) {
             if ($article->article_image) {
                 if (Storage::exists($article->article_image)) {
                     Storage::delete($article->article_image);
-                    $validateData['article_image'] = $request
-                        ->file('article_image')
-                        ->store('img/article');
                 }
             }
+            $validatedData['article_image'] = $request
+                ->file('article_image')
+                ->store('img/article');
         }
-
-        if ($request->article_type == 1) {
-            $validateData['article_slug'] = 'profil-lsp';
-        } else {
-            if ($request->article_type == 1) {
-                $validateData['article_slug'] = 'struktur-organisasi';
-            } else {
-                $validateData['article_slug'] = Str::slug(
-                    $request->article_title . round(microtime(true)),
-                    '-'
-                );
-            }
-        }
-
-        $article->update($validateData);
+        // dd($validatedData);
+        $article->update($validatedData);
 
         return redirect('/article?type=' . $request->article_type)->with(
             'success',
-            "Berhasil merubah article \"$request->article_title\"!"
+            "Berhasil Mengubah article \"$article->artcicle_title\"!"
         );
     }
 
@@ -162,9 +159,9 @@ class ArticleController extends Controller
 
         $article->delete();
 
-        return redirect('/article?type=3')->with(
+        return redirect('/article?type=' . request('type'))->with(
             'success',
-            "Berhasil Menghapus article \"$article->article_title\"!"
+            "Berhasil Menghapus article \"$article->artcicle_title\"!"
         );
     }
 }

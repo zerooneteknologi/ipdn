@@ -6,8 +6,9 @@
 @endif
 
 @section('content')
-@if (request('type') == 3)
+
 <div class="pagetitle">
+    @if (request('type') ==3)
     <h1>Berita</h1>
     <nav>
         <ol class="breadcrumb">
@@ -15,10 +16,22 @@
             <li class="breadcrumb-item active">Berita</li>
         </ol>
     </nav>
+    @else
+    <h1>Pengumuman</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+            <li class="breadcrumb-item active">Pengumuman</li>
+        </ol>
+    </nav>
+    @endif
 </div><!-- End Page Title -->
+
+@if (request('type') ==3)
 <section class="section">
     <div class="card">
         <div class="card-body">
+            <label for="" class="bg-warning">{{ $article_type }}</label>
             @if (session()->has('success'))
             <div class="alert alert-primary alert-dismissible fade show" role="alert">
                 <i class="bi bi-star me-1"></i>
@@ -92,11 +105,19 @@
     </div>
 
 </section>
+@endif
+<!-- End Page category -->
+
 <section class="section">
     <div class="card">
         <div class="card-body">
+            @if (request('type') ==3)
             <h5 class="card-title">Berita</h5>
-            <a href="{{ route('article.create') }}?type=3" class="btn btn-primary float-start">Tambah Berita</a>
+            @else
+            <h5 class="card-title">Pengumuman</h5>
+            @endif
+            <a href="{{ route('article.create') }}?type={{ request('type')}}" class="btn btn-primary float-start">Tambah
+                Baru</a>
             <!-- Default Table -->
             <table id="articles" class="table table-responsive">
                 <thead>
@@ -105,7 +126,9 @@
                         <th scope="col">No</th>
                         <th scope="col">Gambar</th>
                         <th scope="col">Judul</th>
+                        @if (request('type') ==3)
                         <th scope="col">Kategori</th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -113,12 +136,13 @@
                     <tr>
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>
-                            <a href="{{ route('article.edit', $article->id) }}?type=3" class="badge bg-warning"
-                                data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i
-                                    class="bi bi-pencil"></i>
+                            <a href="{{ route('article.edit', $article->id) }}?type={{ request('type')}}"
+                                class="badge bg-warning" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Edit"><i class="bi bi-pencil"></i>
                             </a>
-                            <form id="deleted-form" action="{{ route('article.destroy', $article->id) }}" method="POST"
-                                class="d-inline">
+                            <form id="deleted-form"
+                                action="{{ route('article.destroy', $article->id) }}?type={{ request('type')}}"
+                                method="POST" class="d-inline">
                                 <button class="badge bg-danger  border-0"
                                     onClick="return confirm(`Apakah Yakin hapus article {{ $article->article_title }}?`)">
                                     <i class="bi bi-trash"></i></button>
@@ -137,7 +161,9 @@
                             @endif
                         </td>
                         <td>{{ $article->article_title }}</td>
+                        @if (request('type') ==3)
                         <td>{{ $article->category->category_name }}</td>
+                        @endif
                     </tr>
                     @endforeach
                 </tbody>
@@ -147,81 +173,6 @@
     </div>
 
 </section>
-
-@else
-
-<div class="pagetitle">
-    <h1>Berita</h1>
-    <nav>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-            <li class="breadcrumb-item active">Pengumuman</li>
-        </ol>
-    </nav>
-</div><!-- End Page Title -->
-
-<section class="section">
-    <div class="card">
-        <div class="card-body">
-            @if (session()->has('success'))
-            <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                <i class="bi bi-star me-1"></i>
-                {{ session('success') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
-            <h5 class="card-title">Berita</h5>
-            <a href="{{ route('article.create') }}?type=4" class="btn btn-primary float-start">Tambah Pengumuman</a>
-            <!-- Default Table -->
-            <table id="pengumuman" class="table table-responsive">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">No</th>
-                        <th scope="col">Gambar</th>
-                        <th scope="col">Judul Pengumuman</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($announcements as $announcement)
-                    <tr>
-                        <th scope="row">{{ $loop->iteration }}</th>
-                        <td>
-                            <a href="{{ route('article.edit', $announcement->id) }}?type=4" class="badge bg-warning"
-                                data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i
-                                    class="bi bi-pencil"></i>
-                            </a>
-                            <form id="deleted-form" action="{{ route('article.destroy', $announcement->id) }}"
-                                method="POST" class="d-inline">
-                                <button class="badge bg-danger  border-0"
-                                    onClick="return confirm(`Apakah Yakin hapus announcement {{ $announcement->article_title }}?`)">
-                                    <i class="bi bi-trash"></i></button>
-                                @csrf
-                                @method('delete')
-                            </form>
-                        </td>
-                        <td>
-                            @if ($announcement->article_image)
-                            <img width="50px" class="rounded-circle"
-                                src="{{ asset('ipdn/storage/app/public/' . $announcement->article_image) }}"
-                                alt="{{ $announcement->article_name }}">
-                            @else
-                            <img width="50px" class="rounded-circle" src="/assets/img/logo/noimage.png"
-                                alt="Tidak ada gambar">
-                            @endif
-                        </td>
-                        <td>{{ $announcement->article_title }}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-            <!-- End Default Table Example -->
-        </div>
-    </div>
-
-</section>
-
-@endif
 
 @endsection
 

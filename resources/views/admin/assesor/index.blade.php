@@ -26,7 +26,7 @@
             <a href="{{ route('assesor.create')}}" class="btn btn-primary float-start">Tambah Assesor</a>
 
             <!-- Default Table -->
-            <table id="assesor" class="table table-responsive">
+            <table id="assesors" class="table table-responsive">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -85,7 +85,7 @@
 @push('script')
 <script>
     $(document).ready(function() {
-        $('#assesor').DataTable({
+        $('#assesors').DataTable({
             dom: 'Bfrtip', // Menambahkan tombol ekspor
             buttons: [
                 'copy', 'csv', 'excel', 'pdf', 'print' // Pilihan ekspor

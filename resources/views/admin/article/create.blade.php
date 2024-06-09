@@ -29,7 +29,7 @@
 <section class="section">
     <div class="card">
         <div class="card-body">
-            @if (request('type') == 4)
+            @if (request('type') == 3)
             <h5 class="card-title">Tambah Berita</h5>
             @else
             <h5 class="card-title">Tambah Pengumuman</h5>
@@ -41,7 +41,13 @@
                 <div class="row">
                     <div class="col-sm-6 mb-3">
 
+                        <label for="article_name" class="col-form-label mt-2">Judul</label>
+                        <input id="article_title" name="article_title" type="text" class="form-control" required>
+
+                        <input type="hidden" name="user_id" value="{{ Auth::user()->id}}">
+
                         <input type="hidden" name="article_type" value="{{ request('type')}}">
+
                         @if (request('type') == 3)
                         <label for="article_id" class="col-form-label">Kategori article</label>
                         <select id="article_id" name="category_id" class="form-control" required>
@@ -52,16 +58,17 @@
                         </select>
                         @endif
 
-                        <label for="article_name" class="col-form-label mt-2">Judul</label>
-                        <input id="article_title" name="article_title" type="text" class="form-control" required>
                     </div>
+
                     <div class="col-sm-6">
                         <label for="article_image" class="col-sm-4 col-form-label">Tambah Gambar</label>
                         <input name="article_image" class="form-control" type="file" id="article_image"
                             onchange="validateImage()" accept="image/*">
                         <img id="img-preview" class="img-fluid col-sm-4 mt-3" src="">
                     </div>
+
                 </div>
+
                 <div class="row mb-3">
                     <label for="article_description" class="col-form-label">Description</label>
                     <div class="col-sm-12">
