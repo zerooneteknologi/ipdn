@@ -1,5 +1,5 @@
 <header id="header"
-    class="navbar-expand-lg fixed-top d-flex align-items-center {{Request::is('/') ? 'header-transparent' :''}}">
+    class="navbar-expand-lg fixed-top d-flex align-items-center {{ Request::is('/') ? 'header-transparent' : '' }}">
     <div class="container d-flex justify-content-between align-items-center">
 
         <div id="logo">
@@ -15,12 +15,12 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto {{Request::is('/') ? 'active' :''}}" href="/">Beranda</a>
+                <li><a class="nav-link scrollto {{ Request::is('/') ? 'active' : '' }}" href="/">Beranda</a>
                 </li>
                 <li class="dropdown"><a href="#about"><span>Profil LSP</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="{{ route('articlesingle', 'lembaga_sertifikasi_profesi') }}">Profil LSP</a></li>
-                        <li><a href="{{ route('mision')}}">Visi Misi</a></li>
+                        <li><a href="{{ route('mision') }}">Visi Misi</a></li>
                         <li><a href="{{ route('articlesingle', 'struktur_organisasi') }}">Struktur Organisasi</a>
                         </li>
                     </ul>
@@ -49,11 +49,11 @@
 <script>
     console.log('ok');
 </script>
-<script src="{{ asset('assets/js/costum.js')}}"></script>
+<script src="{{ asset('assets/js/costum.js') }}"></script>
 @endif
 <script>
     $(document).ready(function() {
-        const scemes = `
+            const scemes = `
                         <section id="schema" class=" pb-md-2 pb-lg-5 section-bg pt-lg-5" data-aos="fade-up">
                             <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
                             <div class="container pb-4 pt-5">
@@ -62,7 +62,7 @@
                                         <h2 class="mb-2 mb-md-0">Skema Sertifikasi</h2>
                                     </div>
                                     <div class="col-md-6">
-                                        <form class="row gy-2" action="{{ route('search')}}">
+                                        <form class="row gy-2" action="{{ route('search') }}">
                                             <div class="d-flex align-items-center">
                                                 <div class="nav flex-nowrap me-sm-4 me-3">
                                                     <label class="nav-link p-0 active" aria-label="Grid view">
@@ -88,28 +88,32 @@
                                 </div>
                             </div>
                         </section>`
-        $('input').click(function() {
-            $('ul').addClass("d-none")
+            $('input').click(function() {
+                $('ul').addClass("d-none")
+            })
+
+            $('.button-reset').click(function() {
+                $('ul').removeClass("d-none")
+            })
+            $('input').keyup(function() {
+                const val = $('input').val()
+
+                @if (Request::is('scemes'))
+                    $.get('/search', {
+                        search: `${val}`
+                    }, function(data) {
+                        $('.filter').html(data)
+                    })
+                @else
+                    $('#header').removeClass("header-transparent")
+                    $('#main').html(scemes);
+                    $.get('/search', {
+                        search: `${val}`
+                    }, function(data) {
+                        $('.filter').html(data)
+                    })
+                @endif
+            })
         })
-    
-        $('.button-reset').click(function() {
-            $('ul').removeClass("d-none")
-        })
-        $('input').keyup(function() {
-            const val = $('input').val()
-            
-            @if (Request::is('scemes'))
-                $.get('/search', { search : `${val}`}, function(data) {
-                    $('.filter').html(data)
-                })
-            @else
-            $('#header').removeClass("header-transparent")
-                $('#main').html(scemes);
-                $.get('/search', { search : `${val}`}, function(data) {
-                    $('.filter').html(data)
-                })
-            @endif
-        })
-    })
 </script>
 @endpush
