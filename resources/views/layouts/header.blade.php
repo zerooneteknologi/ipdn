@@ -53,6 +53,14 @@
 @endif
 <script>
     $(document).ready(function() {
+    @if (!Request::is('assesors') && !Request::is('articles'))
+        <script>
+            console.log('ok');
+</script>
+<script src="{{ asset('assets/js/costum.js') }}"></script>
+@endif
+<script>
+    $(document).ready(function() {
             const scemes = `
                         <section id="schema" class=" pb-md-2 pb-lg-5 section-bg pt-lg-5" data-aos="fade-up">
                             <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
