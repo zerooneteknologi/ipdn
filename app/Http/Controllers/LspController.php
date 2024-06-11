@@ -8,6 +8,7 @@ use App\Models\Partner;
 use App\Models\Sceme;
 use App\Models\Article;
 use App\Models\Mision;
+use App\Models\Setting;
 use App\Models\Vision;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
@@ -43,7 +44,9 @@ class LspController extends Controller
 
     public function registration()
     {
-        return view('web.registration.registration');
+        return view('web.registration.registration', [
+            'iframe' => Setting::latest()->first(),
+        ]);
     }
 
     /*

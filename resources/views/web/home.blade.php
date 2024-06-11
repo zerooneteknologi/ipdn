@@ -14,7 +14,7 @@
 
 <!-- ======= About Section ======= -->
 <section id="about">
-    <div class="container pt-5" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
 
         <div class="row">
             <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
@@ -27,9 +27,10 @@
             </div>
 
             <div class="col-lg-6 content" data-aos="fade-left" dat-aos-delay="100">
-                <h2>{{ $profile->article_title }}</h2>
+                <h1 class="text-primary">Apa Iu LSP?</h1>
+                <h4>{{ $profile->article_title }}</h4>
 
-                {{ Str::after(Str::limit($profile->article_description, 600, '...'), '<div>') }}
+                {{ Str::after(Str::limit($profile->article_description, 100, '...'), '<div>') }}
                     <br>
                     <a href="{{ route('articlesingle', $profile->article_slug) }}"
                         class="btn btn-danger justify-center mt-3">Selengkapnya</a>
@@ -48,11 +49,11 @@
         </h2>
         <div class="row align-items-center pb-5 mb-lg-2">
             <div class="col-md-8 text-center text-md-start">
-                <p class="fs-lg text-muted mb-md-0">
+                {{-- <p class="fs-lg text-muted mb-md-0">
                     Skema sertifikasi juga dapat diartikan sebagai paket kompetensi dan persyaratan spesifik yang
                     berkaitan dengan kategori
                     jabatan atau keterampilan dari seseorang. Skema disusun sesuai dengan kebutuhan dari penggunanya.
-                </p>
+                </p> --}}
             </div>
             <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
                 <a href="{{ route('scemes') }}" class="btn btn-outline-primary btn-lg">
@@ -132,11 +133,22 @@
 <section id="pengumuman" class="section-bg">
     <div class="container" data-aos="fade-up">
 
-        <div class="section-header">
-            <h3 class="section-title">Pengumuman</h3>
+        <div class="section-header mt-lg-2">
+            <h3 class="section-title text-md-start">Pengumuman</h3>
             <span class="section-divider"></span>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                doloremque</p>
+
+            <div class="row align-items-center pb-5 mb-lg-2">
+                <div class="col-md-8 text-center text-md-start">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium
+                        doloremque</p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
+                    <a href="{{ route('articles') }}?type=4" class="btn btn-outline-primary btn-lg">
+                        Daftar Lengkap
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="row">
@@ -172,12 +184,18 @@
                     </div>
                 </div>
                 @endforeach
+
 </section><!-- End Pricing Section -->
 
 <!-- Post Section -->
 <section id="berita" class="section-bg" data-aos="fade-up">
     <div class="container mb-5 pt-5 pb-lg-5">
-        <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Berita Terbaru</h2>
+        <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-md-start">Berita Terbaru</h2>
+        <div class="col-md-8 text-center text-md-start">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium
+                doloremque</p>
+        </div>
 
         <!-- Blog articles -->
         <div class="pb-3">
@@ -244,14 +262,14 @@
 <!-- ======= Clients Section ======= -->
 <section id="clients">
     <div class="container" data-aos="fade-up">
-        <h3 class="mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Partner Kerjasama Kami</h3>
+        <h3 class="mb-4 pt-lg-2 pb-lg-3 py-1 text-md-start">Partner Kerjasama Kami</h3>
         <div class="row">
 
             @foreach ($partners as $partner)
             @if ($partner->partner_image)
             <div class="col-md-2">
-                <img src="{{ asset('storage/' . $partner->partner_image) }}" alt="$partner->partner_name"
-                    class="img-fluid h-50">
+                <img src="{{ asset('ipdn/storage/app/public/' . $partner->partner_image) }}"
+                    alt="{{ $partner->partner_name }}" class="img-fluid h-50">
             </div>
             @endif
             @endforeach
