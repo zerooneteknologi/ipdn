@@ -43,23 +43,16 @@
     </div>
 </header>
 
-
 @push('script')
 @if (!Request::is('assesors') && !Request::is('articles'))
-<script>
-    console.log('ok');
-</script>
-<script src="{{ asset('assets/js/costum.js') }}"></script>
 @endif
-<script>
-    $(document).ready(function() {
-    @if (!Request::is('assesors') && !Request::is('articles'))
-        <script>
-            console.log('ok');
-</script>
 <script src="{{ asset('assets/js/costum.js') }}"></script>
-@endif
 <script>
+    $.ajaxSetup({
+    headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+    });
     $(document).ready(function() {
             const scemes = `
                         <section id="schema" class=" pb-md-2 pb-lg-5 section-bg pt-lg-5" data-aos="fade-up">
@@ -92,17 +85,18 @@
                                     </div>
                                     <div class="row align-items-center pb-5 mb-lg-2">
                                     </div>
-                                    <div class="row row-cols-1 row-cols-md-2 pt-lg-3 mt-lg-4 filter"></div>
+                                    <div class="filter"></div>
                                 </div>
                             </div>
                         </section>`
-            $('input').click(function() {
+            $('input').focus(function() {
                 $('ul').addClass("d-none")
             })
 
-            $('.button-reset').click(function() {
+            $('input').focusout(function() {
                 $('ul').removeClass("d-none")
             })
+
             $('input').keyup(function() {
                 const val = $('input').val()
 
@@ -122,6 +116,25 @@
                     })
                 @endif
             })
+        })
+
+        $(document).on('click', '.pagination a', function (e) {
+            e.preventDefault()
+
+            @if (!Request::is('assesors') && !Request::is('articles'))
+            console.log('assesor');
+                $.get($(this).attr('href'), {}, function (data) {
+                $('.filter').html(data)
+                })
+            @else
+                $.get($(this).attr('href'), {}, function (data) {
+                document.open();
+                document.write(data);
+                document.close();
+                })
+            console.log('sceme');
+            @endif
+            
         })
 </script>
 @endpush

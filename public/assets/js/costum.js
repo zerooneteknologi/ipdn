@@ -21,9 +21,9 @@ $(document).on('change', '.sceme_status', function () {
   filter()
 })
 
-$(document).on('click', '.pagination a', function (e) {
-  e.preventDefault()
-  $.get($(this).attr('href'), {}, function (data) {
-    $('.filter').html(data)
-  })
-})
+// $(document).on('click', '.pagination a', function (e) {
+//   e.preventDefault()
+//   $.get($(this).attr('href'), {}, function (data) {
+//     $('.filter').html(data)
+//   })
+// })

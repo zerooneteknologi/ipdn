@@ -393,11 +393,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../img/hero-bg.jpg') center top no-repeat;
   background-size: cover;
   position: relative;
@@ -1378,17 +1374,19 @@ section {
   outline: none;
   background-color: white;
 }
-/*  */
+/* fokus input */
 #header .container .search-box input[type='text']:focus,
 .search-box input[type='text']:not(:placeholder-shown) {
   width: 18em;
   transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
+
 #header .container .search-box input[type='text']:focus + button[type='reset'],
 .search-box input[type='text']:not(:placeholder-shown) + button[type='reset'] {
   transform: rotate(-45deg) translateY(0);
   transition: transform 150ms ease-out 800ms;
 }
+
 #header
   .container
   .search-box
@@ -1401,6 +1399,7 @@ section {
   transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms,
     opacity 150ms ease 950ms;
 }
+
 #header .container .search-box button[type='reset'] {
   background-color: transparent;
   width: 1em;
@@ -1417,6 +1416,7 @@ section {
   transform: rotate(-45deg) translateY(1.1em);
   transition: transform 150ms ease-out 150ms;
 }
+
 #header .container .search-box button[type='reset']:before,
 .search-box button[type='reset']:after {
   content: '';
@@ -1425,16 +1425,17 @@ section {
   height: 1em;
   position: absolute;
 }
+
 #header .container .search-box button[type='reset']:after {
   transform: rotate(90deg);
   opacity: 0;
   transition: transform 150ms ease-out, opacity 150ms ease-out;
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   #header .container .search-box input[type='text']:focus,
   .search-box input[type='text']:not(:placeholder-shown) {
     width: 5em;
     transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
-}
+} */
