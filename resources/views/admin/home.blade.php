@@ -87,7 +87,7 @@
                                         <td>
                                             @if ($sceme->sceme_image)
                                             <img width="30px" class="rounded-circle"
-                                                src="{{ asset('storage/'. $sceme->sceme_image)}}"
+                                                src="{{ asset('ipdn/storage/app/public/'. $sceme->sceme_image)}}"
                                                 alt="{{ $sceme->sceme_name }}">
                                             @else
                                             <img width="30px" class="rounded-circle" src="/assets/img/logo/noimage.png"
@@ -142,7 +142,7 @@
                                         <th scope="row">{{ $loop->iteration }}</th>
                                         <td>
                                             @if ($assesor->assesor_image)
-                                            <img src="{{ asset('storage/' . $assesor->assesor_image)}}"
+                                            <img src="{{ asset('ipdn/storage/app/public/' . $assesor->assesor_image)}}"
                                                 alt="{{ $assesor->assesor_name }}">
                                             @else
                                             <img width="30px" class="rounded-circle" src="/assets/img/logo/noimage.png"
@@ -177,7 +177,7 @@
                         @foreach ($articles as $article)
                         <div class="post-item clearfix">
                             @if ($article->article_image)
-                            <img src="{{ asset('storage/' .$article->article_image) }}"
+                            <img src="{{ asset('ipdn/storage/app/public/' .$article->article_image) }}"
                                 alt="{{ $article->article_title }}">
                             @else
                             <img src="/assets/img/logo/noimage.png" alt="noimage">
