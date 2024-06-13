@@ -36,7 +36,7 @@ class ArticleController extends Controller
                 'articles' => Article::where('article_type', request('type'))
                     ->latest()
                     ->get(),
-                'categories' => Category::latest()->get(),
+                'categories' => Category::all()->skip(1),
                 'article_type' => request('type'),
             ]);
         } else {
@@ -55,7 +55,7 @@ class ArticleController extends Controller
     public function create()
     {
         return view('admin.article.create', [
-            'categories' => Category::latest()->get(),
+            'categories' => Category::all()->skip(1),
         ]);
     }
 
@@ -118,7 +118,10 @@ class ArticleController extends Controller
             );
         } else {
             if (request('type') == 1) {
-                $validatedData['article_slug'] = Str::slug('lembaga sertifikasi profesi', '_');
+                $validatedData['article_slug'] = Str::slug(
+                    'lembaga sertifikasi profesi',
+                    '_'
+                );
             } else {
                 $validatedData['article_slug'] = Str::slug(
                     'struktur organisasi',

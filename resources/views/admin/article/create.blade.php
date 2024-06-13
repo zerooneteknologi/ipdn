@@ -58,6 +58,10 @@
                         </select>
                         @endif
 
+                        @if (request('type') == 4)
+                        <input type="hidden" name="category_id" value="1">
+                        @endif
+
                     </div>
 
                     <div class="col-sm-6">

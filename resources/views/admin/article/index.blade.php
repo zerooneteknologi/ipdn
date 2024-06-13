@@ -31,7 +31,6 @@
 <section class="section">
     <div class="card">
         <div class="card-body">
-            <label for="" class="bg-warning">{{ $article_type }}</label>
             @if (session()->has('success'))
             <div class="alert alert-primary alert-dismissible fade show" role="alert">
                 <i class="bi bi-star me-1"></i>

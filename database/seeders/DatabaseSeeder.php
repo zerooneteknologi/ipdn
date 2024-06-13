@@ -23,15 +23,24 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        $this->call([
-            ScemeSeeder::class,
-            AssesorSeeder::class,
-            SettingSeeder::class,
-            PartnerSeeder::class,
-            ArticleSeeder::class,
-            CategorySeeder::class,
-            VisionSeeder::class,
-            MisionSeeder::class,
+        Article::factory()->create([
+            'user_id' => 1,
+            'category_id' => 1,
+            'article_title' => fake()->name(),
+            'article_slug' => 'lembaga_sertifikasi_profesi',
+            'article_type' => 1,
+            'article_description' => fake()->paragraph(6),
         ]);
+
+        Article::factory()->create([
+            'user_id' => 1,
+            'category_id' => 1,
+            'article_title' => fake()->name(),
+            'article_slug' => 'struktur_organisasi',
+            'article_type' => 2,
+            'article_description' => fake()->paragraph(6),
+        ]);
+
+        $this->call([CategorySeeder::class]);
     }
 }
