@@ -79,22 +79,22 @@
             <!-- Grid row -->
             <div class="row mt-3">
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
-                    <img src="/assets/img/logo/logo_lsp_no_backround-removebg.png" class="rounded-circle float-start"
-                        width="100" alt="Silicon" />
+                <div class="col-sm-6 d-flex align-items-center">
+                    <img src="/assets/img/logo/logo_lsp.png" class="rounded-circle float-start" width="100"
+                        alt="Silicon" />
                     <!-- Content -->
-                    <h6 class="text-capitalize fw-bold mb-4">
-                        Lembaga Sertifikasi Profesi Institut Pemerintahan Dalam Negeri
+                    <h6 class="text-capitalize fw-bold">
+                        Lembaga Sertifikasi Profesi <br> Institut Pemerintahan Dalam Negeri
                     </h6>
-                    <p><i class="fas fa-home"></i> Jalan Ir. Soekarno KM 20, Cibeusi, Jatinangor, Kabupaten
-                        Sumedang
-                        Jawa Barat 45363</p>
-                    <p>lsp.ipdn.ac.id</p>
                 </div>
-                <!-- Grid column -->
+                <p>Jalan Ir. Soekarno KM 20, Cibeusi, Jatinangor, <br> Kabupaten
+                    Sumedang
+                    Jawa Barat 45363 <br> lsp.ipdn.ac.id</p>
+            </div>
+            <!-- Grid column -->
 
-                <!-- Grid column -->
-                {{-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Grid column -->
+            {{-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
                         Products
@@ -149,8 +149,8 @@
                 </div>
                 <!-- Grid column -->
             </div> --}}
-                <!-- Grid row -->
-            </div>
+            <!-- Grid row -->
+        </div>
     </section>
     <!-- Section: Links  -->
 
