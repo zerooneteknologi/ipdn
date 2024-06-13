@@ -11,34 +11,34 @@
         </h2>
         <div class="row align-items-center pb-5 mb-lg-2">
         </div>
-        <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 gy-md-4 gy-2">
+        <div class="row row-cols-lg-5 row-cols-sm-2 row-cols-1 gy-md-4 gy-2">
             @foreach ($assesors as $assesor)
-            <!-- Item -->
-            <div class="col pb-3">
-                <article class="card border-0 shadow-sm h-100">
-                    <div class="position-relative">
-                        @if ($assesor->assesor_image)
-                        <img src="{{ asset('ipdn/storage/app/public/' . $assesor->assesor_image)}}" class="card-img-top"
-                            alt="{{ $assesor->assesor_name}}">
-                        @else
-                        <img src="/assets/img/logo/noimage.png" class="card-img-top" alt="Image">
-                        @endif
-                    </div>
-                    <div class="card-body pb-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <span class="fs-sm text-muted">{{ $assesor->assesor_specialize}}</span>
+                <!-- Item -->
+                <div class="col pb-3">
+                    <article class="card border-0 shadow-sm h-100">
+                        <div class="position-relative">
+                            @if ($assesor->assesor_image)
+                                <img src="{{ asset('ipdn/storage/app/public/' . $assesor->assesor_image) }}"
+                                    class="card-img-top" alt="{{ $assesor->assesor_name }}">
+                            @else
+                                <img src="/assets/img/logo/noimage.png" class="card-img-top" alt="Image">
+                            @endif
                         </div>
-                        <h3 class="h5 mb-0">
-                            <a href="{{ route('assesorsingle', $assesor->assesor_slug)}}">{{
-                                $assesor->assesor_name}}</a>
-                        </h3>
-                    </div>
-                </article>
-            </div>
+                        <div class="card-body pb-4 text-center">
+                            <div class="align-items-center justify-content-between mb-3">
+                                <span class="fs-sm text-muted">{{ $assesor->assesor_specialize }}</span>
+                            </div>
+                            <h3 class="h5 mb-0">
+                                <a
+                                    href="{{ route('assesorsingle', $assesor->assesor_slug) }}">{{ $assesor->assesor_name }}</a>
+                            </h3>
+                        </div>
+                    </article>
+                </div>
             @endforeach
 
         </div>
-        {{ $assesors->links()}}
+        {{ $assesors->links() }}
     </div>
 
     </div>
@@ -49,6 +49,12 @@
 <script>
     // this.onload = (even) => {
     //     alert('ok')
-    // }
+    // }    
+    // $(document).ready(function() {
+    //     // Gantilah '#elementID' dengan ID elemen yang ingin Anda scroll ke sana
+    //     $('html, body').animate({
+    //         scrollTop: $('#schema').offset().top - 100
+    //     }, 1000); // Durasi scroll dalam milidetik
+    // });
 </script>
 @endpush
