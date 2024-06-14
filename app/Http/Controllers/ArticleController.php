@@ -22,7 +22,7 @@ class ArticleController extends Controller
             'article_type' => '',
             'article_slug' => '',
             'article_image' => '',
-            'article_description' => '',
+            'article_description' => ['required'],
         ]);
     }
 

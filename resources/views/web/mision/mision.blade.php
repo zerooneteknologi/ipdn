@@ -20,10 +20,10 @@
                         <hr class="hr hr-blurry" />
                         <table class="table table-borderless">
                             @foreach ($misions as $mision)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>{{ $mision->mision }}</td>
-                            </tr>
+                                <tr>
+                                    <td style="width: 2%">{{ $loop->iteration }}.</td>
+                                    <td>{{ $mision->mision }}</td>
+                                </tr>
                             @endforeach
                         </table>
                     </div>

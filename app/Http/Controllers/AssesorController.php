@@ -23,7 +23,7 @@ class AssesorController extends Controller
             'assesor_code' => '',
             'assesor_specialize' => '',
             'assesor_address' => '',
-            'assesor_detail' => '',
+            'assesor_detail' => ['required'],
             'assesor_image' => '',
         ]);
     }

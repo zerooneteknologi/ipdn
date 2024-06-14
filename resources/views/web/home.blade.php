@@ -135,8 +135,8 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-header mt-lg-5">
-                <h3 class="h1 mb-xl-4 mb-0 pb-xl-3">Pengumuman</h3>
-                <div class="row align-items-center pb-5 mb-lg-2">
+                <h3 class="h1 mb-xl-4 mb-0 pb-sm-2">Pengumuman</h3>
+                <div class="row align-items-center pb-3 mb-lg-2">
                     <div class="col-md-9 text-center text-md-start">
                         <p class="fs-lg text-muted mb-md-0">
                             Pengumuman terbaru seputar LSP IPDN dan lainya

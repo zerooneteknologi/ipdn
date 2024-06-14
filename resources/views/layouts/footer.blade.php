@@ -80,7 +80,7 @@
             <div class="row mt-3">
                 <!-- Grid column -->
                 <div class="col-sm-6 d-flex align-items-center">
-                    <img src="/assets/img/logo/logo_lsp.png" class="rounded-circle float-start" width="100"
+                    <img src="/assets/img/logo/Logo_LSP.png" class="rounded-circle float-start" width="100"
                         alt="Silicon" />
                     <!-- Content -->
                     <h6 class="text-capitalize fw-bold">

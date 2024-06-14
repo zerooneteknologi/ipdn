@@ -17,7 +17,7 @@ class ScemeController extends Controller
             'sceme_code' => '',
             'sceme_status' => '',
             'sceme_bnsp' => '',
-            'sceme_detail' => '',
+            'sceme_detail' => ['required'],
             'sceme_image' => '',
             'sceme_file' => '',
         ]);
