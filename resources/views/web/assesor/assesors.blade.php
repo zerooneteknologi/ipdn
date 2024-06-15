@@ -6,7 +6,7 @@
 <section id="schema" class=" pb-md-2 pb-lg-5 section-bg pt-lg-5" data-aos="fade-up">
     <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
     <div class="container pb-4 pt-5">
-        <h2 class="h1 text-center text-md-center mb-lg-4 pt-1 pt-md-4">
+        <h2 class="h1 text-center text-md-center mb-lg-4 pt-1 pt-md-4 title-custom">
             Assesor Kompetensi
         </h2>
         <div class="row align-items-center pb-5 mb-lg-2">

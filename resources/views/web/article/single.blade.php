@@ -10,26 +10,29 @@
 
             <div class="col-12">
                 <div class="">
-                    @if ($article->article_image)
-                        <img class="rounded img-fluid mx-auto d-block" style="width: 80%;"
-                            src="{{ asset('ipdn/storage/app/public/' . $article->article_image) }}" alt="Tidak ada gambar"
-                            class="card-img-top img-fluid">
-                    @else
-                        <img class="rounded img-fluid mx-auto d-block" style="width: 80%;"
-                            src="/assets/img/logo/noimage.png" alt="Tidak ada gambar" class="card-img-top img-fluid">
-                    @endif
                     <hr class="hr hr-blurry" />
                     <div class="card-body">
-                        <h1 class="card-title">{{ $article->article_title }}</h1>
+                        <h1 class="card-title text-capitalize title-custom">{{ $article->article_title }}</h1>
                         <strong class="badge bg-info border-0 text-uppercase my-3">
-                            @if (!request('type') == 1 || !request('type') == 2)
+                            @if ($article->article_type == 3)
                                 {{ $article->category->category_name }}
-                                |
+                                <span class="mx-2">|</span>
                             @endif
+                            <i class="bi bi-clock-fill"></i>
                             {{ date_format($article->created_at, 'd M Y') }}
                         </strong>
+                        <hr>
+                        @if ($article->article_image)
+                            <img class="rounded img-fluid mx-auto d-block my-5" style="width: 50%;"
+                                src="{{ asset('ipdn/storage/app/public/' . $article->article_image) }}"
+                                alt="{{ $article->article_image }}" class="card-img-top img-fluid">
+                        @else
+                            <img class="rounded img-fluid mx-auto d-block my-5" style="width: 50%;"
+                                src="/assets/img/logo/noimage.png" alt="Tidak ada gambar"
+                                class="card-img-top img-fluid">
+                        @endif
                         <hr class="hr hr-blurry" />
-                        <p>{!! $article->article_description !!}</p>
+                        <div style="text-align: justify">{!! $article->article_description !!}</div>
                     </div>
                 </div>
             </div>

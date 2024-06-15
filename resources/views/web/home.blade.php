@@ -18,12 +18,7 @@
 
             <div class="row">
                 <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
-                    @if ($profile->article_image)
-                        <img src="{{ asset('ipdn/storage/app/public/' . $profile->article_image) }}"
-                            alt="{{ $profile->article_title }}">
-                    @else
-                        <img src="/assets/img/logo/noimage.png" alt="No Image">
-                    @endif
+                    <img src="assets/img/walking.gif" alt="walking.gif">
                 </div>
 
                 <div class="col-lg-6 content" data-aos="fade-left" dat-aos-delay="100">

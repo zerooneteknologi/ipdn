@@ -8,7 +8,7 @@
     <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-            <h3 class="section-title">Pendaftaran</h3>
+            <h2 class="h1 text-center text-md-center mb-lg-4 pt-1 pt-md-4 title-custom">Pendaftaran</h2>
             <span class="section-divider"></span>
         </div>
 
@@ -21,16 +21,16 @@
 @push('script')
 <script>
     // Tentukan elemen tujuan
-        var targetElement = document.getElementById("registration");
+    var targetElement = document.getElementById("registration");
 
-        // Dapatkan posisi relatif elemen terhadap dokumen
-        var rect = targetElement.getBoundingClientRect();
+    // Dapatkan posisi relatif elemen terhadap dokumen
+    var rect = targetElement.getBoundingClientRect();
 
-        // Gulir halaman ke posisi elemen tersebut
-        window.scrollTo({
-            // top: rect.top + window.scrollY,
-            top: rect.top + (window.scrollY - 80),
-            behavior: 'smooth' // untuk animasi scroll
-        });
-@endpush
+    // Gulir halaman ke posisi elemen tersebut
+    window.scrollTo({
+        // top: rect.top + window.scrollY,
+        top: rect.top + (window.scrollY - 80),
+        behavior: 'smooth' // untuk animasi scroll
+    });
+    @endpush
 </script>

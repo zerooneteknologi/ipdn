@@ -8,10 +8,10 @@
     <div class="container pb-4 pt-5">
         <div class="row align-items-end gy-3 mb-4 pb-lg-3 pb-1">
             <div class="col-md-6">
-                <h2 class="mb-2 mb-md-0">Skema Sertifikasi</h2>
+                <h2 class="mb-2 mb-md-0 title-custom">Skema Sertifikasi</h2>
             </div>
             <div class="col-md-6">
-                <form class="row gy-2" action="{{ route('search')}}">
+                <form class="row gy-2" action="{{ route('search') }}">
                     <div class="d-flex align-items-center">
                         <div class="nav flex-nowrap me-sm-4 me-3">
                             <label class="nav-link p-0 active" aria-label="Grid view">
