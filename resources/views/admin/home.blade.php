@@ -185,8 +185,8 @@
                             <h4><a href="{{ route('articlesingle', $article->article_slug) }}">{{
                                     $article->article_title }}</a></h4>
                             <p>
-                                {{ Str::after(Str::limit($article->article_description, 50, '...'), '
-                            <div>') }}
+                                {!! Str::after(Str::limit($article->article_description, 50, '...'), '
+                            <div>') !!}
                                 </p>
                             </div>
                             @endforeach
