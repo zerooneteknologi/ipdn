@@ -39,8 +39,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab"
-                                data-bs-target="#profile-edit">Deskripsi</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">File</button>
                         </li>
                     </ul>
                     <div class="tab-content pt-2">
@@ -54,22 +53,30 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 label">Keahlian</div>
-                                <div class="col-lg-9 col-md-8">{{ $assesor->assesor_specialize }}
+                                <div class="col-lg-3 col-md-4 label">Lisensi</div>
+                                <div class="col-lg-9 col-md-8">{{ $assesor->assesor_license }}
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 label">Alamat</div>
-                                <div class="col-lg-9 col-md-8">{{ $assesor->assesor_address }}
+                                <div class="col-lg-3 col-md-4 label">Kompetensi</div>
+                                <div class="col-lg-9 col-md-8">{{ $assesor->assesor_competency }}
                                 </div>
+                            </div>
+
+                            <div class="row" style="text-align: justify;">
+                                {!! $assesor->assesor_detail !!}
                             </div>
                         </div>
 
                         <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
-
-                            {!! $assesor->assesor_detail !!}
-
+                            <!-- file preview Form -->
+                            @if ($assesor->assesor_file)
+                            <embed src="{{ route('viepdf', $assesor->id) }}?type=2" class="w-100 vh-100">
+                            @else
+                            <div class="row">Tidak Ada file</div>
+                            @endif
+                            <!-- End file preview Form -->
                         </div>
 
                     </div><!-- End Bordered Tabs -->

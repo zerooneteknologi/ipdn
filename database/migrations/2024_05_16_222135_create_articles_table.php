@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->string('article_slug');
             $table->enum('article_type', [1, 2, 3, 4]); // 1.profile, 2.organizer, 3.news, 4 announcement
             $table->string('article_image')->nullable();
+            $table->string('article_file')->nullable();
             $table->text('article_description');
             $table->softDeletes();
             $table->timestamps();

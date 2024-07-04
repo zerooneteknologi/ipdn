@@ -41,6 +41,13 @@ class DatabaseSeeder extends Seeder
             'article_description' => fake()->paragraph(6),
         ]);
 
-        $this->call([CategorySeeder::class, SettingSeeder::class, VisionSeeder::class]);
+        $this->call([
+            CategorySeeder::class,
+            SettingSeeder::class,
+            VisionSeeder::class,
+            ScemeSeeder::class,
+            AssesorSeeder::class,
+            ArticleSeeder::class,
+        ]);
     }
 }

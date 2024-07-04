@@ -20,8 +20,8 @@ class AssesorFactory extends Factory
             'assesor_name' => fake()->name(),
             'assesor_slug' => fake()->slug(),
             'assesor_code' => fake()->lexify(),
-            'assesor_specialize' => fake()->streetName(),
-            'assesor_address' => fake()->address(),
+            'assesor_license' => fake()->streetName(),
+            'assesor_competency' => fake()->address(),
             'assesor_detail' => fake()->text(500),
         ];
     }

@@ -34,7 +34,7 @@
                         <th scope="col">No</th>
                         <th scope="col">Nama</th>
                         <th scope="col">Kode</th>
-                        <th scope="col">spesialsasi</th>
+                        <th scope="col">Lisensi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -70,7 +70,7 @@
                         </td>
                         <td>{{ $assesor->assesor_name}}</td>
                         <td>{{ $assesor->assesor_code}}</td>
-                        <td>{{ $assesor->assesor_specialize}}</td>
+                        <td>{{ $assesor->assesor_license}}</td>
                     </tr>
                     @endforeach
                 </tbody>

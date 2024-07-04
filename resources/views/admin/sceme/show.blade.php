@@ -73,15 +73,33 @@
                                     @endif
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label">Status BNSP</div>
+                                <div class="col-lg-9 col-md-8">
+                                    @if ($sceme->sceme_bnsp == 1)
+                                    Aktif
+                                    @else
+                                    @if ($sceme->sceme_bnsp == 3)
+                                    Pengajuan
+                                    @else
+                                    Tidak Aktif
+                                    @endif
+                                    @endif
+                                </div>
+                            </div>
                             <h5 class="card-title">Detail</h5>
 
                             {!! $sceme->sceme_detail !!}
                         </div>
 
                         <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
-
                             <!-- file preview Form -->
-                            <iframe src="" frameborder="0"></iframe>
+                            @if ($sceme->sceme_file)
+                            <embed src="{{ route('viepdf', $sceme->id) }}?type=1" type="" class="w-100 vh-100">
+                            @else
+                            <div class="row">Tidak Ada file</div>
+                            @endif
                             <!-- End file preview Form -->
 
                         </div>

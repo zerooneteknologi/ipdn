@@ -18,10 +18,11 @@ class ArticleController extends Controller
         return $data = $request->validate([
             'category_id' => '',
             'user_id' => '',
-            'article_title' => '',
+            'article_title' => 'max:255',
             'article_type' => '',
             'article_slug' => '',
             'article_image' => '',
+            'article_file' => '',
             'article_description' => ['required'],
         ]);
     }
@@ -33,7 +34,8 @@ class ArticleController extends Controller
     {
         if (request('type') == 3 || request('type') == 4) {
             return view('admin.article.index', [
-                'articles' => Article::where('article_type', request('type'))
+                'articles' => Article::with('category')
+                    ->where('article_type', request('type'))
                     ->latest()
                     ->get(),
                 'categories' => Category::all()->skip(1),
@@ -71,10 +73,22 @@ class ArticleController extends Controller
             '_'
         );
 
+        /**
+         * uplad image
+         */
         if ($request->file('article_image')) {
             $validatedData['article_image'] = $request
                 ->file('article_image')
                 ->store('img/article');
+        }
+
+        /**
+         * uplad pdf
+         */
+        if ($request->file('article_file')) {
+            $validatedData['article_file'] = $request
+                ->file('article_file')
+                ->store('file/article');
         }
 
         Article::create($validatedData);
@@ -130,6 +144,9 @@ class ArticleController extends Controller
             }
         }
 
+        /**
+         * upload image
+         */
         if ($request->file('article_image')) {
             if ($article->article_image) {
                 if (Storage::exists($article->article_image)) {
@@ -140,7 +157,20 @@ class ArticleController extends Controller
                 ->file('article_image')
                 ->store('img/article');
         }
-        // dd($validatedData);
+        /**
+         * upload pdf
+         */
+        if ($request->file('article_file')) {
+            if ($article->article_file) {
+                if (Storage::exists($article->article_file)) {
+                    Storage::delete($article->article_file);
+                }
+            }
+            $validatedData['article_file'] = $request
+                ->file('article_file')
+                ->store('file/article');
+        }
+
         $article->update($validatedData);
 
         return redirect('/article?type=' . $request->article_type)->with(

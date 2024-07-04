@@ -12,9 +12,9 @@ class ScemeController extends Controller
     private function validateData(Request $request)
     {
         return $data = $request->validate([
-            'sceme_name' => '',
+            'sceme_name' => 'max:255',
             'sceme_slug' => '',
-            'sceme_code' => '',
+            'sceme_code' => 'max:255',
             'sceme_status' => '',
             'sceme_bnsp' => '',
             'sceme_detail' => ['required'],
@@ -66,7 +66,8 @@ class ScemeController extends Controller
         }
 
         $data['sceme_slug'] = Str::slug(
-            $request->sceme_name . round(microtime(true))
+            $request->sceme_name . ' ' . round(microtime(true)),
+            '_'
         );
         Sceme::create($data);
 
@@ -141,7 +142,8 @@ class ScemeController extends Controller
         }
 
         $data['sceme_slug'] = Str::slug(
-            $request->sceme_name . round(microtime(true))
+            $request->sceme_name . ' ' . round(microtime(true)),
+            '_'
         );
 
         $sceme->update($data);

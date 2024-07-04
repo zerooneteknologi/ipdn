@@ -18,7 +18,7 @@ class ArticleFactory extends Factory
     {
         return [
             'user_id' => fake()->randomDigitNotNull(),
-            'category_id' => mt_rand(1, 3),
+            'category_id' => mt_rand(2, 3),
             'article_title' => fake()->name(),
             'article_slug' => fake()->slug(),
             'article_type' => mt_rand(1, 4),

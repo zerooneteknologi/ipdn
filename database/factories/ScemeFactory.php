@@ -21,7 +21,7 @@ class ScemeFactory extends Factory
             'sceme_slug' => fake()->slug(),
             'sceme_code' => fake()->lexify(),
             'sceme_status' => fake()->numberBetween(1, 2),
-            'sceme_bnsp' => fake()->numberBetween(1, 2),
+            'sceme_bnsp' => rand(1, 3),
             'sceme_detail' => fake()->paragraph(10),
         ];
     }

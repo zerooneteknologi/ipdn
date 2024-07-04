@@ -79,16 +79,20 @@
                         </td>
                         <td>
                             @if ($sceme->sceme_status == 1)
-                            <p class="text-bg-info">Aktif</p>
+                            <p class="badge bg-info">Aktif</p>
                             @else
-                            <p class="text-bg-danger">Tidak Aktif</p>
+                            <p class="badge bg-danger">Tidak Aktif</p>
                             @endif
                         </td>
                         <td>
                             @if ($sceme->sceme_bnsp == 1)
-                            <p class="text-bg-info">Aktif</p>
+                            <span class="badge bg-info">Aktif</span>
                             @else
-                            <p class="text-bg-danger">Tidak Aktif</p>
+                            @if ($sceme->sceme_bnsp == 3)
+                            <span class="badge bg-success">Pengajuan</span>
+                            @else
+                            <span class="badge bg-danger">Tidak Aktif</span>
+                            @endif
                             @endif
                         </td>
                     </tr>

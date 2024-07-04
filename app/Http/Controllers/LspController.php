@@ -12,6 +12,7 @@ use App\Models\Setting;
 use App\Models\Vision;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class LspController extends Controller
@@ -102,12 +103,38 @@ class LspController extends Controller
         ]);
     }
 
-    public function viepdf(Sceme $sceme)
+    /**
+     * preview pdf
+     */
+    public function viepdf($id)
     {
-        // dd($sceme);
-        return response()->file(public_path('storage/' . $sceme->sceme_file), [
-            'conten-type' => 'aplocation/pdf',
-        ]);
+        $sceme = Sceme::where('id', $id)->first();
+        $assesor = Assesor::where('id', $id)->first();
+
+        if (request('type') == 1) {
+            return response()->file(
+                public_path('storage/' . $sceme->sceme_file),
+                [
+                    'conten-type' => 'aplocation/pdf',
+                ]
+            );
+        } else {
+            return response()->file(
+                public_path('storage/' . $assesor->assesor_file),
+                [
+                    'conten-type' => 'aplocation/pdf',
+                ]
+            );
+            // return $assesor;
+        }
+    }
+
+    /**
+     * download pdf
+     */
+    public function download(Article $article)
+    {
+        return Storage::download($article->article_file);
     }
 
     public function articles()

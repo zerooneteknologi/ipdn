@@ -15,10 +15,11 @@ return new class extends Migration {
             $table->string('assesor_name');
             $table->string('assesor_slug');
             $table->string('assesor_code');
-            $table->string('assesor_specialize');
-            $table->string('assesor_address');
+            $table->string('assesor_license');
+            $table->text('assesor_competency');
             $table->text('assesor_detail');
             $table->string('assesor_image')->nullable();
+            $table->string('assesor_file')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
