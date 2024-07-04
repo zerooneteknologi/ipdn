@@ -19,12 +19,13 @@
                             </label>
                         </div>
                         <select class="form-select sceme_bnsp" name="sceme_bnsp">
-                            <option value="0">Status BNSP</option>
+                            <option disabled value="0">Status BNSP</option>
                             <option value="1">BNSP Aktif</option>
                             <option value="2">BNSP Tidak Aktif</option>
+                            <option value="3">BNSP Pengajuan</option>
                         </select>
                         <select class="form-select sceme_status" name="sceme_status">
-                            <option value="0">Status Skema</option>
+                            <option disabled value="0">Status Skema</option>
                             <option value="1">Status Aktif</option>
                             <option value="2">Status Tidak Aktif</option>
                         </select>

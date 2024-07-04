@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center text-center">
                         @if ($assesor->assesor_image)
-                        <img src="{{ asset('ipdn/storage/app/public/' . $assesor->assesor_image) }}" alt="Profile"
-                            class="rounded" width="250px">
+                            <img src="{{ asset('ipdn/storage/app/public/' . $assesor->assesor_image) }}" alt="Profile"
+                                class="rounded" width="250px">
                         @else
-                        <img src="/assets/img/logo/noimage.png" alt="Profile" class="rounded" width="200px">
+                            <img src="/assets/img/logo/noimage.png" alt="Profile" class="rounded" width="200px">
                         @endif
                         <h2>{{ $assesor->assesor_name }}</h2>
                     </div>
@@ -37,6 +37,10 @@
                             <li class="nav-item">
                                 <button class="nav-link" data-bs-toggle="tab"
                                     data-bs-target="#profile-edit">File</button>
+                            </li>
+                            <li class="nav-item ms-auto">
+                                <a href="{{ route('assesors') }}" class="btn btn-outline-secondary"><i
+                                        class="bi bi-arrow-left"></i></a>
                             </li>
 
                         </ul>
@@ -72,9 +76,10 @@
 
                             <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
                                 @if ($assesor->assesor_file)
-                                <embed src="{{ route('viepdf', $assesor->id) }}?type=2" type="" class="w-100 vh-100">
+                                    <embed src="{{ route('viepdf', $assesor->id) }}?type=2" type=""
+                                        class="w-100 vh-100">
                                 @else
-                                Tidak Ada file
+                                    Tidak Ada file
                                 @endif
                             </div>
 

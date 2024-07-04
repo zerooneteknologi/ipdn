@@ -25,7 +25,7 @@
                     <h1 class="text-primary">Apa Itu LSP?</h1>
                     <h4>{{ $profile->article_title }}</h4>
 
-                    {{ Str::after(Str::limit($profile->article_description, 100, '...'), '<div>') }}
+                    {{ Str::after(Str::limit($profile->article_description, 200, '...'), '<div>') }}
                     <br>
                     <a href="{{ route('articlesingle', $profile->article_slug) }}"
                         class="btn btn-danger justify-center mt-3">Selengkapnya</a>

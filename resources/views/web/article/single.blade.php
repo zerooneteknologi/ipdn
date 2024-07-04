@@ -15,24 +15,31 @@
                         <h1 class="card-title text-capitalize title-custom">{{ $article->article_title }}</h1>
                         <strong class="badge bg-info border-0 text-uppercase my-3">
                             @if ($article->article_type == 3)
-                            {{ $article->category->category_name }}
-                            <span class="mx-2">|</span>
+                                {{ $article->category->category_name }}
+                                <span class="mx-2">|</span>
                             @endif
 
                             <i class="bi bi-clock-fill"></i>
                             {{ date_format($article->created_at, 'd M Y') }}
                         </strong>
                         @if ($article->article_type == 4)
-                        <a href="{{ route('download', $article->article_slug)}}"><i class="bi bi-download"></i></a>
+                            <a href="{{ route('download', $article->article_slug) }}"><i class="bi bi-download"></i></a>
                         @endif
                         <hr>
                         @if ($article->article_image)
-                        <img class="rounded img-fluid mx-auto d-block my-5" style="width: 50%;"
-                            src="{{ asset('ipdn/storage/app/public/' . $article->article_image) }}"
-                            alt="{{ $article->article_image }}" class="card-img-top img-fluid">
+                            <a class="d-flex justify-content-center align-items-center"
+                                href="{{ asset('ipdn/storage/app/public/' . $article->article_image) }}"
+                                data-lightbox="image-1" data-title="{{ $article->article_image }}">
+                                <img class="rounded img-fluid mx-auto d-block my-5" style="width: 50%;"
+                                    src="{{ asset('ipdn/storage/app/public/' . $article->article_image) }}"
+                                    alt="{{ $article->article_image }}" class="card-img-top img-fluid">
+                            </a>
                         @else
-                        <img class="rounded img-fluid mx-auto d-block my-5" style="width: 50%;"
-                            src="/assets/img/logo/noimage.png" alt="Tidak ada gambar" class="card-img-top img-fluid">
+                            <a class="d-flex justify-content-center align-items-center" href="/assets/img/logo/st.jpeg"
+                                data-lightbox="image-1" data-title="No Image">
+                                <img src="/assets/img/logo/st.jpeg" class="img-fluid rounded-start mr-3" alt="no image"
+                                    style="width: 50%" />
+                            </a>
                         @endif
                         <hr class="hr hr-blurry" />
                         <div style="text-align: justify">{!! $article->article_description !!}</div>
@@ -46,3 +53,11 @@
 
 </section><!-- End Service-details Section -->
 @endsection
+
+@push('css')
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+@endpush
+
+@push('script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+@endpush
