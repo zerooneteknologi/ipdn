@@ -23,7 +23,8 @@
                             {{ date_format($article->created_at, 'd M Y') }}
                         </strong>
                         @if ($article->article_type == 4)
-                            <a href="{{ route('download', $article->article_slug) }}"><i class="bi bi-download"></i></a>
+                            <a class="badge bg-secondary" href="{{ route('download', $article->article_slug) }}"><i
+                                    class="bi bi-download"></i>Unduh File</a>
                         @endif
                         <hr>
                         @if ($article->article_image)
@@ -35,10 +36,10 @@
                                     alt="{{ $article->article_image }}" class="card-img-top img-fluid">
                             </a>
                         @else
-                            <a class="d-flex justify-content-center align-items-center" href="/assets/img/logo/st.jpeg"
-                                data-lightbox="image-1" data-title="No Image">
-                                <img src="/assets/img/logo/st.jpeg" class="img-fluid rounded-start mr-3" alt="no image"
-                                    style="width: 50%" />
+                            <a class="d-flex justify-content-center align-items-center"
+                                href="/assets/img/logo/noimage.png" data-lightbox="image-1" data-title="No Image">
+                                <img src="/assets/img/logo/noimage.png" class="img-fluid rounded-start mr-3"
+                                    alt="no image" style="width: 50%" />
                             </a>
                         @endif
                         <hr class="hr hr-blurry" />
