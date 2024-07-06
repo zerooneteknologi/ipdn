@@ -140,11 +140,11 @@ class LspController extends Controller
     public function articles()
     {
         if (request('type') == 3) {
-            $articles = Article::where('article_type', 3)
+            $articles = Article::with('category')->where('article_type', 3)
                 ->latest()
                 ->paginate(8);
         } else {
-            $articles = Article::where('article_type', 4)
+            $articles = Article::with('category')->where('article_type', 4)
                 ->latest()
                 ->paginate(8);
         }
@@ -158,7 +158,7 @@ class LspController extends Controller
     {
         // return $article;
         return view('web.article.single', [
-            'article' => $article,
+            'article' => $article->with('category'),
         ]);
     }
 

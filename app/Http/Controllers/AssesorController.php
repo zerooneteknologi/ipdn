@@ -125,7 +125,7 @@ class AssesorController extends Controller
                     Storage::delete($assesor->assesor_image);
                     $validateData['assesor_image'] = $request
                         ->file('assesor_image')
-                        ->store('file/assesor');
+                        ->store('img/assesor');
                 }
             }
         }
