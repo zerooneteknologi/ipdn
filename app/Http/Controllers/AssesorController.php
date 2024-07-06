@@ -123,11 +123,11 @@ class AssesorController extends Controller
             if ($assesor->assesor_image) {
                 if (Storage::exists($assesor->assesor_image)) {
                     Storage::delete($assesor->assesor_image);
-                    $validateData['assesor_image'] = $request
-                        ->file('assesor_image')
-                        ->store('img/assesor');
                 }
             }
+            $validateData['assesor_image'] = $request
+                ->file('assesor_image')
+                ->store('img/assesor');
         }
 
         /**
@@ -137,11 +137,11 @@ class AssesorController extends Controller
             if ($assesor->assesor_file) {
                 if (Storage::exists($assesor->assesor_file)) {
                     Storage::delete($assesor->assesor_file);
-                    $validateData['assesor_file'] = $request
-                        ->file('assesor_file')
-                        ->store('file/assesor');
                 }
             }
+            $validateData['assesor_file'] = $request
+                ->file('assesor_file')
+                ->store('file/assesor');
         }
 
         $assesor->update($validateData);
@@ -162,6 +162,11 @@ class AssesorController extends Controller
         if ($assesor->assesor_image) {
             if (Storage::exists($assesor->assesor_image)) {
                 Storage::delete($assesor->assesor_image);
+            }
+        }
+        if ($assesor->assesor_file) {
+            if (Storage::exists($assesor->assesor_file)) {
+                Storage::delete($assesor->assesor_file);
             }
         }
 

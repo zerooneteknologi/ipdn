@@ -28,7 +28,7 @@ class LspController extends Controller
                 ->limit(3)
                 ->get(),
             'assesors' => Assesor::latest()
-                ->limit(4)
+                ->limit(3)
                 ->get(),
             'partners' => Partner::latest()->get(),
             'articles' => Article::where('article_type', 3)
@@ -156,9 +156,8 @@ class LspController extends Controller
 
     public function articlesingle(Article $article)
     {
-        // return $article;
         return view('web.article.single', [
-            'article' => $article->with('category'),
+            'article' => $article,
         ]);
     }
 

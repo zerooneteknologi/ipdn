@@ -189,6 +189,11 @@ class ArticleController extends Controller
                 Storage::delete($article->article_image);
             }
         }
+        if ($article->article_file) {
+            if (Storage::exists($article->article_file)) {
+                Storage::delete($article->article_file);
+            }
+        }
 
         $article->delete();
 

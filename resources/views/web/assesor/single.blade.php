@@ -69,7 +69,7 @@
                                     <div class="col-lg-9 col-md-8">{{ $assesor->assesor_competency }}</div>
                                 </div>
 
-                                <div class="row mb-3">
+                                <div class="row mb-3 px-3">
                                     {!! $assesor->assesor_detail !!}
                                 </div>
                             </div>
