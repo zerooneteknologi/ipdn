@@ -18,10 +18,10 @@ class AssesorController extends Controller
     protected function validateData(Request $request)
     {
         return $data = $request->validate([
-            'assesor_name' => 'max:255',
+            'assesor_name' => 'max:200',
             'assesor_slug' => '',
-            'assesor_code' => 'max:255',
-            'assesor_license' => 'max:255',
+            'assesor_code' => 'max:200',
+            'assesor_license' => 'max:200',
             'assesor_competency' => '',
             'assesor_detail' => ['required'],
             'assesor_image' => '',

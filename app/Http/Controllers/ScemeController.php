@@ -12,9 +12,9 @@ class ScemeController extends Controller
     private function validateData(Request $request)
     {
         return $data = $request->validate([
-            'sceme_name' => 'max:255',
+            'sceme_name' => 'max:200',
             'sceme_slug' => '',
-            'sceme_code' => 'max:255',
+            'sceme_code' => 'max:200',
             'sceme_status' => '',
             'sceme_bnsp' => '',
             'sceme_detail' => ['required'],

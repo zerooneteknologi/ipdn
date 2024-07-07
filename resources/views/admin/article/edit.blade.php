@@ -48,7 +48,7 @@
                             name="article_title" type="text"
                             class="form-control @error('article_title') is-invalid @enderror" required>
                         @error('article_title')
-                        <span class="text-danger">{{ 'Maksimal 255 karakter !'}}</span>
+                        <span class="text-danger">{{ 'Maksimal 200 karakter !'}}</span>
                         @enderror
 
                         @if (request('type') == 3)

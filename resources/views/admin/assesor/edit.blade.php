@@ -29,7 +29,7 @@
                             id="assesor_name" type="text"
                             class="form-control @error('assesor_name') is-invalid @enderror" required>
                         @error('assesor_name')
-                        <span class="text-danger">{{ 'maksimal 225 karakter !' }}</span><br>
+                        <span class="text-danger">{{ 'maksimal 200 karakter !' }}</span><br>
                         @enderror
 
                         <label for="assesor_code" class="col-form-label">Kode Assesor</label>
@@ -37,7 +37,7 @@
                             name="assesor_code" type="text"
                             class="form-control @error('assesor_code') is-invalid @enderror" required>
                         @error('assesor_code')
-                        <span class="text-danger">{{ 'maksimal 225 karakter !' }}</span><br>
+                        <span class="text-danger">{{ 'maksimal 200 karakter !' }}</span><br>
                         @enderror
 
                         <label for="assesor_license" class="col-form-label">Lisensi Assesor</label>
@@ -45,7 +45,7 @@
                             name="assesor_license" type="text"
                             class="form-control @error('assesor_license') is-invalid @enderror" required>
                         @error('assesor_license')
-                        <span class="text-danger">{{ 'maksimal 225 karakter !' }}</span><br>
+                        <span class="text-danger">{{ 'maksimal 200 karakter !' }}</span><br>
                         @enderror
 
                         <label for="assesor_competency" class="col-form-label">Kompetensi Assesor</label>

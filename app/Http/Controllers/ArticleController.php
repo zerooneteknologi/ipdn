@@ -18,7 +18,7 @@ class ArticleController extends Controller
         return $data = $request->validate([
             'category_id' => '',
             'user_id' => '',
-            'article_title' => 'max:255',
+            'article_title' => 'max:200',
             'article_type' => '',
             'article_slug' => '',
             'article_image' => '',

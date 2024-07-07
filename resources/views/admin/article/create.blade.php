@@ -45,7 +45,7 @@
                         <input id="article_title" name="article_title" type="text" value="{{ old('article_title')}}"
                             class="form-control @error('article_title') is-invalid @enderror" required>
                         @error('article_title')
-                        <span class="text-danger">{{ 'Maksimal 255 karakter !'}}</span>
+                        <span class="text-danger">{{ 'Maksimal 200 karakter !'}}</span>
                         @enderror
 
                         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">

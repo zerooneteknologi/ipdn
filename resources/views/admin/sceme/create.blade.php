@@ -27,14 +27,14 @@
                         <input name="sceme_name" id="sceme_name" type="text" value="{{ old('sceme_name')}}"
                             class="form-control @error('sceme_name') is-invalid @enderror" required>
                         @error('sceme_name')
-                        <small class="text-danger">{{ 'maksimal karakter 255' }}</small><br>
+                        <small class="text-danger">{{ 'maksimal karakter 200' }}</small><br>
                         @enderror
 
                         <label for="sceme_code" class="col-form-label">Kode Skema</label>
                         <input id="sceme_code" name="sceme_code" type="text" value="{{ old('sceme_code')}}"
                             class="form-control @error('sceme_code') is-invalid @enderror" required>
                         @error('sceme_code')
-                        <small class="text-danger">{{ 'maksimal karakter 255' }}</small><br>
+                        <small class="text-danger">{{ 'maksimal karakter 200' }}</small><br>
                         @enderror
 
                         <label for="sceme_status" class="col-form-label">Status</label>
