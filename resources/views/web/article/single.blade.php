@@ -43,7 +43,7 @@
                             </a>
                         @endif
                         <hr class="hr hr-blurry" />
-                        <div style="text-align: justify">{!! $article->article_description !!}</div>
+                        <div class="mb-5" style="text-align: justify">{!! $article->article_description !!}</div>
                     </div>
                 </div>
             </div>
