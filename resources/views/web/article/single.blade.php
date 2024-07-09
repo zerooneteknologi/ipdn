@@ -13,19 +13,30 @@
                     <hr class="hr hr-blurry" />
                     <div class="card-body">
                         <h1 class="card-title text-capitalize title-custom">{{ $article->article_title }}</h1>
-                        <strong class="badge bg-info border-0 text-uppercase my-3">
-                            @if ($article->article_type == 3)
-                                {{ $article->category->category_name }}
-                                <span class="mx-2">|</span>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong class="badge bg-info border-0 text-uppercase my-3">
+                                @if ($article->article_type == 3)
+                                    {{ $article->category->category_name }}
+                                    <span class="mx-2">|</span>
+                                @endif
+                                <i class="bi bi-clock-fill"></i>
+                                {{ date_format($article->created_at, 'd M Y') }}
+                            </strong>
+                            @if ($article->article_type == 4)
+                                <a class="badge bg-secondary ms-2"
+                                    href="{{ route('download', $article->article_slug) }}"><i
+                                        class="bi bi-download"></i> File pdf unduh disini</a>
                             @endif
 
-                            <i class="bi bi-clock-fill"></i>
-                            {{ date_format($article->created_at, 'd M Y') }}
-                        </strong>
-                        @if ($article->article_type == 4)
-                            <a class="badge bg-secondary" href="{{ route('download', $article->article_slug) }}"><i
-                                    class="bi bi-download"></i>Unduh File</a>
-                        @endif
+                            @if ($article->article_type == 3)
+                                <a href="{{ route('articles') }}?type=3" class="btn btn-outline-secondary ms-auto"><i
+                                        class="bi bi-arrow-left"></i></a>
+                            @elseif($article->article_type == 4)
+                                <a href="{{ route('articles') }}?type=4" class="btn btn-outline-secondary ms-auto"><i
+                                        class="bi bi-arrow-left"></i></a>
+                            @endif
+                        </div>
+
                         <hr>
                         @if ($article->article_image)
                             <a class="d-flex justify-content-center align-items-center"

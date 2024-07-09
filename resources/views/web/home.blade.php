@@ -106,10 +106,14 @@
                                     <div class="member">
                                         <div class="pic mt-2">
                                             @if ($assesor->assesor_image)
-                                                <img src="{{ asset('ipdn/storage/app/public/' . $assesor->assesor_image) }}"
+                                                <img class="img-fluid w-100"
+                                                    style="min-height: 230px; max-height: 230px; object-fit: contain;"
+                                                    src="{{ asset('ipdn/storage/app/public/' . $assesor->assesor_image) }}"
                                                     alt="{{ $assesor->assesor_name }}">
                                             @else
-                                                <img src="/assets/img/logo/noimage.png" alt="no image">
+                                                <img class="img-fluid w-100"
+                                                    style="min-height: 230px; max-height: 230px; object-fit: contain;"
+                                                    src="/assets/img/logo/noimage.png" alt="no image">
                                             @endif
                                         </div>
                                         <h4>{{ $assesor->assesor_name }}</h4>
