@@ -65,8 +65,12 @@ class LspController extends Controller
      */
     public function search()
     {
+        if (request('search') == 0) {
+            # code...
+        }
         return view('web.sceme.search', [
-            'scemes' => Sceme::search(request('search'))
+            'scemes' => Sceme::orderBy('sceme_bnsp', 'asc')
+                ->search(request('search'))
                 ->filter(
                     request(['sceme_sortif', 'sceme_bnsp', 'sceme_status'])
                 )
@@ -140,11 +144,13 @@ class LspController extends Controller
     public function articles()
     {
         if (request('type') == 3) {
-            $articles = Article::with('category')->where('article_type', 3)
+            $articles = Article::with('category')
+                ->where('article_type', 3)
                 ->latest()
                 ->paginate(8);
         } else {
-            $articles = Article::with('category')->where('article_type', 4)
+            $articles = Article::with('category')
+                ->where('article_type', 4)
                 ->latest()
                 ->paginate(8);
         }

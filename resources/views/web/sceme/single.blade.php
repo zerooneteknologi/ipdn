@@ -21,10 +21,10 @@
                 <div class="service-box">
                     <div class="card-body pt-4 d-flex flex-column align-items-center">
                         @if ($sceme->sceme_image)
-                            <img src="{{ asset('ipdn/storage/app/public/' . $sceme->sceme_image) }}" alt="Profile"
-                                class="rounded" width="300px">
+                        <img src="{{ asset('ipdn/storage/app/public/' . $sceme->sceme_image) }}" alt="Profile"
+                            class="rounded" width="300px">
                         @else
-                            <img src="/assets/img/logo/noimage.png" alt="Profile" class="rounded" width="200px">
+                        <img src="/assets/img/logo/noimage.png" alt="Profile" class="rounded" width="200px">
                         @endif
                     </div>
                 </div>
@@ -61,19 +61,19 @@
                         <div class="row">
                             <div class="col-lg-3 col-md-4 label ">Status Skema</div>
                             @if ($sceme->sceme_status == 1)
-                                <div class="col-lg-9 col-md-8">Aktif</div>
+                            <div class="col-lg-9 col-md-8">Aktif</div>
                             @else
-                                <div class="col-lg-9 col-md-8">Tidak Aktif</div>
+                            <div class="col-lg-9 col-md-8">Tidak Aktif</div>
                             @endif
                         </div>
                         <div class="row mb-3">
                             <div class="col-lg-3 col-md-4 label ">Status BNSP</div>
                             @if ($sceme->sceme_bnsp == 1)
-                                <div class="col-lg-9 col-md-8">Ya</div>
+                            <div class="col-lg-9 col-md-8">Sudah BNSP</div>
                             @elseif ($sceme->sceme_bnsp == 2)
-                                <div class="col-lg-9 col-md-8">Tidak</div>
+                            <div class="col-lg-9 col-md-8">Belum BNSP</div>
                             @else
-                                <div class="col-lg-9 col-md-8">Pengajuan</div>
+                            <div class="col-lg-9 col-md-8">Pengajuan</div>
                             @endif
                         </div>
 
@@ -82,9 +82,9 @@
                     </div>
                     <div class="tab-pane fade profile-edit pt-3" id="data-sceme">
                         @if ($sceme->sceme_file)
-                            <embed src="{{ route('viepdf', $sceme->id) }}?type=1" type="" class="w-100 vh-100">
+                        <embed src="{{ route('viepdf', $sceme->id) }}?type=1" type="" class="w-100 vh-100">
                         @else
-                            Tidak Ada file
+                        Tidak Ada file
                         @endif
                     </div>
                 </div>
