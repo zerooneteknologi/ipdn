@@ -73,7 +73,7 @@
                             @elseif ($sceme->sceme_bnsp == 2)
                             <div class="col-lg-9 col-md-8">Belum BNSP</div>
                             @else
-                            <div class="col-lg-9 col-md-8">Pengajuan</div>
+                            <div class="col-lg-9 col-md-8">Dalam Pengajuan</div>
                             @endif
                         </div>
 
