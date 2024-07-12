@@ -23,9 +23,13 @@
                                 {{ date_format($article->created_at, 'd M Y') }}
                             </strong>
                             @if ($article->article_type == 4)
-                                <a class="badge bg-secondary ms-2"
-                                    href="{{ route('download', $article->article_slug) }}"><i
-                                        class="bi bi-download"></i> File pdf unduh disini</a>
+                                @if ($article->article_file !== null)
+                                    <a class="badge bg-secondary ms-2"
+                                        href="{{ route('download', $article->article_slug) }}"><i
+                                            class="bi bi-download"></i> File pdf unduh disini</a>
+                                @else
+                                    <span class="badge bg-secondary ms-2 text-capitalize">tidak ada berkas file</span>
+                                @endif
                             @endif
 
                             @if ($article->article_type == 3)
